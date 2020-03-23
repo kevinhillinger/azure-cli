@@ -2,10 +2,11 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
+# pylint: disable=line-too-long
 
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import (service_output_format)
-from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api)
+from azure.cli.command_modules.apim._client_factory import (cf_service, cf_product)
 
 
 def load_command_table(self, _):
@@ -13,13 +14,12 @@ def load_command_table(self, _):
         operations_tmpl='azure.mgmt.apimanagement.operations#ApiManagementServiceOperations.{}',
         client_factory=cf_service
     )
-
-    api_sdk = CliCommandType(
-        operations_tmpl='azure.mgmt.apimanagement.operations#ApiOperations.{}',
-        client_factory=cf_api
+    
+    product_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.apimanagement.operations#ProductOperations.{}',
+        client_factory=cf_product
     )
 
-    # pylint: disable=line-too-long
     with self.command_group('apim', service_sdk, is_preview=True) as g:
         g.custom_command('create', 'create_apim', supports_no_wait=True, table_transformer=service_output_format)
         g.custom_show_command('show', 'get_apim', table_transformer=service_output_format)
@@ -29,12 +29,9 @@ def load_command_table(self, _):
         g.custom_command('check-name', 'check_name_availability')
         g.custom_command('backup', 'apim_backup', supports_no_wait=True)
         g.custom_command('apply-network-updates', 'apim_apply_network_configuration_updates', supports_no_wait=True)
-        g.wait_command('wait')
 
-    with self.command_group('apim api', api_sdk, is_preview=True) as g:
-        g.custom_command('create', 'create_apim_api', supports_no_wait=True)
-        g.custom_show_command('show', 'get_apim_api')
-        g.custom_command('list', 'list_apim_api')
-        g.custom_command('delete', 'delete_apim_api', confirmation=True, supports_no_wait=True)
-        g.generic_update_command('update', custom_func_name='update_apim_api', supports_no_wait=True)
-        g.wait_command('wait')
+    # product apis    
+    with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:
+        g.custom_command('list-by-service', 'product_list_by_service', supports_no_wait=True, table_transformer=service_output_format)
+
+  
