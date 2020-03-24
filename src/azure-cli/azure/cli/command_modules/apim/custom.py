@@ -121,3 +121,7 @@ def product_list_by_service(client, resource_group_name, service_name):
     
     return client.list_by_service(resource_group_name, service_name)
 
+def product_get(client, resource_group_name, service_name, product_id):
+    """Gets the details of the product specified by its identifier. """
+
+    return client.get(resource_group_name, service_name, product_id)

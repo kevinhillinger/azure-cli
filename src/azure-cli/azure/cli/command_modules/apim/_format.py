@@ -73,3 +73,17 @@ def _output_format(result, format_group):
 
 def transform_string_array(item):
     return ','.join(item)
+
+
+def product_output_format(result):
+    return _output_format(result, _product_format_group)
+
+
+def _product_format_group(item):
+    return OrderedDict([
+        ('NAME', _get_value_as_str(item, 'name')),
+        ('RESOURCE GROUP', _get_value_as_str(item, 'resourceGroup')),
+        ('DISPLAY NAME', _get_value_as_str(item, 'displayName')),
+        ('SUBSCRIPTION REQUIRED', _get_value_as_str(item, 'subscriptionRequired')),
+        ('STATE', _service_status(_get_value_as_str(item, 'state')))
+    ])

@@ -6,6 +6,7 @@
 
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import (service_output_format)
+from azure.cli.command_modules.apim._format import (product_output_format)
 from azure.cli.command_modules.apim._client_factory import (cf_service, cf_product)
 
 
@@ -32,6 +33,7 @@ def load_command_table(self, _):
 
     # product apis    
     with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:
-        g.custom_command('list-by-service', 'product_list_by_service', supports_no_wait=True, table_transformer=service_output_format)
+        g.custom_command('list-by-service', 'product_list_by_service', table_transformer=product_output_format)
+        g.custom_command('get', 'product_get', table_transformer=product_output_format)
 
   
