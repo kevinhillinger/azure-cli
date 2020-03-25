@@ -118,10 +118,15 @@ def apim_apply_network_configuration_updates(client, resource_group_name, name, 
 # Product Commands
 def product_list_by_service(client, resource_group_name, service_name):
     """Lists a collection of products in the specified service instance. """
-    
+
     return client.list_by_service(resource_group_name, service_name)
 
 def product_get(client, resource_group_name, service_name, product_id):
     """Gets the details of the product specified by its identifier. """
 
     return client.get(resource_group_name, service_name, product_id)
+
+def product_delete(client, resource_group_name, service_name, product_id):
+    """Delete product. """
+    deleteSubscriptions = 'True'
+    return client.delete(resource_group_name, service_name, product_id, deleteSubscriptions, '*')

@@ -92,3 +92,19 @@ examples:
     text: >
         az apim product get -n MyApim -g MyResourceGroup -p starter
 """
+
+helps['apim product delete'] = """
+type: command
+short-summary: Deletes the product specified by its name.
+parameters:
+  - name: --product_name -p
+    type: string
+    short-summary: unique name of the product
+    long-summary: |
+        The unique internal name of the product.  See 'name' attribute from
+        list-by-service result.
+examples:
+  - name: Common usage.
+    text: >
+        az apim product delete -n MyApim -g MyResourceGroup -p starter
+"""
