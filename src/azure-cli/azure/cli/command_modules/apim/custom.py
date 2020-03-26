@@ -121,12 +121,15 @@ def product_list_by_service(client, resource_group_name, service_name):
 
     return client.list_by_service(resource_group_name, service_name)
 
-def product_get(client, resource_group_name, service_name, product_id):
+def product_show(client, resource_group_name, service_name, product_id):
     """Gets the details of the product specified by its identifier. """
 
     return client.get(resource_group_name, service_name, product_id)
 
 def product_delete(client, resource_group_name, service_name, product_id):
     """Delete product. """
-    deleteSubscriptions = 'True'
-    return client.delete(resource_group_name, service_name, product_id, deleteSubscriptions, '*')
+    delete_subscriptions = 'True'
+    # Request Header If-Match
+    if_match = '*'
+    return client.delete(resource_group_name, service_name, product_id, delete_subscriptions, if_match)
+

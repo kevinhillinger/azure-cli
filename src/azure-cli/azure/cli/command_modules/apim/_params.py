@@ -57,4 +57,4 @@ def load_arguments(self, _):
         c.argument('storage_account_container', arg_group='Storage', help='The name of the storage account container used to place the backup.')
 
     with self.argument_context('apim product') as c:
-        c.argument('product_id', options_list=['--product_name', '-p'], help='The internal name of the APIM product.')
+        c.argument('product_id', options_list=['--product_id', '-p'], help='Product identifier. Must be unique in the current API Management service instance.')

@@ -72,12 +72,12 @@ type: command
 short-summary: Update an API Management service instance.
 """
 
-helps['apim product list-by-service'] = """
+helps['apim product list'] = """
 type: command
 short-summary: Lists a collection of products in the specified service instance.
 """
 
-helps['apim product get'] = """
+helps['apim product show'] = """
 type: command
 short-summary: Gets the details of the product specified by its name.
 parameters:
@@ -90,7 +90,7 @@ parameters:
 examples:
   - name: Common usage.
     text: >
-        az apim product get -n MyApim -g MyResourceGroup -p starter
+        az apim product show -n MyApim -g MyResourceGroup -p starter
 """
 
 helps['apim product delete'] = """
@@ -106,5 +106,5 @@ parameters:
 examples:
   - name: Common usage.
     text: >
-        az apim product delete -n MyApim -g MyResourceGroup -p starter
+        az apim product delete -g MyResourceGroup -n MyApim -p starter
 """
