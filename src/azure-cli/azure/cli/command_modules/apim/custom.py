@@ -7,8 +7,7 @@
 from azure.cli.core.util import sdk_no_wait
 from azure.mgmt.apimanagement.models import (ApiManagementServiceResource, ApiManagementServiceIdentity,
                                              ApiManagementServiceSkuProperties, ApiManagementServiceBackupRestoreParameters,
-                                             ApiContract, ApiType, Protocol,
-                                             VirtualNetworkType, SkuType)
+                                             VirtualNetworkType, SkuType, ProductContract, ProductState)
 
 # Service Operations
 
@@ -133,3 +132,31 @@ def product_delete(client, resource_group_name, service_name, product_id):
     if_match = '*'
     return client.delete(resource_group_name, service_name, product_id, delete_subscriptions, if_match)
 
+def product_create(client, resource_group_name, service_name, product_id, description=None, terms=None,
+                subscription_required=None, approval_required=None, subscriptions_limit=None, state=None):
+    """Creates or Updates a product. """
+    # Request Header If-Match
+    if_match = '*'
+
+    resource = ProductContract (
+        display_name=product_id
+    )
+    if description is not None:
+        resource.description = description
+
+    if terms is not None:
+        resource.terms = terms
+
+    if subscription_required is not None:
+        resource.subscription_required = subscription_required
+
+    if approval_required is not None:
+        resource.subscription_required = approval_required
+
+    if subscriptions_limit is not None:
+        resource.subscriptions_limit = subscriptions_limit
+
+    if state is not None:
+        resource.state = state
+
+    return client.create_or_update(resource_group_name, service_name, product_id, resource, if_match)
