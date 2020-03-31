@@ -147,9 +147,8 @@ class ApimScenarioTest(ScenarioTest):
                 'tags': ["foo=boo"]
             })
 
-        self.cmd('apim product create -n {service_name} -g {rg} -p {product_id},
-                 checks=[self.check('name', '{product_id}')
-                         
+        self.cmd('apim product create -n {service_name} -g {rg} -p {product_id}',
+                 checks=[self.check('name', '{product_id}')]) 
 
 KNOWN_LOCS = {'eastasia': 'East Asia',
               'southeastasia': 'Southeast Asia',
