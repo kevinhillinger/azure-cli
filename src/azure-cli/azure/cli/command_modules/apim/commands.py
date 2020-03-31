@@ -37,5 +37,4 @@ def load_command_table(self, _):
         g.custom_command('list', 'product_list_by_service', table_transformer=product_output_format)
         g.custom_command('show', 'product_show', table_transformer=product_output_format)
         g.custom_command('delete', 'product_delete', table_transformer=product_output_format)
-
-  
+        g.generic_update_command('update', custom_func_name='product_update', getter_name='get', setter_name='create_or_update', supports_no_wait=True)

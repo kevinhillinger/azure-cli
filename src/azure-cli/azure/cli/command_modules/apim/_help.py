@@ -79,7 +79,7 @@ short-summary: Lists a collection of products in the specified service instance.
 
 helps['apim product create'] = """
 type: command
-short-summary: Create a product specified by the name name.
+short-summary: Create a product specified by the name.
 parameters:
   - name: --product_name -p
     type: string
@@ -88,9 +88,28 @@ parameters:
         The unique internal name of the product.  See 'name' attribute from
         list-by-service result.
 examples:
-  - name: Common usage.
+  - name: Creates a product with no options set.
     text: >
         az apim product create -g MyResourceGroup -n MyApim -p NewName
+  - name: Create a product in a published state.
+    text: >
+        az apim product create -g MyResourceGroup -n MyApim -p NewName --state published
+"""
+
+helps['apim product update'] = """
+type: command
+short-summary: Updates product attributes specified by the options.
+parameters:
+  - name: --product_name -p
+    type: string
+    short-summary: unique name of the product
+    long-summary: |
+        The unique internal name of the product.  See 'name' attribute from
+        list-by-service result.
+examples:
+  - name: Updates the state of a product to a published state and updates the description.
+    text: >
+        az apim product update -g MyResourceGroup -n MyApim -p NewName --state published --description "My Description"
 """
 
 helps['apim product show'] = """

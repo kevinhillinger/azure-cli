@@ -134,7 +134,7 @@ def product_delete(client, resource_group_name, service_name, product_id):
 
 def product_create(client, resource_group_name, service_name, product_id, description=None, terms=None,
                 subscription_required=None, approval_required=None, subscriptions_limit=None, state=None):
-    """Creates or Updates a product. """
+    """Creates a product. """
     # Request Header If-Match
     if_match = '*'
 
@@ -160,3 +160,29 @@ def product_create(client, resource_group_name, service_name, product_id, descri
         resource.state = state
 
     return client.create_or_update(resource_group_name, service_name, product_id, resource, if_match)
+
+def product_update(instance, description=None, terms=None, subscription_required=None, approval_required=None, 
+                subscriptions_limit=None, state=None):
+    """Update existing product details. """
+    # Request Header If-Match
+#    if_match = '*'
+
+    if description is not None:
+        instance.description = description
+
+    if terms is not None:
+        instance.terms = terms
+
+    if subscription_required is not None:
+        instance.subscription_required = subscription_required
+
+    if approval_required is not None:
+        instance.subscription_required = approval_required
+
+    if subscriptions_limit is not None:
+        instance.subscriptions_limit = subscriptions_limit
+
+    if state is not None:
+        instance.state = state
+
+    return instance
