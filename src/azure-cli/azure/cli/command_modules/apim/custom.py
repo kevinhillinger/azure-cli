@@ -7,7 +7,8 @@
 from azure.cli.core.util import sdk_no_wait
 from azure.mgmt.apimanagement.models import (ApiManagementServiceResource, ApiManagementServiceIdentity,
                                              ApiManagementServiceSkuProperties, ApiManagementServiceBackupRestoreParameters,
-                                             VirtualNetworkType, SkuType, ProductContract, ProductState)
+                                             VirtualNetworkType, SkuType, ProductContract)
+
 
 # Service Operations
 
@@ -114,16 +115,19 @@ def apim_apply_network_configuration_updates(client, resource_group_name, name, 
 
     return client.api_management_service.apply_network_configuration_updates(resource_group_name, name, properties)
 
+
 # Product Commands
 def product_list_by_service(client, resource_group_name, service_name):
     """Lists a collection of products in the specified service instance. """
 
     return client.list_by_service(resource_group_name, service_name)
 
+
 def product_show(client, resource_group_name, service_name, product_id):
     """Gets the details of the product specified by its identifier. """
 
     return client.get(resource_group_name, service_name, product_id)
+
 
 def product_delete(client, resource_group_name, service_name, product_id):
     """Delete product. """
@@ -132,13 +136,14 @@ def product_delete(client, resource_group_name, service_name, product_id):
     if_match = '*'
     return client.delete(resource_group_name, service_name, product_id, delete_subscriptions, if_match)
 
+
 def product_create(client, resource_group_name, service_name, product_id, description=None, terms=None,
-                subscription_required=None, approval_required=None, subscriptions_limit=None, state=None):
+                   subscription_required=None, approval_required=None, subscriptions_limit=None, state=None):
     """Creates a product. """
     # Request Header If-Match
     if_match = '*'
 
-    resource = ProductContract (
+    resource = ProductContract(
         display_name=product_id
     )
     if description is not None:
@@ -161,8 +166,9 @@ def product_create(client, resource_group_name, service_name, product_id, descri
 
     return client.create_or_update(resource_group_name, service_name, product_id, resource, if_match)
 
-def product_update(instance, description=None, terms=None, subscription_required=None, approval_required=None, 
-                subscriptions_limit=None, state=None):
+
+def product_update(instance, description=None, terms=None, subscription_required=None, approval_required=None,
+                   subscriptions_limit=None, state=None):
     """Update existing product details. """
     # Request Header If-Match
 #    if_match = '*'

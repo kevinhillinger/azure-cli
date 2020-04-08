@@ -31,7 +31,7 @@ def load_command_table(self, _):
         g.custom_command('backup', 'apim_backup', supports_no_wait=True)
         g.custom_command('apply-network-updates', 'apim_apply_network_configuration_updates', supports_no_wait=True)
 
-    # product apis    
+    # product apis
     with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:
         g.custom_command('create', 'product_create', table_transformer=product_output_format)
         g.custom_command('list', 'product_list_by_service', table_transformer=product_output_format)
