@@ -1,0 +1,67 @@
+interactions:
+- request:
+    body: '{"properties": {"displayName": "apim_product-000003"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim product create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json; charset=utf-8
+      If-Match:
+      - '*'
+      ParameterSetName:
+      - -n -g -p
+      User-Agent:
+      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/products\",\r\n  \"name\": \"apim_product-000003\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"apim_product-000003\",\r\n    \"description\":
+        null,\r\n    \"terms\": null,\r\n    \"subscriptionRequired\": true,\r\n    \"approvalRequired\":
+        false,\r\n    \"subscriptionsLimit\": null,\r\n    \"state\": \"notPublished\",\r\n
+        \   \"groups\": [\r\n      {\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/groups/administrators\",\r\n
+        \       \"name\": \"Administrators\",\r\n        \"description\": \"Administrators
+        is a built-in group. Its membership is managed by the system. Microsoft Azure
+        subscription administrators fall into this group.\",\r\n        \"builtIn\":
+        true,\r\n        \"type\": \"system\",\r\n        \"externalId\": null\r\n
+        \     }\r\n    ]\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1258'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 08 Apr 2020 16:31:18 GMT
+      etag:
+      - '"AAAAAAAACRA="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 201
+      message: Created
+version: 1
