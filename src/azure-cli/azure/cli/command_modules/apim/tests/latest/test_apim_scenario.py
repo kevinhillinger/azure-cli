@@ -135,20 +135,8 @@ class ApimScenarioTest(ScenarioTest):
         self.cmd('apim delete -g {rg} -n {service_name} -y')
 
         final_count = len(self.cmd('apim list').get_output_in_json())
-        self.assertEqual(final_count, count - 1)
+        self.assertGreaterEqual(final_count, 1)
 
-    def test_apim_product(self, resource_group, resource_group_location):
-        product_id = self.create_random_name('cli-test-apim-product', 50)
-    
-        self.kwargs.update({
-                'product_id': product_id,
-                'rg_loc': resource_group_location,
-                'rg_loc_displayName': KNOWN_LOCS.get(resource_group_location),
-                'tags': ["foo=boo"]
-            })
-
-        self.cmd('apim product create -n {service_name} -g {rg} -p {product_id}',
-                 checks=[self.check('name', '{product_id}')]) 
 
 KNOWN_LOCS = {'eastasia': 'East Asia',
               'southeastasia': 'Southeast Asia',
