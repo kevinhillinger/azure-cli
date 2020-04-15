@@ -12,6 +12,7 @@ from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, StorageAccou
 TEST_DIR = os.path.abspath(os.path.join(os.path.abspath(__file__), '..'))
 
 
+# pylint: disable=line-too-long
 class ApimScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @StorageAccountPreparer(parameter_name='storage_account_for_backup')
@@ -57,8 +58,6 @@ class ApimScenarioTest(ScenarioTest):
         self.cmd('apim update -n {service_name} -g {rg} --publisher-name {publisher_name} --set publisherEmail={publisher_email}',
                  checks=[self.check('publisherName', '{publisher_name}'), self.check('publisherEmail', '{publisher_email}')])
 
-        count = len(self.cmd('apim list').get_output_in_json())
-
         self.cmd('apim show -g {rg} -n {service_name}', checks=[
             # recheck properties from create
             self.check('name', '{service_name}'),
@@ -82,6 +81,9 @@ class ApimScenarioTest(ScenarioTest):
             'storage_account_key': account_key,
             'storage_account_container': account_container
         })
+
+        count = len(self.cmd('apim list').get_output_in_json())
+        self.assertGreater(count, 0)
 
         self.cmd('apim backup -g {rg} -n {service_name} --backup-name {backup_name} --storage-account-name {storage_account_name} --storage-account-container {storage_account_container} --storage-account-key {storage_account_key}', checks=[
             self.check('provisioningState', 'Succeeded')
