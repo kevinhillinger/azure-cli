@@ -156,7 +156,7 @@ def product_create(client, resource_group_name, service_name, product_id, descri
         resource.subscription_required = subscription_required
 
     if approval_required is not None:
-        resource.subscription_required = approval_required
+        resource.approval_required = approval_required
 
     if subscriptions_limit is not None:
         resource.subscriptions_limit = subscriptions_limit
@@ -183,7 +183,7 @@ def product_update(instance, description=None, terms=None, subscription_required
         instance.subscription_required = subscription_required
 
     if approval_required is not None:
-        instance.subscription_required = approval_required
+        instance.approval_required = approval_required
 
     if subscriptions_limit is not None:
         instance.subscriptions_limit = subscriptions_limit
