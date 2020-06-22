@@ -31,6 +31,7 @@ def delete_policy():
     return None
 
 
-def show_policy_etag():
-    return None
+def get_policy_etag():
+    """Show etag of an APIM policy """
+    return client.get_entity_tag(resource_group_name, service_name)
 

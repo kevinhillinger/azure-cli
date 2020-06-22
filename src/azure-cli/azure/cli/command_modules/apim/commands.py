@@ -44,7 +44,7 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_policy', table_transformer=None)
         g.command('delete', 'delete', confirmation=True, supports_no_wait=True)
         g.generic_update_command('update', custom_func_name='update_policy', getter_name='get', setter_name='create_or_update', supports_no_wait=True)
-        g.custom_command('show-etag', 'show_policy_etag')
+        g.custom_command('show-etag', 'get_policy_etag')
 
     # product apis
     with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:
