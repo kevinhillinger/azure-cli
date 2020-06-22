@@ -7,7 +7,7 @@
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import (service_output_format)
 from azure.cli.command_modules.apim._format import (product_output_format)
-from azure.cli.command_modules.apim._client_factory import (cf_service, cf_product)
+from azure.cli.command_modules.apim._client_factory import (cf_service, cf_policy, cf_product)
 
 
 def load_command_table(self, _):
@@ -15,7 +15,12 @@ def load_command_table(self, _):
         operations_tmpl='azure.mgmt.apimanagement.operations#ApiManagementServiceOperations.{}',
         client_factory=cf_service
     )
-    
+
+    policy_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.apimanagement.operations#PolicyOperations.{}',
+        client_factory=cf_policy
+    )
+
     product_sdk = CliCommandType(
         operations_tmpl='azure.mgmt.apimanagement.operations#ProductOperations.{}',
         client_factory=cf_product
@@ -30,6 +35,15 @@ def load_command_table(self, _):
         g.custom_command('check-name', 'check_name_availability')
         g.custom_command('backup', 'apim_backup', supports_no_wait=True)
         g.custom_command('apply-network-updates', 'apim_apply_network_configuration_updates', supports_no_wait=True)
+
+    # policy
+    with self.command_group('apim policy', policy_sdk, is_preview=True) as g:
+        g.custom_command('create', 'create_policy', supports_no_wait=True, table_transformer=None)
+        g.custom_show_command('show', 'get_policy', table_transformer=None)
+        g.custom_command('list', 'list_policy', table_transformer=None)
+        g.command('delete', 'delete', confirmation=True, supports_no_wait=True)
+        g.generic_update_command('update', custom_func_name='update_policy', getter_name='get', setter_name='create_or_update', supports_no_wait=True)
+        g.custom_command('show-etag', 'show_policy_etag')
 
     # product apis
     with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:

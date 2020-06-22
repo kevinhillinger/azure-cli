@@ -16,3 +16,7 @@ def cf_service(cli_ctx, *_):
 
 def cf_product(cli_ctx, *_):
     return cf_apim(cli_ctx).product
+
+
+def cf_policy(cli_ctx, *_):
+    return cf_apim(cli_ctx).policy
