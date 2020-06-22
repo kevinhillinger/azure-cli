@@ -10,8 +10,8 @@ from azure.mgmt.apimanagement.models import (PolicyContract)
 
 # Service Operations
 
-def list_policy():
-    return None
+def list_policy(client, resource_group_name, service_name):
+    return client.list_by_service(resource_group_name, service_name)
 
 
 def get_policy():
