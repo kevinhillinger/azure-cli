@@ -14,8 +14,9 @@ def list_policy(client, resource_group_name, service_name):
     return client.list_by_service(resource_group_name, service_name)
 
 
-def get_policy():
-    return None
+def get_policy(client, resource_group_name, service_name):
+    """Show details of an APIM policy """
+    return client.get(resource_group_name, service_name)
 
 
 def create_policy():

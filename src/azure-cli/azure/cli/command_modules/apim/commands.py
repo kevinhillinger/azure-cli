@@ -11,6 +11,7 @@ from azure.cli.command_modules.apim._client_factory import (cf_service, cf_polic
 
 
 def load_command_table(self, _):
+
     service_sdk = CliCommandType(
         operations_tmpl='azure.mgmt.apimanagement.operations#ApiManagementServiceOperations.{}',
         client_factory=cf_service
@@ -37,7 +38,7 @@ def load_command_table(self, _):
         g.custom_command('apply-network-updates', 'apim_apply_network_configuration_updates', supports_no_wait=True)
 
     # policy
-    with self.command_group('apim policy', policy_sdk, is_preview=True) as g:
+    with self.command_group('apim policy', policy_sdk, client_factory=cf_policy,  is_preview=True) as g:
         g.custom_command('create', 'create_policy', supports_no_wait=True, table_transformer=None)
         g.custom_show_command('show', 'get_policy', table_transformer=None)
         g.custom_command('list', 'list_policy', table_transformer=None)
