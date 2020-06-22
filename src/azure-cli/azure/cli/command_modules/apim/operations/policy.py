@@ -12,6 +12,7 @@ from azure.cli.command_modules.apim._validators import validate_policy_xml_conte
 # Service Operations
 
 def list_policy(client, resource_group_name, service_name):
+     """List all APIM instances.  Resource group is optional """
     return client.list_by_service(resource_group_name, service_name)
 
 
