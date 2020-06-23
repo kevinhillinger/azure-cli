@@ -35,6 +35,26 @@ def create_api(client, resource_group_name, service_name, api_id,
     if display_name is None and REVISION_INDICATOR not in api_id:
         display_name = path
 
+from azure.cli.core.util import sdk_no_wait
+from azure.mgmt.apimanagement.models import (ApiContract, ApiCreateOrUpdateParameter, Protocol,
+                                                AuthenticationSettingsContract, OAuth2AuthenticationSettingsContract, OpenIdAuthenticationSettingsContract, BearerTokenSendingMethod,
+                                                SubscriptionKeyParameterNamesContract,
+                                                ApiVersionSetContractDetails, 
+                                                ApiCreateOrUpdatePropertiesWsdlSelector)
+
+# API Operations
+def create_api(client, resource_group_name, service_name, api_id, 
+                path, display_name=None, description=None, service_url=None, protocols=None, 
+                api_revision=None, api_revision_description=None, api_version=None, api_version_set_id=None, api_version_set=None, api_version_description=None, 
+                source_api_id=None,
+                oauth2_authorization_server_id=None, oauth2_scope=None,
+                openid_provider_id=None, openid_bearer_token_sending_methods=None,
+                subscription_required=None, subscription_key_header_name=None, subscription_key_query_string_name=None,
+                wsdl_selector=None, soap_api_type=None,
+            ):
+    
+    if_match = None
+
     # Set the authentication settings
     authentication_settings = AuthenticationSettingsContract()
     if oauth2_authorization_server_id is not None:
@@ -112,7 +132,6 @@ def update_api(instance,
 
     if display_name is not None:
         instance.display_name = display_name
-
     if description is not None:
         instance.description = description
 
