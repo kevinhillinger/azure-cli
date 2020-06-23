@@ -8,9 +8,6 @@ from azure.cli.core.util import sdk_no_wait
 from azure.mgmt.apimanagement.models import (ApiManagementServiceResource, ApiManagementServiceIdentity,
                                              ApiManagementServiceSkuProperties, ApiManagementServiceBackupRestoreParameters,
                                              VirtualNetworkType, SkuType, ProductContract)
-from azure.cli.command_modules.apim.operations.policy import *
-
-# Service Operations
 
 
 def create_apim(client, resource_group_name, name, publisher_email, sku_name=SkuType.developer.value,

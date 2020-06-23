@@ -23,6 +23,11 @@ def load_command_table(self, _):
         client_factory=cf_policy
     )
 
+    policy_custom_type = CliCommandType(
+        operations_tmpl='azure.cli.command_modules.apim.operations.policy#{}',
+        client_factory=cf_policy
+    )
+
     product_sdk = CliCommandType(
         operations_tmpl='azure.mgmt.apimanagement.operations#ProductOperations.{}',
         client_factory=cf_product
@@ -39,13 +44,12 @@ def load_command_table(self, _):
         g.custom_command('apply-network-updates', 'apim_apply_network_configuration_updates', supports_no_wait=True)
 
     # policy
-    with self.command_group('apim policy', policy_sdk, client_factory=cf_policy,  is_preview=True) as g:
-        g.custom_command('create', 'create_policy', supports_no_wait=True, table_transformer=None, validator = validate_policy_xml_content)
+    with self.command_group('apim policy', policy_sdk, custom_command_type=policy_custom_type, client_factory=cf_policy, is_preview=True) as g:
+        g.custom_command('create', 'create_policy', supports_no_wait=True, table_transformer=None, validator=validate_policy_xml_content)
         g.custom_show_command('show', 'get_policy', table_transformer=None)
         g.custom_command('list', 'list_policy', table_transformer=None)
         g.custom_command('delete', 'delete_policy', confirmation=True, supports_no_wait=True)
-        g.custom_command('update', 'update_policy', table_transformer=None, validator = validate_policy_xml_content)
-        g.custom_command('show-etag', 'get_policy_etag', table_transformer=None)
+        g.custom_command('update', 'update_policy', table_transformer=None, validator=validate_policy_xml_content)
 
     # product apis
     with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:

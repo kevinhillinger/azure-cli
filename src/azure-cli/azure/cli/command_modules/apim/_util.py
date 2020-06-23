@@ -2,7 +2,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
-
+# pylint: disable=line-too-long
 
 def get_xml_content(xml, xml_path, xml_uri):
     """Gets the XML content for policies based on the 3 options that a user can provide, with inline taking precedentsm, then file, then uri"""
