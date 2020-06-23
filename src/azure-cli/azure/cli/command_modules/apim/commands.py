@@ -8,6 +8,7 @@ from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import (service_output_format)
 from azure.cli.command_modules.apim._format import (product_output_format)
 from azure.cli.command_modules.apim._client_factory import (cf_service, cf_policy, cf_product)
+from ._validators import validate_policy_xml_content
 
 
 def load_command_table(self, _):
@@ -39,12 +40,12 @@ def load_command_table(self, _):
 
     # policy
     with self.command_group('apim policy', policy_sdk, client_factory=cf_policy,  is_preview=True) as g:
-        g.custom_command('create', 'create_policy', supports_no_wait=True, table_transformer=None)
+        g.custom_command('create', 'create_policy', supports_no_wait=True, table_transformer=None, validator = validate_policy_xml_content)
         g.custom_show_command('show', 'get_policy', table_transformer=None)
         g.custom_command('list', 'list_policy', table_transformer=None)
-        g.command('delete', 'delete', confirmation=True, supports_no_wait=True)
-        g.custom_command('update', 'update_policy', table_transformer=None)
-        g.custom_command('show-etag', 'get_policy_etag')
+        g.custom_command('delete', 'delete_policy', confirmation=True, supports_no_wait=True)
+        g.custom_command('update', 'update_policy', table_transformer=None, validator = validate_policy_xml_content)
+        g.custom_command('show-etag', 'get_policy_etag', table_transformer=None)
 
     # product apis
     with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:

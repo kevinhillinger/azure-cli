@@ -22,6 +22,7 @@ def load_arguments(self, _):
     from azure.cli.core.commands.parameters import tags_type
     from azure.cli.core.commands.validators import get_default_location_from_resource_group
 
+    # api service
     with self.argument_context('apim') as c:
         c.argument('resource_group_name', arg_type=resource_group_name_type)
         c.argument('tags', tags_type)
@@ -54,11 +55,13 @@ def load_arguments(self, _):
         c.argument('storage_account_key', arg_group='Storage', help='The access key of the storage account used to place the backup.')
         c.argument('storage_account_container', arg_group='Storage', help='The name of the storage account container used to place the backup.')
 
+    # policy
     with self.argument_context('apim policy') as c:
-        c.argument('xml', help='The contents are inline and Content type is a non XML encoded policy document.')
+        c.argument('xml', options_list=['--xml-value', '-v'], help='The XML document value inline as a non-XML encoded string.')
         c.argument('xml_path', options_list=['--xml-file', '-f'], help='The path to the policy XML document.')
         c.argument('xml_uri', options_list=['--xml-uri', '-u'], help='The URI of the policy XML document from an HTTP endpoint accessible from the API Management service.')
 
+    # product 
     with self.argument_context('apim product') as c:
         c.argument('product_id', options_list=['--product_id', '-p'], help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('description', options_list=['--description', '-d'], help='Product description. May include HTML formatting tags.')

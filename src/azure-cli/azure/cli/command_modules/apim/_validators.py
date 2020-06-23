@@ -3,7 +3,12 @@
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 
-def validate_policy_xml_content(xml_content):
+from knack.util import CLIError
+from azure.cli.command_modules.apim._util import (get_xml_content)
+
+def validate_policy_xml_content(cmd, namespace):
     """Validates that the xml content has been set"""
-    if len(xml_content) == 0:
-        raise CLIError('The XML is required for creating or updating an API Management service policy')
+    xml_content = get_xml_content(namespace.xml, namespace.xml_path, namespace.xml_uri)
+
+    if xml_content is None or len(xml_content) == 0:
+        raise CLIError('The XML content for a policy is required for creating or updating an API Management service policy')
