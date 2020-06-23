@@ -42,7 +42,7 @@ def load_command_table(self, _):
         g.custom_command('create', 'create_policy', supports_no_wait=True, table_transformer=None)
         g.custom_show_command('show', 'get_policy', table_transformer=None)
         g.custom_command('list', 'list_policy', table_transformer=None)
-        g.command('delete', 'delete', confirmation=True, supports_no_wait=True)
+        g.custom_command('delete', 'delete_policy', confirmation=True, supports_no_wait=True)
         g.generic_update_command('update', custom_func_name='update_policy', getter_name='get', setter_name='create_or_update', supports_no_wait=True)
         g.custom_command('show-etag', 'get_policy_etag')
 

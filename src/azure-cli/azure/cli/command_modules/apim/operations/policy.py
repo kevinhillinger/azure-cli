@@ -34,8 +34,8 @@ def update_policy():
     return None
 
 
-def delete_policy():
-    return None
+def delete_policy(client, resource_group_name, service_name):
+    return client.delete(resource_group_name, service_name, if_match = '*')
 
 
 def get_policy_etag(client, resource_group_name, service_name):
