@@ -5,16 +5,11 @@
             "name": "Azure CLI Debug (Integrated Console)",
             "type": "python",
             "request": "launch",
-            "pythonPath": "${command:python.interpreterPath}",
+            "pythonPath": "${config:python.pythonPath}",
             "program": "${workspaceRoot}/src/azure-cli/azure/cli/__main__.py",
             "cwd": "${workspaceRoot}",
             "args": [
-                "apim",
-                "subscription",
-                "delete",
-                "--resource-group", "azure-cli",
-                "--name", "azure-cli-apim-af",
-                "--sid", "test1"
+                "--help"
             ],
             "console": "integratedTerminal",
             "debugOptions": [
@@ -29,7 +24,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath": "${command:python.interpreterPath}",
+            "pythonPath": "${config:python.pythonPath}",
             "program": "${workspaceRoot}/src/azure-cli/azure/cli/__main__.py",
             "cwd": "${workspaceRoot}",
             "args": [
@@ -45,7 +40,7 @@
             "name": "Azdev Scripts",
             "type": "python",
             "request": "launch",
-            "pythonPath": "${command:python.interpreterPath}",
+            "pythonPath": "${config:python.pythonPath}",
             "program": "${workspaceRoot}/tools/automation/__main__.py",
             "cwd": "${workspaceRoot}",
             "args": [

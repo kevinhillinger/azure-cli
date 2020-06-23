@@ -5,9 +5,8 @@
 # pylint: disable=line-too-long
 
 from azure.cli.core.commands import CliCommandType
-from azure.cli.command_modules.apim._format import (service_output_format)
 from azure.cli.command_modules.apim._format import (product_output_format, subscription_output_format)
-from azure.cli.command_modules.apim._client_factory import (cf_service, cf_policy, cf_product, cf_subscription)
+from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_policy, cf_product, cf_subscription)
 from ._validators import validate_policy_xml_content
 
 
@@ -26,6 +25,16 @@ def load_command_table(self, _):
     policy_custom_type = CliCommandType(
         operations_tmpl='azure.cli.command_modules.apim.operations.policy#{}',
         client_factory=cf_policy
+    )
+
+    api_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.apimanagement.operations#ApiOperations.{}',
+        client_factory=cf_api
+    )
+
+    api_custom_type = CliCommandType(
+        operations_tmpl='azure.cli.command_modules.apim.operations.api#{}',
+        client_factory=cf_api
     )
 
     product_sdk = CliCommandType(
@@ -58,6 +67,15 @@ def load_command_table(self, _):
         g.custom_command('check-name', 'check_name_availability')
         g.custom_command('backup', 'apim_backup', supports_no_wait=True)
         g.custom_command('apply-network-updates', 'apim_apply_network_configuration_updates', supports_no_wait=True)
+
+    # api apis
+    with self.command_group('apim api', api_sdk, custom_command_type=api_custom_type, client_factory=cf_api, is_preview=True) as g:
+        g.custom_command('create', 'create_api', supports_no_wait=True, table_transformer=None)
+        g.custom_command('delete', 'delete_api', confirmation=True, supports_no_wait=True)
+        g.custom_command('show-etag', 'get_api_etag')
+        g.custom_show_command('show', 'get_api', table_transformer=None)
+        g.custom_command('list', 'list_api', table_transformer=None)
+        g.generic_update_command('update', custom_func_name='update_api', supports_no_wait=True)
 
     # product apis
     with self.command_group('apim product', product_sdk, is_preview=True, client_factory=cf_product) as g:

@@ -9,8 +9,7 @@ from azure.cli.core.commands.parameters import (get_enum_type,
                                                 get_location_type,
                                                 resource_group_name_type,
                                                 get_three_state_flag)
-from azure.mgmt.apimanagement.models import (SkuType, VirtualNetworkType, ProductState)
-
+from azure.mgmt.apimanagement.models import (SkuType, VirtualNetworkType, ProductState, SoapApiType)
 
 SKU_TYPES = SkuType
 VNET_TYPES = VirtualNetworkType
@@ -62,6 +61,17 @@ def load_arguments(self, _):
         c.argument('xml_uri', options_list=['--xml-uri', '-u'], help='The URI of the policy XML document from an HTTP endpoint accessible from the API Management service.')
 
     # product
+    with self.argument_context('apim api') as c:
+        c.argument('api_id', options_list=['--api-id', '-a'], help='API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')
+        c.argument('description', options_list=['--description', '-d'], help='Description of the API. May include HTML formatting tags.')
+        c.argument('subscription_required', arg_type=get_three_state_flag(), help='Specifies whether an API or Product subscription is required for accessing the API. If parameter is omitted when creating a new API its value is assumed to be true.')
+        c.argument('is_current', arg_type=get_three_state_flag(), help='Indicates if an API revision is current api revision. This parameter is ignored if this is the first revision. New revisions cannot be set as current.')
+        c.argument('is_online', arg_type=get_three_state_flag(), help='Indicates if an API revision is accessible via the gateway. This parameter is ignored if this is the first revision.')
+        c.argument('protocols', nargs='+', help='Describes on which protocols the operations in this API can be invoked.')
+        c.argument('openid_bearer_token_sending_methods', nargs='+', help='How to send token to the server. Options include "authorizationHeader" or "query"')
+        c.argument('soap_api_type', arg_type=get_enum_type(SoapApiType), help='Type of Api to create. "http" creates a SOAP to REST API. "soap" creates a SOAP pass-through API.')
+        c.argument('delete_revisions', arg_type=get_three_state_flag(), help='Delete all revisions of the Api.')
+
     with self.argument_context('apim product') as c:
         c.argument('product_id', options_list=['--product_id', '-p'], help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('description', options_list=['--description', '-d'], help='Product description. May include HTML formatting tags.')
