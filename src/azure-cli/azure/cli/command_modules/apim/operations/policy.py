@@ -17,7 +17,6 @@ def list_policy(client, resource_group_name, service_name):
 
 
 def get_policy(client, resource_group_name, service_name):
-    """Show details of an APIM policy """
     return client.get(resource_group_name, service_name)
 
 
@@ -30,8 +29,13 @@ def create_policy(client, resource_group_name, service_name, xml=None, xml_path=
     client.create_or_update(resource_group_name, service_name, xml_content, if_match, xml_format)
 
 
-def update_policy():
-    return None
+def update_policy(client, resource_group_name, service_name, xml=None, xml_path=None, xml_uri=None):
+    if_match = client.get_entity_tag(resource_group_name, service_name)
+    xml_format = _get_xml_format(xml, xml_path, xml_uri)
+    xml_content = _get_xml_content(xml, xml_path, xml_uri)
+
+    validate_policy_xml_content(xml_content)
+    client.create_or_update(resource_group_name, service_name, xml_content, if_match, xml_format)
 
 
 def delete_policy(client, resource_group_name, service_name):
