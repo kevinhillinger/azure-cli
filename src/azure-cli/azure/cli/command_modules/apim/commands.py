@@ -6,7 +6,7 @@
 
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import (service_output_format)
-from azure.cli.command_modules.apim._format import (product_output_format)
+from azure.cli.command_modules.apim._format import (product_output_format, subscription_output_format)
 from azure.cli.command_modules.apim._client_factory import (cf_service, cf_policy, cf_product, cf_subscription)
 from ._validators import validate_policy_xml_content
 
@@ -69,8 +69,8 @@ def load_command_table(self, _):
 
     # subscription apis
     with self.command_group('apim subscription', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True, client_factory=cf_subscription) as g:
-        g.custom_command('create', 'create_subscription', table_transformer=None)
-        g.custom_command('list', 'list_subscription', table_transformer=None)
-        g.custom_command('show', 'get_subscription', table_transformer=None)
-        g.custom_command('delete', 'delete_subscription', confirmation=True, table_transformer=None)
-        g.generic_update_command('update', custom_func_name='update_subscription', supports_no_wait=True)
+        g.custom_command('create', 'create_subscription', table_transformer=subscription_output_format)
+        g.custom_command('list', 'list_subscription', table_transformer=subscription_output_format)
+        g.custom_command('show', 'get_subscription', table_transformer=subscription_output_format)
+        g.custom_command('delete', 'delete_subscription', confirmation=True, table_transformer=subscription_output_format)
+        g.generic_update_command('update', custom_func_name='update_subscription', supports_no_wait=subscription_output_format )
