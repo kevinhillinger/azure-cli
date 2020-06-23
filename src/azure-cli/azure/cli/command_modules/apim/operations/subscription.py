@@ -23,7 +23,7 @@ def get_subscription(client, resource_group_name, service_name, sid):
 
 
 def create_subscription(cmd, resource_group_name, service_name, sid, display_name, scope, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None):
-
+    
     from azure.cli.command_modules.apim._client_factory import (cf_service, cf_subscription)
     client = cf_subscription(cmd.cli_ctx)
     service_client = cf_service(cmd.cli_ctx)
@@ -72,7 +72,6 @@ def update_subscription(cmd, resource_group_name, service_name, sid, display_nam
         allow_tracing=allow_tracing
     )
     return client.update(resource_group_name, service_name, sid, parameters, if_match='*')
-
 
 def delete_subscription(client, resource_group_name, service_name, sid):
     return client.delete(resource_group_name, service_name, sid, if_match='*')
