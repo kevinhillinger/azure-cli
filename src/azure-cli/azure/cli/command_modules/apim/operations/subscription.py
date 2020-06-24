@@ -14,8 +14,8 @@ def get_subscription(client, resource_group_name, service_name, sid):
     return client.get(resource_group_name, service_name, sid)
 
 
-def create_subscription(client, resource_group_name, service_name):
-    return None
+def create_subscription(client, resource_group_name, service_name, sid):
+    return client.create(resource_group_name, service_name, sid)
 
 
 def update_subscription(client, resource_group_name, service_name):

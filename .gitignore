@@ -117,3 +117,4 @@ pip.log
 
 az_command_coverage.txt
 node_modules
+.vscode/launch.json
