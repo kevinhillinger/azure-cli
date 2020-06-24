@@ -39,21 +39,31 @@ from azure.cli.core.util import sdk_no_wait
 from azure.mgmt.apimanagement.models import (ApiContract, ApiCreateOrUpdateParameter, Protocol,
                                                 AuthenticationSettingsContract, OAuth2AuthenticationSettingsContract, OpenIdAuthenticationSettingsContract, BearerTokenSendingMethod,
                                                 SubscriptionKeyParameterNamesContract,
-                                                ApiVersionSetContractDetails, 
-                                                ApiCreateOrUpdatePropertiesWsdlSelector)
+                                                ApiCreateOrUpdatePropertiesWsdlSelector,
+                                                ContentFormat)
 
 # API Operations
 def create_api(client, resource_group_name, service_name, api_id, 
                 path, display_name=None, description=None, service_url=None, protocols=None, 
-                api_revision=None, api_revision_description=None, api_version=None, api_version_set_id=None, api_version_set=None, api_version_description=None, 
+                api_revision=None, api_revision_description=None, 
+                api_version=None, api_version_set_id=None, 
                 source_api_id=None,
                 oauth2_authorization_server_id=None, oauth2_scope=None,
                 openid_provider_id=None, openid_bearer_token_sending_methods=None,
                 subscription_required=None, subscription_key_header_name=None, subscription_key_query_string_name=None,
-                wsdl_selector=None, soap_api_type=None,
+                is_current=None, is_online=None, 
+                format=None, value=None,
+                wsdl_service_name=None, wsdl_endpoint_name=None, api_type=None,
             ):
     
+    # Revsion indicator
+    REVISION_INDICATOR = ";rev="
+
     if_match = None
+
+    # Default the display name to the path - DO NOT DEFAULT when creating a new revision
+    if display_name is None and REVISION_INDICATOR not in api_id:
+        display_name = path
 
     # Set the authentication settings
     authentication_settings = AuthenticationSettingsContract()
@@ -71,6 +81,7 @@ def create_api(client, resource_group_name, service_name, api_id,
         authentication_settings.openid = openid
 
     # Set the remaining parameters
+    dummy = ApiCreateOrUpdateParameter(path = "path")
     parameters = ApiCreateOrUpdateParameter(
         path=path,
         display_name=display_name,
