@@ -92,11 +92,11 @@ def subscription_output_format(result):
     return _output_format(result, _subscription_format_group)
 
 def _subscription_format_group(item):
-    return OrderedDict([                   
-        ('ALLOW TRACING', item['allowTracing']),
+    return OrderedDict([   
         ('DISPLAY NAME', _get_value_as_str(item, 'displayName')),
         ('PRIMARY KEY', _get_value_as_str(item, 'primaryKey')),
         ('SECONDARY KEY', _get_value_as_str(item, 'secondaryKey')),
         ('SCOPE', _get_value_as_str(item, 'scope')),
-        ('STATE', _service_status(_get_value_as_str(item, 'state')))                  
+        ('STATE', _service_status(_get_value_as_str(item, 'state'))),
+        ('ALLOW TRACING', item['allowTracing'])                  
     ])
