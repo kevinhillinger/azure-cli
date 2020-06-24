@@ -79,14 +79,14 @@ def product_output_format(result):
     return _output_format(result, _product_format_group)
 
 
-def _product_format_group(item):
-    return OrderedDict([
+def policy_output_format(result):
+    return _output_format(result, (lambda item: OrderedDict([
         ('NAME', _get_value_as_str(item, 'name')),
         ('RESOURCE GROUP', _get_value_as_str(item, 'resourceGroup')),
         ('DISPLAY NAME', _get_value_as_str(item, 'displayName')),
         ('SUBSCRIPTION REQUIRED', _get_value_as_str(item, 'subscriptionRequired')),
         ('STATE', _service_status(_get_value_as_str(item, 'state')))
-    ])
+    ])))
 
 def subscription_output_format(result):
     return _output_format(result, _subscription_format_group)

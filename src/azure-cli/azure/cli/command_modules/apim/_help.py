@@ -72,9 +72,36 @@ type: command
 short-summary: Update an API Management service instance.
 """
 
+# policy
+helps['apim policy'] = """
+type: group
+short-summary: Manage Azure API Management policies.
+"""
+
+helps['apim policy show'] = """
+type: command
+short-summary: Show details of a policy for an API Management instance.
+"""
+
+helps['apim policy create'] = """
+type: command
+short-summary: Create a policy for an API Management instance.
+"""
+
+helps['apim policy update'] = """
+type: command
+short-summary: Update a policy for an API Management instance.
+"""
+
+helps['apim policy delete'] = """
+type: command
+short-summary: Delete a policy for an API Management instance.
+"""
+
+# product
 helps['apim product'] = """
 type: group
-short-summary: Manage Azure API Management Product services.
+short-summary: Manage Azure API Management products.
 """
 
 helps['apim product list'] = """
