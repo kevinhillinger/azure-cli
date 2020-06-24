@@ -8,21 +8,31 @@ from azure.cli.core.util import sdk_no_wait
 from azure.mgmt.apimanagement.models import (ApiContract, ApiCreateOrUpdateParameter, Protocol,
                                                 AuthenticationSettingsContract, OAuth2AuthenticationSettingsContract, OpenIdAuthenticationSettingsContract, BearerTokenSendingMethod,
                                                 SubscriptionKeyParameterNamesContract,
-                                                ApiVersionSetContractDetails, 
-                                                ApiCreateOrUpdatePropertiesWsdlSelector)
+                                                ApiCreateOrUpdatePropertiesWsdlSelector,
+                                                ContentFormat)
 
 # API Operations
 def create_api(client, resource_group_name, service_name, api_id, 
                 path, display_name=None, description=None, service_url=None, protocols=None, 
-                api_revision=None, api_revision_description=None, api_version=None, api_version_set_id=None, api_version_set=None, api_version_description=None, 
+                api_revision=None, api_revision_description=None, 
+                api_version=None, api_version_set_id=None, 
                 source_api_id=None,
                 oauth2_authorization_server_id=None, oauth2_scope=None,
                 openid_provider_id=None, openid_bearer_token_sending_methods=None,
                 subscription_required=None, subscription_key_header_name=None, subscription_key_query_string_name=None,
-                wsdl_selector=None, soap_api_type=None,
+                is_current=None, is_online=None, 
+                format=None, value=None,
+                wsdl_service_name=None, wsdl_endpoint_name=None, api_type=None,
             ):
     
+    # Revsion indicator
+    REVISION_INDICATOR = ";rev="
+
     if_match = None
+
+    # Default the display name to the path - DO NOT DEFAULT when creating a new revision
+    if display_name is None and REVISION_INDICATOR not in api_id:
+        display_name = path
 
     # Set the authentication settings
     authentication_settings = AuthenticationSettingsContract()
@@ -40,6 +50,7 @@ def create_api(client, resource_group_name, service_name, api_id,
         authentication_settings.openid = openid
     
     # Set the remaining parameters
+    dummy = ApiCreateOrUpdateParameter(path = "path")
     parameters = ApiCreateOrUpdateParameter(
         path = path,
         display_name=display_name,
@@ -47,19 +58,21 @@ def create_api(client, resource_group_name, service_name, api_id,
         api_revision = api_revision, 
         api_revision_description = api_revision_description, 
         api_version = api_version, 
-        api_version_description = api_version_description, 
         api_version_set_id = api_version_set_id, 
         subscription_required = subscription_required,
         source_api_id = source_api_id,
         service_url = service_url,
-        # subscription_key_parameter_names = subscription_key_parameter_names,
         authentication_settings = authentication_settings,
-        api_version_set = api_version_set,
-        wsdl_selector = wsdl_selector,
-        api_type = soap_api_type
+        api_type = api_type,
+        is_current = is_current,
+        is_online = is_online,
+        format = format,
+        value = value
     )
 
-    # Set the protocol(s)
+    # Default and set the protocol(s) - DO NOT DEFAULT when creating a new revision
+    if protocols is None and REVISION_INDICATOR not in api_id:
+        parameters.protocols = ["https"]
     if protocols is not None and len(protocols) > 0:
         parameters.protocols = list(map(lambda x: Protocol(x), protocols[0].split()))
 
@@ -70,24 +83,27 @@ def create_api(client, resource_group_name, service_name, api_id,
             query = subscription_key_query_string_name
         )
 
-    # TODO: api_version_set
-    # parameters['api_version_set'] = ApiVersionSetContractDetails()
-
-    # TODO: wsdl_selector = wsdl_selector
-    # parameters['wsdl_selector'] = ApiCreateOrUpdatePropertiesWsdlSelector()
+    # Set the wsdl_selector
+    if wsdl_service_name is not None and wsdl_endpoint_name is not None:
+        parameters.wsdl_selector = ApiCreateOrUpdatePropertiesWsdlSelector(
+            wsdl_service_name = wsdl_service_name,
+            wsdl_endpoint_name = wsdl_endpoint_name
+        )
 
     return client.create_or_update(resource_group_name, service_name, api_id, parameters, if_match)
 
 
 def update_api(instance,  
                 path=None, display_name=None, description=None, service_url=None, protocols=None,
-                api_revision=None, api_revision_description=None, api_version=None, api_version_set_id=None, api_version_set=None, api_version_description=None, 
+                api_revision=None, api_revision_description=None, 
+                api_version=None, api_version_set_id=None, 
                 source_api_id=None,
                 oauth2_authorization_server_id=None, oauth2_scope=None,
                 openid_provider_id=None, openid_bearer_token_sending_methods=None,
                 subscription_required=None, subscription_key_header_name=None, subscription_key_query_string_name=None,
-                wsdl_selector=None, soap_api_type=None,
-                is_current=None, is_online=None
+                is_current=None, is_online=None,
+                format=None, value=None,
+                wsdl_service_name=None, wsdl_endpoint_name=None, api_type=None,
             ):
 
     if path is not None:
@@ -115,13 +131,7 @@ def update_api(instance,
         instance.api_version = api_version
 
     if api_version_set_id is not None: 
-        instance.api_version_set_id
-
-    if api_version_set is not None:
-        instance.api_version_set = api_version_set
-
-    if api_version_description is not None:
-        instance.api_version_description = api_version_description
+        instance.api_version_set_id = api_version_set_id
 
     if source_api_id is not None:
         instance.source_api_id = source_api_id
@@ -145,17 +155,28 @@ def update_api(instance,
     if subscription_key_query_string_name is not None:
         instance.subscription_key_parameter_names.query = subscription_key_query_string_name
 
-    if wsdl_selector is not None:
-        instance.wsdl_selector = wsdl_selector
-
-    if soap_api_type is not None:
-        instance.soap_api_type = soap_api_type
-
     if is_current is not None: 
         instance.is_current = is_current
 
     if is_online is not None:
         instance.is_online = is_online
+
+    if format is not None:
+        instance.format = format
+
+    if value is not None:
+        instance.value = value
+
+    # TODO:
+    # Set the WSDL selector
+    if wsdl_service_name is not None and wsdl_endpoint_name is not None:
+        instance.wsdl_selector = ApiCreateOrUpdatePropertiesWsdlSelector(
+            wsdl_service_name = wsdl_service_name,
+            wsdl_endpoint_name = wsdl_endpoint_name
+        )
+
+    if api_type is not None:
+        instance.api_type = api_type
 
     return instance
 
