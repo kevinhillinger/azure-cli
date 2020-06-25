@@ -96,6 +96,7 @@ def load_arguments(self, _):
         c.argument('scope', arg_group='Subscription', help='Scope like /products/{productId} or /apis or /apis/{apiId}.')
         c.argument('primary_key', arg_group="Subscription", help='The primary access key for the APIM subscription')
         c.argument('secondary_key', arg_group="Subscription", help='The secondary access key for the APIM subscription')
+    
     for scope in ['apim subscription keys regenerate', 'apim subscription regenerate-key']:
         with self.argument_context(scope) as c:
             c.argument('key_kind', arg_type=get_enum_type(SubscriptionKeyKind), help='The type of key to regenerate: primary or secondary')

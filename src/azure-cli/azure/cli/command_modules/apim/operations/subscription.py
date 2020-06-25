@@ -29,12 +29,13 @@ def create_subscription(cmd, resource_group_name, service_name, sid, display_nam
     service_client = cf_service(cmd.cli_ctx)
     apim_instance = service_client.get(resource_group_name, service_name)
     scope = apim_instance.id + "/" + scope
-    
+
     parameters = SubscriptionCreateParameters(
         display_name = display_name,
         scope = scope        
     )
     if owner_id is not None:
+        owner_id = apim_instance.id + "/users/" + owner_id
         parameters.owner_id = owner_id
 
     if primary_key is not None:
@@ -49,7 +50,7 @@ def create_subscription(cmd, resource_group_name, service_name, sid, display_nam
     if allow_tracing is not None:
         parameters.allow_tracing = allow_tracing
 
-     return client.create_or_update(resource_group_name, service_name, sid, parameters)
+    return client.create_or_update(resource_group_name, service_name, sid, parameters)
 
 
 def update_subscription(cmd, resource_group_name, service_name, sid, display_name=None, scope=None, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None):
