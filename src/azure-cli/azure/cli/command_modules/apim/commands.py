@@ -127,9 +127,9 @@ def load_command_table(self, _):
         g.generic_update_command('update', custom_func_name='product_update', getter_name='get', setter_name='create_or_update', supports_no_wait=True)
 
     # subscription apis
-    with self.command_group('apim subscription', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True, client_factory=cf_subscription) as g:
+    with self.command_group('apim subscription', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True) as g:
         g.custom_command('create', 'create_subscription', table_transformer=subscription_output_format)
-        g.custom_command('list', 'list_subscription', table_transformer=subscription_output_format)
-        g.custom_command('show', 'get_subscription', table_transformer=subscription_output_format)
-        g.custom_command('delete', 'delete_subscription', confirmation=True, table_transformer=subscription_output_format)
-        g.generic_update_command('update', custom_func_name='update_subscription', supports_no_wait=subscription_output_format )
+        g.custom_command('list', 'list_subscription', table_transformer=subscription_output_format,client_factory=cf_subscription)
+        g.custom_command('show', 'get_subscription', table_transformer=subscription_output_format,client_factory=cf_subscription)
+        g.custom_command('delete', 'delete_subscription', confirmation=True, table_transformer=subscription_output_format,client_factory=cf_subscription)
+        g.generic_update_command('update', custom_func_name='update_subscription', supports_no_wait=subscription_output_format,client_factory=cf_subscription)

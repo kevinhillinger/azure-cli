@@ -9,8 +9,8 @@ from azure.cli.core.commands.parameters import (get_enum_type,
                                                 get_location_type,
                                                 resource_group_name_type,
                                                 get_three_state_flag)
-from azure.mgmt.apimanagement.models import (SkuType, VirtualNetworkType, ProductState, SubscriptionState)
-from azure.cli.command_modules.apim.operations.subscription import (SubscriptionKeyKind)
+from azure.mgmt.apimanagement.models import (SkuType, VirtualNetworkType, ProductState, SoapApiType, ContentFormat, SubscriptionState)
+
 
 SKU_TYPES = SkuType
 VNET_TYPES = VirtualNetworkType
