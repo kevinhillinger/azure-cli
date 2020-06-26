@@ -16,6 +16,7 @@ VNET_TYPES = VirtualNetworkType
 STATE_TYPES = ProductState
 
 
+# pylint: disable=too-many-statements
 def load_arguments(self, _):
 
     from azure.cli.core.commands.parameters import tags_type

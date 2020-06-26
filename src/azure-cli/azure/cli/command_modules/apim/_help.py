@@ -148,22 +148,27 @@ examples:
         az apim product delete -g MyResourceGroup -n MyApim -p starter
 """
 
+helps['apim api'] = """
+type: group
+short-summary: Manage Azure API Management API services.
+"""
+
 helps['apim api create'] = """
 type: command
 short-summary: Creates new API of the API Management service instance.
 parameters:
   - name: --display-name
     type: string
-    short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter. 
+    short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter.
   - name: --oauth2-authorization-server-id
     type: string
-    short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance. 
+    short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance.
   - name: --oauth2-scope
     type: string
-    short-summary: OAuth 2.0 operations scope. 
+    short-summary: OAuth 2.0 operations scope.
   - name: --openid-provider-id
     type: string
-    short-summary: OpenID authorization server identifier. Authorization server definition must already exist in the API Management service instance. 
+    short-summary: OpenID authorization server identifier. Authorization server definition must already exist in the API Management service instance.
   - name: --service-url
     type: string
     short-summary: Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
@@ -215,19 +220,19 @@ examples:
         az apim api create -n MyApim -g MyResourceGroup -a MyOpenIdConnectApi --display-name "Swagger Petstore" --description "This is a sample server Petstore server" --path petstore --openid-provider-id IdPid --openid-bearer-token-sending-methods authorizationHeader
   - name: Import an API from a Swagger JSON link.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --format "swagger-link-json" --value "http://petstore.swagger.io/v2/swagger.json" --path petstore 
+        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import_format "swagger-link-json" --value "http://petstore.swagger.io/v2/swagger.json" --path petstore
   - name: Import an API from a Swagger JSON link, overwriting the service URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --format "swagger-link-json" --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --path petstoreapi123 --service-url "http://petstore.swagger.wordnik.com/api"
+        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import_format "swagger-link-json" --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --path petstoreapi123 --service-url "http://petstore.swagger.wordnik.com/api"
   - name: Import an API from an OpenAPI 3 URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyOai3Api --format "openapi-link" --value "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml" --path petstore
+        az apim api create -n MyApim -g MyResourceGroup -a MyOai3Api --import_format "openapi-link" --value "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml" --path petstore
   - name: Import an API with SOAP pass-through using a WSDL URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-soap" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type soap
+        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import_format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-soap" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type soap
   - name: Import an API converting a WSDL SOAP endpoint to a REST endpoint.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-http" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type http
+        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import_format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-http" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type http
 """
 
 helps['apim api update'] = """
@@ -236,16 +241,16 @@ short-summary: Updates API attributes specified by the parameters.
 parameters:
   - name: --display-name
     type: string
-    short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter. 
+    short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter.
   - name: --oauth2-authorization-server-id
     type: string
-    short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance. 
+    short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance.
   - name: --oauth2-scope
     type: string
-    short-summary: OAuth 2.0 operations scope. 
+    short-summary: OAuth 2.0 operations scope.
   - name: --openid-provider-id
     type: string
-    short-summary: OpenID authorization server identifier. Authorization server definition must already exist in the API Management service instance. 
+    short-summary: OpenID authorization server identifier. Authorization server definition must already exist in the API Management service instance.
   - name: --service-url
     type: string
     short-summary: Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.

@@ -10,6 +10,7 @@ from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, 
 from ._validators import validate_policy_xml_content
 
 
+
 def load_command_table(self, _):
 
     service_sdk = CliCommandType(
