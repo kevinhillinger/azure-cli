@@ -72,7 +72,7 @@ def load_arguments(self, _):
         c.argument('protocols', nargs='+', help='Describe on which protocols the operations in this API can be invoked. Default: "https"')
         c.argument('openid_bearer_token_sending_methods', nargs='+', help='Indicate how to send the bearer token to the backend server.')
         c.argument('api_type', arg_type=get_enum_type(SoapApiType), help='Type of API to create.')
-        c.argument('format', arg_type=get_enum_type(ContentFormat), help='Format of the Content in which the API is getting imported.')
+        c.argument('import_format', arg_type=get_enum_type(ContentFormat), help='Format of the Content in which the API is getting imported.')
         c.argument('delete_revisions', arg_type=get_three_state_flag(), help='Delete all revisions of the API.')
         c.argument('expand_api_version_set', arg_type=get_three_state_flag(), help='Include full ApiVersionSet resource in response.')
 

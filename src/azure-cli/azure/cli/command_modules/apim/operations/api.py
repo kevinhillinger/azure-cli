@@ -191,10 +191,9 @@ def get_api(client, resource_group_name, service_name, api_id):
     return client.get(resource_group_name, service_name, api_id)
 
 
-def get_api_etag(client, resource_group_name, service_name, api_id):
-    return client.get_entity_tag(resource_group_name, service_name, api_id)
+# def get_api_etag(client, resource_group_name, service_name, api_id):
+#     return client.get_entity_tag(resource_group_name, service_name, api_id)
 
 
-# pylint: disable=redefined-builtin
-def list_api(client, resource_group_name, service_name, filter=None, top=None, skip=None, tags=None, expand_api_version_set=None):
-    return client.list_by_service(resource_group_name, service_name, filter, top, skip, tags, expand_api_version_set)
+def list_api(client, resource_group_name, service_name, tags=None, expand_api_version_set=None):
+    return client.list_by_service(resource_group_name, service_name, None, None, None, tags, expand_api_version_set)
