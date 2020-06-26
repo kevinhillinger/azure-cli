@@ -48,7 +48,12 @@ def create_subscription(cmd, resource_group_name, service_name, sid, display_nam
 def update_subscription(cmd, resource_group_name, service_name, sid, display_name, scope, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None):
     return create_subscription(cmd, resource_group_name, service_name, sid, display_name, scope, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None)
 
-
 def delete_subscription(client, resource_group_name, service_name, sid):
     return client.delete(resource_group_name, service_name, sid, if_match='*')
+
+def regenerate_primary_key(client, resource_group_name, service_name, sid):
+    return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
+
+def regenerate_secondary_key(client, resource_group_name, service_name, sid):
+    return client.regenerate_secondary_key(resource_group_name, service_name, sid, if_match='*')
 
