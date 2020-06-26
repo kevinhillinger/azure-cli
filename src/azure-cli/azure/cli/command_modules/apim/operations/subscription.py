@@ -28,7 +28,7 @@ def create_subscription(cmd, resource_group_name, service_name, sid, display_nam
     client = cf_subscription(cmd.cli_ctx)
     service_client = cf_service(cmd.cli_ctx)
     apim_instance = service_client.get(resource_group_name, service_name)
-    scope = apim_instance.id + "/" + scope
+    scope = apim_instance.id + scope
 
     parameters = SubscriptionCreateParameters(
         display_name = display_name,
@@ -54,7 +54,6 @@ def create_subscription(cmd, resource_group_name, service_name, sid, display_nam
 
 
 def update_subscription(cmd, resource_group_name, service_name, sid, display_name=None, scope=None, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None):
-
     from azure.cli.command_modules.apim._client_factory import (cf_service, cf_subscription)
     client = cf_subscription(cmd.cli_ctx)
     if scope is not None:
@@ -72,6 +71,7 @@ def update_subscription(cmd, resource_group_name, service_name, sid, display_nam
         allow_tracing=allow_tracing
     )
     return client.update(resource_group_name, service_name, sid, parameters, if_match='*')
+
 
 def delete_subscription(client, resource_group_name, service_name, sid):
     return client.delete(resource_group_name, service_name, sid, if_match='*')
