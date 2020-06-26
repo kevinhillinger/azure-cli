@@ -35,36 +35,6 @@ def create_api(client, resource_group_name, service_name, api_id,
     if display_name is None and REVISION_INDICATOR not in api_id:
         display_name = path
 
-from azure.cli.core.util import sdk_no_wait
-from azure.mgmt.apimanagement.models import (ApiContract, ApiCreateOrUpdateParameter, Protocol,
-                                                AuthenticationSettingsContract, OAuth2AuthenticationSettingsContract, OpenIdAuthenticationSettingsContract, BearerTokenSendingMethod,
-                                                SubscriptionKeyParameterNamesContract,
-                                                ApiCreateOrUpdatePropertiesWsdlSelector,
-                                                ContentFormat)
-
-# API Operations
-def create_api(client, resource_group_name, service_name, api_id, 
-                path, display_name=None, description=None, service_url=None, protocols=None, 
-                api_revision=None, api_revision_description=None, 
-                api_version=None, api_version_set_id=None, 
-                source_api_id=None,
-                oauth2_authorization_server_id=None, oauth2_scope=None,
-                openid_provider_id=None, openid_bearer_token_sending_methods=None,
-                subscription_required=None, subscription_key_header_name=None, subscription_key_query_string_name=None,
-                is_current=None, is_online=None, 
-                format=None, value=None,
-                wsdl_service_name=None, wsdl_endpoint_name=None, api_type=None,
-            ):
-    
-    # Revsion indicator
-    REVISION_INDICATOR = ";rev="
-
-    if_match = None
-
-    # Default the display name to the path - DO NOT DEFAULT when creating a new revision
-    if display_name is None and REVISION_INDICATOR not in api_id:
-        display_name = path
-
     # Set the authentication settings
     authentication_settings = AuthenticationSettingsContract()
     if oauth2_authorization_server_id is not None:
@@ -81,7 +51,6 @@ def create_api(client, resource_group_name, service_name, api_id,
         authentication_settings.openid = openid
 
     # Set the remaining parameters
-    dummy = ApiCreateOrUpdateParameter(path = "path")
     parameters = ApiCreateOrUpdateParameter(
         path=path,
         display_name=display_name,
@@ -224,6 +193,6 @@ def get_api(client, resource_group_name, service_name, api_id):
 # def get_api_etag(client, resource_group_name, service_name, api_id):
 #     return client.get_entity_tag(resource_group_name, service_name, api_id)
 
-
-def list_api(client, resource_group_name, service_name, tags=None, expand_api_version_set=None):
-    return client.list_by_service(resource_group_name, service_name, None, None, None, tags, expand_api_version_set)
+# pylint: disable=redefined-builtin
+def list_api(client, resource_group_name, service_name, filter=None, top=None, skip=None, tags=None, expand_api_version_set=None):
+    return client.list_by_service(resource_group_name, service_name, filter, top, skip, tags, expand_api_version_set)

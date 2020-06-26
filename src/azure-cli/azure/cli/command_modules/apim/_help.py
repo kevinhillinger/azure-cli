@@ -220,19 +220,19 @@ examples:
         az apim api create -n MyApim -g MyResourceGroup -a MyOpenIdConnectApi --display-name "Swagger Petstore" --description "This is a sample server Petstore server" --path petstore --openid-provider-id IdPid --openid-bearer-token-sending-methods authorizationHeader
   - name: Import an API from a Swagger JSON link.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import-format "swagger-link-json" --value "http://petstore.swagger.io/v2/swagger.json" --path petstore
+        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import_format "swagger-link-json" --value "http://petstore.swagger.io/v2/swagger.json" --path petstore
   - name: Import an API from a Swagger JSON link, overwriting the service URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import-format "swagger-link-json" --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --path petstoreapi123 --service-url "http://petstore.swagger.wordnik.com/api"
+        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import_format "swagger-link-json" --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --path petstoreapi123 --service-url "http://petstore.swagger.wordnik.com/api"
   - name: Import an API from an OpenAPI 3 URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyOai3Api --import-format "openapi-link" --value "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml" --path petstore
+        az apim api create -n MyApim -g MyResourceGroup -a MyOai3Api --import_format "openapi-link" --value "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml" --path petstore
   - name: Import an API with SOAP pass-through using a WSDL URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import-format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-soap" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type soap
+        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import_format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-soap" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type soap
   - name: Import an API converting a WSDL SOAP endpoint to a REST endpoint.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import-format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-http" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type http
+        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import_format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-http" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type http
 """
 
 helps['apim api update'] = """
