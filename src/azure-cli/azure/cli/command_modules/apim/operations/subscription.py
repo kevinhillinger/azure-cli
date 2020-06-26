@@ -72,15 +72,12 @@ def update_subscription(cmd, resource_group_name, service_name, sid, display_nam
     )
     return client.update(resource_group_name, service_name, sid, parameters, if_match='*')
 
-
 def delete_subscription(client, resource_group_name, service_name, sid):
     return client.delete(resource_group_name, service_name, sid, if_match='*')
 
+def regenerate_primary_key(client, resource_group_name, service_name, sid):
+    return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
 
-def regenerate_key(client, resource_group_name, service_name, sid, key_kind=SubscriptionKeyKind.primary.value):
-    if key_kind == SubscriptionKeyKind.primary.value:
-        return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
+def regenerate_secondary_key(client, resource_group_name, service_name, sid):
     return client.regenerate_secondary_key(resource_group_name, service_name, sid, if_match='*')
 
-def list_keys(client, resource_group_name, service_name, sid):
-    return client.list_secrets(resource_group_name, service_name, sid, if_match='*')
