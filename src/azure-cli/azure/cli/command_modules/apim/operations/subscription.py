@@ -20,7 +20,7 @@ def create_subscription(cmd, resource_group_name, service_name, sid, display_nam
     client = cf_subscription(cmd.cli_ctx)
     service_client = cf_service(cmd.cli_ctx)
     apim_instance = service_client.get(resource_group_name, service_name)
-    scope = apim_instance.id + "/" + scope
+    scope = apim_instance.id + scope
 
     parameters = SubscriptionCreateParameters(
         display_name = display_name,
@@ -45,8 +45,8 @@ def create_subscription(cmd, resource_group_name, service_name, sid, display_nam
     return client.create_or_update(resource_group_name, service_name, sid, parameters)
 
 
-def update_subscription(client, resource_group_name, service_name):
-    return None
+def update_subscription(cmd, resource_group_name, service_name, sid, display_name, scope, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None):
+    return create_subscription(cmd, resource_group_name, service_name, sid, display_name, scope, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None)
 
 
 def delete_subscription(client, resource_group_name, service_name, sid):
