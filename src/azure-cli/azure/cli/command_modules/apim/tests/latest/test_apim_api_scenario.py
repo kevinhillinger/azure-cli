@@ -24,7 +24,7 @@ class ApimApiScenarioTest(ScenarioTest):
         path = 'api-path'
         display_name = 'api display name'
         description = 'api description'
-        service_url  = 'http://echoapi.cloudapp.net/api'
+        service_url = 'http://echoapi.cloudapp.net/api'
         protocols = 'http https'
         subscription_key_header_name = 'header1234'
         subscription_key_query_string_name = 'query1234'
@@ -56,7 +56,8 @@ class ApimApiScenarioTest(ScenarioTest):
             'api_id': api_id + '_clone',
             'path': path + '-clone',
             'display_name': display_name + ' clone',
-            'description': description + ' clone'
+            'description': description + ' clone',
+            'source_api_id': source_api_id
         })
 
         self.cmd('apim api create -n {apim_name} -g {rg} -a {api_id} --path {path} --display-name {display_name} --description {description} --service-url {service_url} --protocols {protocols} --source-api-id {source_api_id}', checks=[
@@ -94,10 +95,10 @@ class ApimApiScenarioTest(ScenarioTest):
         # api_id_swagger = api_id + '_swagger'
         # path_swagger = path + '_swagger'
         # display_name_swagger = 'Swagger Sample App'
-        # format_swagger = 'swagger-link-json'
+        # import_format_swagger = 'swagger-link-json'
         # value_swagger = 'http://apimpimportviaurl.azurewebsites.net/api/apidocs/'
         # service_url_swagger = 'http://petstore.swagger.wordnik.com/api'
-        # self.cmd('apim api create -n {apim_name} -g {rg} -a {api_id_swagger} --path {path_swagger} --format {format_swagger} --value {value_swagger} --service-url {service_url_swagger}', checks=[
+        # self.cmd('apim api create -n {apim_name} -g {rg} -a {api_id_swagger} --path {path_swagger} --import_format {import_format_swagger} --value {value_swagger} --service-url {service_url_swagger}', checks=[
         #     self.check('name', '{api_id_swagger}'),
         #     self.check('path', '{path_swagger}'),
         #     self.check('displayName', '{display_name_swagger}'),
