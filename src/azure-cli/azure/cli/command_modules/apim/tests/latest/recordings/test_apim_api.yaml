@@ -1,0 +1,1197 @@
+interactions:
+- request:
+    body: '{"properties": {"description": "api description", "authenticationSettings":
+      {}, "subscriptionKeyParameterNames": {"header": "header1234", "query": "query1234"},
+      "displayName": "api display name", "serviceUrl": "http://echoapi.cloudapp.net/api",
+      "path": "api-path", "protocols": ["http"]}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '288'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
+        --subscription-key-query-string-name
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name\",\r\n    \"apiRevision\":
+        \"1\",\r\n    \"description\": \"api description\",\r\n    \"subscriptionRequired\":
+        true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n    \"path\":
+        \"api-path\",\r\n    \"protocols\": [\r\n      \"http\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '810'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:50:14 GMT
+      etag:
+      - '"AAAAAAAaLiI="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
+        --subscription-key-query-string-name
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name\",\r\n    \"apiRevision\":
+        \"1\",\r\n    \"description\": \"api description\",\r\n    \"subscriptionRequired\":
+        true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n    \"path\":
+        \"api-path\",\r\n    \"protocols\": [\r\n      \"http\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '810'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:50:44 GMT
+      etag:
+      - '"AAAAAAAaLiI="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: 'b''b\''{"properties": {"description": "api description clone", "authenticationSettings":
+      {}, "sourceApiId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id",
+      "displayName": "api display name clone", "path": "api-path-clone", "protocols":
+      ["https"]}}\'''''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '417'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -a --path --display-name --description --source-api-id
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id-clone\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name clone\",\r\n
+        \   \"apiRevision\": \"1\",\r\n    \"description\": \"api description clone\",\r\n
+        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n
+        \   \"path\": \"api-path-clone\",\r\n    \"protocols\": [\r\n      \"https\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '841'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:50:46 GMT
+      etag:
+      - '"AAAAAAAaLiY="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a --path --display-name --description --source-api-id
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id-clone\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name clone\",\r\n
+        \   \"apiRevision\": \"1\",\r\n    \"description\": \"api description clone\",\r\n
+        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n
+        \   \"path\": \"api-path-clone\",\r\n    \"protocols\": [\r\n      \"https\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '841'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:51:16 GMT
+      etag:
+      - '"AAAAAAAaLiY="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: 'b''b\''{"properties": {"authenticationSettings": {}, "apiRevisionDescription":
+      "api description revision 2", "sourceApiId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id",
+      "serviceUrl": "http://echoapi.cloudapp.net/api2", "path": "api-path"}}\'''''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '412'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -a --path --api-revision-description --service-url --source-api-id
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id;rev=2\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name\",\r\n    \"apiRevision\":
+        \"2\",\r\n    \"description\": \"api description\",\r\n    \"subscriptionRequired\":
+        true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api2\",\r\n    \"path\":
+        \"api-path\",\r\n    \"protocols\": [\r\n      \"http\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"apiRevisionDescription\": \"api description revision 2\"\r\n
+        \ }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '860'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:51:18 GMT
+      etag:
+      - '"AAAAAAAaLio="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a --path --api-revision-description --service-url --source-api-id
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id;rev=2\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name\",\r\n    \"apiRevision\":
+        \"2\",\r\n    \"description\": \"api description\",\r\n    \"subscriptionRequired\":
+        true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api2\",\r\n    \"path\":
+        \"api-path\",\r\n    \"protocols\": [\r\n      \"http\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"apiRevisionDescription\": \"api description revision 2\"\r\n
+        \ }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '860'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:51:48 GMT
+      etag:
+      - '"AAAAAAAaLio="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"properties": {"authenticationSettings": {}, "displayName": "api-path-swagger",
+      "serviceUrl": "http://petstore.swagger.wordnik.com/api", "path": "api-path-swagger",
+      "protocols": ["https"], "value": "http://apimpimportviaurl.azurewebsites.net/api/apidocs/",
+      "format": "swagger-link-json"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '289'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -a --path --import-format --value --service-url
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Sat, 27 Jun 2020 01:51:50 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5ef6a6362354cb1cb042da63&asyncCode=201
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a --path --import-format --value --service-url
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5ef6a6362354cb1cb042da63&asyncCode=201
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id-swagger\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"Swagger Sample App\",\r\n    \"apiRevision\":
+        \"1\",\r\n    \"description\": \"This is a sample server Petstore server.
+        \ You can find out more about Swagger \\n    at <a href=\\\"http://swagger.wordnik.com\\\">http://swagger.wordnik.com</a>
+        or on irc.freenode.net, #swagger.  For this sample,\\n    you can use the
+        api key \\\"special-key\\\" to test the authorization filters\",\r\n    \"subscriptionRequired\":
+        true,\r\n    \"serviceUrl\": \"http://petstore.swagger.wordnik.com/api\",\r\n
+        \   \"path\": \"api-path-swagger\",\r\n    \"protocols\": [\r\n      \"https\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"Ocp-Apim-Subscription-Key\",\r\n      \"query\":
+        \"subscription-key\"\r\n    },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1139'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:52:19 GMT
+      etag:
+      - '"AAAAAAAaLi4="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"properties": {"authenticationSettings": {}, "displayName": "api-path-oai3-import",
+      "path": "api-path-oai3-import", "protocols": ["https"], "value": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml",
+      "format": "openapi-link"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '274'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -a --path --import-format --value
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Sat, 27 Jun 2020 01:52:21 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5ef6a656c4865110e850b3a0&asyncCode=201
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a --path --import-format --value
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5ef6a656c4865110e850b3a0&asyncCode=201
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id-oai3-import\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"Swagger Petstore\",\r\n    \"apiRevision\":
+        \"1\",\r\n    \"description\": null,\r\n    \"subscriptionRequired\": true,\r\n
+        \   \"serviceUrl\": \"http://petstore.swagger.io/v1\",\r\n    \"path\": \"api-path-oai3-import\",\r\n
+        \   \"protocols\": [\r\n      \"https\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"Ocp-Apim-Subscription-Key\",\r\n      \"query\":
+        \"subscription-key\"\r\n    },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '854'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:52:52 GMT
+      etag:
+      - '"AAAAAAAaLlM="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"properties": {"authenticationSettings": {}, "type": "http", "displayName":
+      "api-path-wsdl", "path": "api-path-wsdl", "protocols": ["https"], "value": "http://www.dneonline.com/calculator.asmx?wsdl",
+      "format": "wsdl-link", "wsdlSelector": {"wsdlServiceName": "Calculator", "wsdlEndpointName":
+      "CalculatorSoap"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '313'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -a --path --import-format --value --wsdl-service-name --wsdl-endpoint-name
+        --api-type
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Sat, 27 Jun 2020 01:52:53 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5ef6a676b6c3ea1c50745d26&asyncCode=201
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a --path --import-format --value --wsdl-service-name --wsdl-endpoint-name
+        --api-type
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5ef6a676b6c3ea1c50745d26&asyncCode=201
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id-wsdl\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"Calculator\",\r\n    \"apiRevision\":
+        \"1\",\r\n    \"description\": null,\r\n    \"subscriptionRequired\": true,\r\n
+        \   \"serviceUrl\": \"http://www.dneonline.com\",\r\n    \"path\": \"api-path-wsdl\",\r\n
+        \   \"protocols\": [\r\n      \"https\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"Ocp-Apim-Subscription-Key\",\r\n      \"query\":
+        \"subscription-key\"\r\n    },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '822'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:53:23 GMT
+      etag:
+      - '"AAAAAAAaLmI="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api update
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a --path --display-name --description --subscription-key-header-name
+        --subscription-key-query-string-name
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name\",\r\n    \"apiRevision\":
+        \"1\",\r\n    \"description\": \"api description\",\r\n    \"subscriptionRequired\":
+        true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n    \"path\":
+        \"api-path\",\r\n    \"protocols\": [\r\n      \"http\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '810'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:53:25 GMT
+      etag:
+      - '"AAAAAAAaLiI="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"properties": {"description": "api description updated", "authenticationSettings":
+      {}, "subscriptionKeyParameterNames": {"header": "updatedheader1234", "query":
+      "updatedquery1234"}, "apiRevision": "1", "isCurrent": true, "subscriptionRequired":
+      true, "displayName": "api display name updated", "serviceUrl": "http://echoapi.cloudapp.net/api",
+      "path": "api-path-updated", "protocols": ["http"]}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api update
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '395'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -a --path --display-name --description --subscription-key-header-name
+        --subscription-key-query-string-name
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name updated\",\r\n
+        \   \"apiRevision\": \"1\",\r\n    \"description\": \"api description updated\",\r\n
+        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n
+        \   \"path\": \"api-path-updated\",\r\n    \"protocols\": [\r\n      \"http\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"updatedheader1234\",\r\n      \"query\": \"updatedquery1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:53:26 GMT
+      etag:
+      - '"AAAAAAAaLn8="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name updated\",\r\n
+        \   \"apiRevision\": \"1\",\r\n    \"description\": \"api description updated\",\r\n
+        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n
+        \   \"path\": \"api-path-updated\",\r\n    \"protocols\": [\r\n      \"http\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"updatedheader1234\",\r\n      \"query\": \"updatedquery1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:53:26 GMT
+      etag:
+      - '"AAAAAAAaLn8="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id;rev=2\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name updated\",\r\n
+        \   \"apiRevision\": \"2\",\r\n    \"description\": \"api description updated\",\r\n
+        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api2\",\r\n
+        \   \"path\": \"api-path-updated\",\r\n    \"protocols\": [\r\n      \"http\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"apiRevisionDescription\": \"api description revision 2\"\r\n
+        \ }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '884'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:53:26 GMT
+      etag:
+      - '"AAAAAAAaLoA="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api list
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-clone\",\r\n      \"properties\": {\r\n        \"displayName\": \"api
+        display name clone\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
+        \"api description clone\",\r\n        \"subscriptionRequired\": true,\r\n
+        \       \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n        \"path\":
+        \"api-path-clone\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"isCurrent\": true\r\n      }\r\n    },\r\n    {\r\n      \"id\":
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id\",\r\n      \"properties\": {\r\n        \"displayName\": \"api display
+        name updated\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
+        \"api description updated\",\r\n        \"subscriptionRequired\": true,\r\n
+        \       \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n        \"path\":
+        \"api-path-updated\",\r\n        \"protocols\": [\r\n          \"http\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"isCurrent\": true\r\n      }\r\n    },\r\n    {\r\n      \"id\":
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-wsdl\",\r\n      \"properties\": {\r\n        \"displayName\": \"Calculator\",\r\n
+        \       \"apiRevision\": \"1\",\r\n        \"description\": null,\r\n        \"subscriptionRequired\":
+        true,\r\n        \"serviceUrl\": \"http://www.dneonline.com\",\r\n        \"path\":
+        \"api-path-wsdl\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"isCurrent\": true\r\n      }\r\n    },\r\n    {\r\n      \"id\":
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-oai3-import\",\r\n      \"properties\": {\r\n        \"displayName\":
+        \"Swagger Petstore\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
+        null,\r\n        \"subscriptionRequired\": true,\r\n        \"serviceUrl\":
+        \"http://petstore.swagger.io/v1\",\r\n        \"path\": \"api-path-oai3-import\",\r\n
+        \       \"protocols\": [\r\n          \"https\"\r\n        ],\r\n        \"authenticationSettings\":
+        null,\r\n        \"subscriptionKeyParameterNames\": null,\r\n        \"isCurrent\":
+        true\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-swagger\",\r\n      \"properties\": {\r\n        \"displayName\":
+        \"Swagger Sample App\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
+        \"This is a sample server Petstore server.  You can find out more about Swagger
+        \\n    at <a href=\\\"http://swagger.wordnik.com\\\">http://swagger.wordnik.com</a>
+        or on irc.freenode.net, #swagger.  For this sample,\\n    you can use the
+        api key \\\"special-key\\\" to test the authorization filters\",\r\n        \"subscriptionRequired\":
+        true,\r\n        \"serviceUrl\": \"http://petstore.swagger.wordnik.com/api\",\r\n
+        \       \"path\": \"api-path-swagger\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"isCurrent\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
+        5\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '4296'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:53:28 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api delete
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      If-Match:
+      - '*'
+      ParameterSetName:
+      - -n -g -a --delete-revisions --yes
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: DELETE
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?deleteRevisions=true&api-version=2019-01-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Sat, 27 Jun 2020 01:53:28 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-deletes:
+      - '14999'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api list
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
+        Azure-SDK-For-Python AZURECLI/2.8.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-01-01
+  response:
+    body:
+      string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-clone\",\r\n      \"properties\": {\r\n        \"displayName\": \"api
+        display name clone\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
+        \"api description clone\",\r\n        \"subscriptionRequired\": true,\r\n
+        \       \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n        \"path\":
+        \"api-path-clone\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"isCurrent\": true\r\n      }\r\n    },\r\n    {\r\n      \"id\":
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-wsdl\",\r\n      \"properties\": {\r\n        \"displayName\": \"Calculator\",\r\n
+        \       \"apiRevision\": \"1\",\r\n        \"description\": null,\r\n        \"subscriptionRequired\":
+        true,\r\n        \"serviceUrl\": \"http://www.dneonline.com\",\r\n        \"path\":
+        \"api-path-wsdl\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"isCurrent\": true\r\n      }\r\n    },\r\n    {\r\n      \"id\":
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-oai3-import\",\r\n      \"properties\": {\r\n        \"displayName\":
+        \"Swagger Petstore\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
+        null,\r\n        \"subscriptionRequired\": true,\r\n        \"serviceUrl\":
+        \"http://petstore.swagger.io/v1\",\r\n        \"path\": \"api-path-oai3-import\",\r\n
+        \       \"protocols\": [\r\n          \"https\"\r\n        ],\r\n        \"authenticationSettings\":
+        null,\r\n        \"subscriptionKeyParameterNames\": null,\r\n        \"isCurrent\":
+        true\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id-swagger\",\r\n      \"properties\": {\r\n        \"displayName\":
+        \"Swagger Sample App\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
+        \"This is a sample server Petstore server.  You can find out more about Swagger
+        \\n    at <a href=\\\"http://swagger.wordnik.com\\\">http://swagger.wordnik.com</a>
+        or on irc.freenode.net, #swagger.  For this sample,\\n    you can use the
+        api key \\\"special-key\\\" to test the authorization filters\",\r\n        \"subscriptionRequired\":
+        true,\r\n        \"serviceUrl\": \"http://petstore.swagger.wordnik.com/api\",\r\n
+        \       \"path\": \"api-path-swagger\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"isCurrent\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
+        4\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '3495'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 27 Jun 2020 01:53:29 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1
