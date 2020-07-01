@@ -198,20 +198,11 @@ examples:
         az apim subscription show -g MyResourceGroup -n MyApim --sid mySubscriptionId
 """
 
-helps['apim subscription regenerate-primary-key'] = """
+helps['apim subscription keys regenerate'] = """
 type: command
-short-summary: Regenerates primary key of existing subscription of the API Management
+short-summary: Regenerates a key of existing subscription of the API Management. If primary is specified for key-kind or key-kind is omitted, it will regenerate the primary key. Otherwise, specify secondary for key-kind to regenerate the secondary key.
 examples:
   - name: Common usage.
     text: >
-        az apim subscription regenerate-primary-key -g MyResourceGroup -n MyApim --sid mySubscriptionId 
-"""
-
-helps['apim subscription regenerate-secondary-key'] = """
-type: command
-short-summary: Regenerates secondary key of existing subscription of the API Management
-examples:
-  - name: Common usage.
-    text: >
-        az apim subscription regenerate-secondary-key -g MyResourceGroup -n MyApim --sid mySubscriptionId 
+        az apim subscription keys regenerate --key-kind secondary -g MyResourceGroup -n MyApim --sid mySubscriptionId
 """

@@ -102,5 +102,8 @@ def load_command_table(self, _):
         g.custom_command('show', 'get_subscription', table_transformer=subscription_output_format, client_factory=cf_subscription)
         g.custom_command('delete', 'delete_subscription', confirmation=True, table_transformer=subscription_output_format, client_factory=cf_subscription)
         g.custom_command('update', 'update_subscription', table_transformer=subscription_output_format)
-        g.custom_command('regenerate-primary-key', 'regenerate_primary_key', table_transformer=subscription_output_format, client_factory=cf_subscription)
-        g.custom_command('regenerate-secondary-key', 'regenerate_secondary_key', table_transformer=subscription_output_format, client_factory=cf_subscription)
+        g.custom_command('regenerate-key', 'regenerate_key', table_transformer=subscription_output_format, client_factory=cf_subscription)
+        
+    with self.command_group('apim subscription keys', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True) as g:
+        g.custom_command('regenerate', 'regenerate_key')
+        

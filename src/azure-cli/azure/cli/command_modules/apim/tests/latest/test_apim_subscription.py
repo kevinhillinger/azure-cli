@@ -7,7 +7,6 @@ import os
 import unittest
 
 from azure_devtools.scenario_tests import AllowLargeResponse
-from azure_devtools.scenario_tests import AllowLargeResponse
 from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagementPreparer)
 
 
@@ -19,7 +18,7 @@ class ApimSubscriptionScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @ApiManagementPreparer(parameter_name='apim_name')
     # sid, display_name, scope, owner_id, primary_key, secondary_key, state, allow_tracing
-    def test_apim_Subscription(self, resource_group_name, apim_name):
+    def test_apim_Subscription(self, resource_group, apim_name):
         # Set variable for subscription operations
         subscription_id = self.create_random_name('apim_subscription-', 50)
         display_name = 'foo-bar'
@@ -56,12 +55,7 @@ class ApimSubscriptionScenarioTest(ScenarioTest):
             self.check('state', '{state}')
         ])
 
-        self.cmd('apim subscription regenerate-primary-key -n {apim_name} -g {rg} -sid {subscription_id}', checks=[
-            self.check('display_name', '{display_name}'),
-            self.check('state', '{state}')
-        ])
-
-        self.cmd('apim subscription regenerate-secondary-key -n {apim_name} -g {rg} -sid {subscription_id}', checks=[
+        self.cmd('apim subscription keys regenerate --key-kind primary -n {apim_name} -g {rg} -sid {subscription_id}', checks=[
             self.check('display_name', '{display_name}'),
             self.check('state', '{state}')
         ])
