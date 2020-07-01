@@ -8,12 +8,9 @@
 from enum import Enum
 from azure.mgmt.apimanagement.models import SubscriptionCreateParameters, SubscriptionUpdateParameters
 
-
 class SubscriptionKeyKind(Enum):
     primary = "primary"
     secondary = "secondary"
-
-
 
 def list_subscription(client, resource_group_name, service_name):
     return client.list(resource_group_name, service_name)
@@ -77,9 +74,10 @@ def delete_subscription(client, resource_group_name, service_name, sid):
     return client.delete(resource_group_name, service_name, sid, if_match='*')
 
 
-def regenerate_primary_key(client, resource_group_name, service_name, sid):
-    return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
+def regenerate_key(client, resource_group_name, service_name, sid, key_kind=SubscriptionKeyKind.primary.value):
+    if key_kind == SubscriptionKeyKind.primary:
+        return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
+    else: 
+        return client.regenerate_secondary_key(resource_group_name, service_name, sid, if_match='*')
 
 
-def regenerate_secondary_key(client, resource_group_name, service_name, sid):
-    return client.regenerate_secondary_key(resource_group_name, service_name, sid, if_match='*')

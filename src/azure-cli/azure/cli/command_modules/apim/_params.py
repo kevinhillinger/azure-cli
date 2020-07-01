@@ -10,14 +10,13 @@ from azure.cli.core.commands.parameters import (get_enum_type,
                                                 resource_group_name_type,
                                                 get_three_state_flag)
 from azure.mgmt.apimanagement.models import (SkuType, VirtualNetworkType, ProductState, SoapApiType, ContentFormat, SubscriptionState)
-
+from azure.cli.command_modules.apim.operations.subscription import SubscriptionKeyKind
 
 SKU_TYPES = SkuType
 VNET_TYPES = VirtualNetworkType
 STATE_TYPES = ProductState
 SUBSCRIPTION_TYPES = SubscriptionState
 SUBSCRIPTION_KEY_KIND = SubscriptionKeyKind
-
 
 def load_arguments(self, _):
 
