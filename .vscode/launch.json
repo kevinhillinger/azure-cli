@@ -10,6 +10,7 @@
             "cwd": "${workspaceRoot}",
             "args": [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "--help"
 =======
                 "apim",
@@ -443,6 +444,9 @@
                 "--delete-revisions",
                 "--yes"
 >>>>>>> tests #89
+=======
+                "--help"
+>>>>>>> reverting vscode launch
             ],
             "console": "integratedTerminal",
             "debugOptions": [
