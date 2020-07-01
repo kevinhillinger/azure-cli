@@ -54,12 +54,17 @@ class ApimSubscriptionScenarioTest(ScenarioTest):
             self.check('display_name', '{display_name}'),
             self.check('state', '{state}')
         ])
+        
+        original_keys = self.cmd('apim subscription show -n {apim_name} -g {rg} -sid {subscription_id}').get_output_in_json()
+        
+        self.cmd('apim subscription keys regenerate --key-kind primary -n {apim_name} -g {rg} -sid {subscription_id}')
+        self.cmd('apim subscription keys regenerate --key-kind secondary -n {apim_name} -g {rg} -sid {subscription_id}')
 
-        self.cmd('apim subscription keys regenerate --key-kind primary -n {apim_name} -g {rg} -sid {subscription_id}', checks=[
-            self.check('display_name', '{display_name}'),
-            self.check('state', '{state}')
-        ])
+        modified_keys = self.cmd('apim subscription keys show -n {apim_name} -g {rg} -sid {subscription_id}').get_output_in_json()
 
+        assert original_keys['primaryKey'] != modified_keys['primaryKey']
+        assert original_keys['secondaryKey'] != modified_keys['secondaryKey']
+        
         self.cmd('apim subscription delete -n {apim_name} -g {rg} -sid {subscription_id}')
 
         final_count = len(self.cmd('apim subscription list -n {apim_name} -g {rg}').get_output_in_json())
