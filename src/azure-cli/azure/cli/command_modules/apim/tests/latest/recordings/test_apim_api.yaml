@@ -21,8 +21,8 @@ interactions:
       - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: PUT
@@ -46,9 +46,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:50:14 GMT
+      - Wed, 01 Jul 2020 19:26:40 GMT
       etag:
-      - '"AAAAAAAaLiI="'
+      - '"AAAAAAAaow0="'
       expires:
       - '-1'
       pragma:
@@ -61,7 +61,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
+      - '1199'
     status:
       code: 201
       message: Created
@@ -80,8 +80,8 @@ interactions:
       - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
   response:
@@ -103,9 +103,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:50:44 GMT
+      - Wed, 01 Jul 2020 19:27:11 GMT
       etag:
-      - '"AAAAAAAaLiI="'
+      - '"AAAAAAAaow0="'
       expires:
       - '-1'
       pragma:
@@ -145,8 +145,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --display-name --description --source-api-id
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: PUT
@@ -171,9 +171,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:50:46 GMT
+      - Wed, 01 Jul 2020 19:27:13 GMT
       etag:
-      - '"AAAAAAAaLiY="'
+      - '"AAAAAAAaoxE="'
       expires:
       - '-1'
       pragma:
@@ -186,7 +186,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1199'
+      - '1198'
     status:
       code: 201
       message: Created
@@ -204,8 +204,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --display-name --description --source-api-id
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-01-01
   response:
@@ -228,9 +228,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:51:16 GMT
+      - Wed, 01 Jul 2020 19:27:44 GMT
       etag:
-      - '"AAAAAAAaLiY="'
+      - '"AAAAAAAaoxE="'
       expires:
       - '-1'
       pragma:
@@ -269,8 +269,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --api-revision-description --service-url --source-api-id
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: PUT
@@ -295,9 +295,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:51:18 GMT
+      - Wed, 01 Jul 2020 19:27:46 GMT
       etag:
-      - '"AAAAAAAaLio="'
+      - '"AAAAAAAaoxU="'
       expires:
       - '-1'
       pragma:
@@ -328,8 +328,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --api-revision-description --service-url --source-api-id
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-01-01
   response:
@@ -352,9 +352,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:51:48 GMT
+      - Wed, 01 Jul 2020 19:28:18 GMT
       etag:
-      - '"AAAAAAAaLio="'
+      - '"AAAAAAAaoxU="'
       expires:
       - '-1'
       pragma:
@@ -394,8 +394,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value --service-url
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: PUT
@@ -409,11 +409,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Sat, 27 Jun 2020 01:51:50 GMT
+      - Wed, 01 Jul 2020 19:28:20 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5ef6a6362354cb1cb042da63&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5efce3d59d1f2019f81cd4c1&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -442,10 +442,10 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value --service-url
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5ef6a6362354cb1cb042da63&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5efce3d59d1f2019f81cd4c1&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger\",\r\n
@@ -469,9 +469,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:52:19 GMT
+      - Wed, 01 Jul 2020 19:28:54 GMT
       etag:
-      - '"AAAAAAAaLi4="'
+      - '"AAAAAAAaoxk="'
       expires:
       - '-1'
       pragma:
@@ -506,8 +506,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: PUT
@@ -521,11 +521,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Sat, 27 Jun 2020 01:52:21 GMT
+      - Wed, 01 Jul 2020 19:28:56 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5ef6a656c4865110e850b3a0&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5efce3f8ae678d288cd478e7&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -554,10 +554,10 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5ef6a656c4865110e850b3a0&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5efce3f8ae678d288cd478e7&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import\",\r\n
@@ -577,9 +577,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:52:52 GMT
+      - Wed, 01 Jul 2020 19:29:29 GMT
       etag:
-      - '"AAAAAAAaLlM="'
+      - '"AAAAAAAaoz4="'
       expires:
       - '-1'
       pragma:
@@ -616,8 +616,8 @@ interactions:
       - -n -g -a --path --import-format --value --wsdl-service-name --wsdl-endpoint-name
         --api-type
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: PUT
@@ -631,11 +631,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Sat, 27 Jun 2020 01:52:53 GMT
+      - Wed, 01 Jul 2020 19:29:31 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5ef6a676b6c3ea1c50745d26&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5efce41c9d1f2019f81cd4d0&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -665,10 +665,10 @@ interactions:
       - -n -g -a --path --import-format --value --wsdl-service-name --wsdl-endpoint-name
         --api-type
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5ef6a676b6c3ea1c50745d26&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5efce41c9d1f2019f81cd4d0&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl\",\r\n
@@ -688,9 +688,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:53:23 GMT
+      - Wed, 01 Jul 2020 19:30:02 GMT
       etag:
-      - '"AAAAAAAaLmI="'
+      - '"AAAAAAAao00="'
       expires:
       - '-1'
       pragma:
@@ -720,8 +720,8 @@ interactions:
       - -n -g -a --path --display-name --description --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: GET
@@ -745,9 +745,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:53:25 GMT
+      - Wed, 01 Jul 2020 19:30:04 GMT
       etag:
-      - '"AAAAAAAaLiI="'
+      - '"AAAAAAAaow0="'
       expires:
       - '-1'
       pragma:
@@ -789,8 +789,8 @@ interactions:
       - -n -g -a --path --display-name --description --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: PUT
@@ -815,9 +815,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:53:26 GMT
+      - Wed, 01 Jul 2020 19:30:05 GMT
       etag:
-      - '"AAAAAAAaLn8="'
+      - '"AAAAAAAao2o="'
       expires:
       - '-1'
       pragma:
@@ -834,7 +834,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1197'
+      - '1199'
     status:
       code: 200
       message: OK
@@ -852,8 +852,8 @@ interactions:
       ParameterSetName:
       - -n -g -a
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: GET
@@ -878,9 +878,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:53:26 GMT
+      - Wed, 01 Jul 2020 19:30:06 GMT
       etag:
-      - '"AAAAAAAaLn8="'
+      - '"AAAAAAAao2o="'
       expires:
       - '-1'
       pragma:
@@ -913,8 +913,8 @@ interactions:
       ParameterSetName:
       - -n -g -a
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: GET
@@ -940,9 +940,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:53:26 GMT
+      - Wed, 01 Jul 2020 19:30:06 GMT
       etag:
-      - '"AAAAAAAaLoA="'
+      - '"AAAAAAAao2s="'
       expires:
       - '-1'
       pragma:
@@ -975,8 +975,8 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: GET
@@ -1038,7 +1038,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:53:28 GMT
+      - Wed, 01 Jul 2020 19:30:09 GMT
       expires:
       - '-1'
       pragma:
@@ -1075,8 +1075,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --delete-revisions --yes
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: DELETE
@@ -1090,7 +1090,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Sat, 27 Jun 2020 01:53:28 GMT
+      - Wed, 01 Jul 2020 19:30:10 GMT
       expires:
       - '-1'
       pragma:
@@ -1121,8 +1121,8 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.1.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
       accept-language:
       - en-US
     method: GET
@@ -1175,7 +1175,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Sat, 27 Jun 2020 01:53:29 GMT
+      - Wed, 01 Jul 2020 19:30:10 GMT
       expires:
       - '-1'
       pragma:

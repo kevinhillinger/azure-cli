@@ -8,6 +8,7 @@ from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import (service_output_format, product_output_format, policy_output_format, subscription_output_format)
 from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_policy, cf_product, cf_subscription)
 from ._validators import validate_policy_xml_content
+from ._exception_handler import apim_api_exception_handler
 
 def load_command_table(self, _):
 
@@ -25,7 +26,7 @@ def load_command_table(self, _):
         operations_tmpl='azure.cli.command_modules.apim.operations.policy#{}',
         client_factory=cf_policy
     )
-    
+
     api_sdk = CliCommandType(
         operations_tmpl='azure.mgmt.apimanagement.operations#ApiOperations.{}',
         client_factory=cf_api
@@ -33,7 +34,8 @@ def load_command_table(self, _):
 
     api_custom_type = CliCommandType(
         operations_tmpl='azure.cli.command_modules.apim.operations.api#{}',
-        client_factory=cf_api
+        client_factory=cf_api,
+        exception_handler=apim_api_exception_handler
     )
 
     api_sdk = CliCommandType(

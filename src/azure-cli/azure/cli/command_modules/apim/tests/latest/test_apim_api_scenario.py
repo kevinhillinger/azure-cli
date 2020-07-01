@@ -15,7 +15,6 @@ TEST_DIR = os.path.abspath(os.path.join(os.path.abspath(__file__), '..'))
 
 # pylint: disable=line-too-long
 class ApimApiScenarioTest(ScenarioTest):
-    @live_only()  # TODO: Determine why - likely to do with the requirement to grab the api-id value for use in cloning and revision creation
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @ApiManagementPreparer(parameter_name='apim_name', sku_name='Consumption')
     def test_apim_api(self, resource_group, apim_name):
@@ -42,15 +41,24 @@ class ApimApiScenarioTest(ScenarioTest):
             'subscription_key_query_string_name': 'query1234'
         })
 
-        source_api_id = self.cmd('apim api create -n {apim_name} -g {rg} -a {api_id} --path {path} --display-name "{display_name}" --description "{description}" --service-url {service_url} --protocols {protocols} --subscription-key-header-name {subscription_key_header_name} --subscription-key-query-string-name {subscription_key_query_string_name}', checks=[
-            self.check('name', '{api_id}'),
-            self.check('path', '{path}'),
-            self.check('displayName', '{display_name}'),
-            self.check('description', '{description}'),
-            self.check('serviceUrl', '{service_url}'),
-            self.check('subscriptionKeyParameterNames.header', '{subscription_key_header_name}'),
-            self.check('subscriptionKeyParameterNames.query', '{subscription_key_query_string_name}')
-        ]).get_output_in_json()['id']
+        source_api_id = self.cmd(
+            """apim api create -n {apim_name} -g {rg} -a {api_id} \
+                    --path {path} \
+                    --display-name "{display_name}" \
+                    --description "{description}" \
+                    --service-url {service_url} \
+                    --protocols {protocols} \
+                    --subscription-key-header-name {subscription_key_header_name} \
+                    --subscription-key-query-string-name {subscription_key_query_string_name}""", checks=[
+                self.check('name', '{api_id}'),
+                self.check('path', '{path}'),
+                self.check('displayName', '{display_name}'),
+                self.check('description', '{description}'),
+                self.check('serviceUrl', '{service_url}'),
+                self.check('subscriptionKeyParameterNames.header', '{subscription_key_header_name}'),
+                self.check('subscriptionKeyParameterNames.query', '{subscription_key_query_string_name}')
+            ]).get_output_in_json()['id']
+
         assert source_api_id is not None
         created_apis += 1
 
@@ -71,7 +79,7 @@ class ApimApiScenarioTest(ScenarioTest):
             self.check('serviceUrl', '{service_url}'),
             self.check('subscriptionKeyParameterNames.header', '{subscription_key_header_name}'),
             self.check('subscriptionKeyParameterNames.query', '{subscription_key_query_string_name}')
-        ])
+            ])
 
         # Create a new revision from an existing API, using the --source-api-id parameter with value {source_api_id}
         api_id_revision2 = api_id + ';rev=2'
@@ -194,5 +202,6 @@ class ApimApiScenarioTest(ScenarioTest):
         self.kwargs.update({
             'api_id': api_id
         })
+        
         self.cmd('apim api delete -n {apim_name} -g {rg} -a {api_id} --delete-revisions --yes')
         self.assertEqual(len(self.cmd('apim api list -n {apim_name} -g {rg}').get_output_in_json()), created_apis - 1)

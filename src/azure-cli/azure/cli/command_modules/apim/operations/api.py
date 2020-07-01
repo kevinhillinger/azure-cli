@@ -4,7 +4,7 @@
 # --------------------------------------------------------------------------------------------
 # pylint: disable=line-too-long
 
-# from azure.cli.core.util import sdk_no_wait
+
 from azure.mgmt.apimanagement.models import (ApiCreateOrUpdateParameter, Protocol,
                                              AuthenticationSettingsContract, OAuth2AuthenticationSettingsContract, OpenIdAuthenticationSettingsContract, BearerTokenSendingMethod,
                                              SubscriptionKeyParameterNamesContract,
@@ -37,12 +37,14 @@ def create_api(client, resource_group_name, service_name, api_id,
 
     # Set the authentication settings
     authentication_settings = AuthenticationSettingsContract()
+
     if oauth2_authorization_server_id is not None:
         o_auth2 = OAuth2AuthenticationSettingsContract(
             authorization_server_id=oauth2_authorization_server_id,
             scope=oauth2_scope
         )
         authentication_settings.o_auth2 = o_auth2
+
     if openid_provider_id is not None:
         openid = OpenIdAuthenticationSettingsContract(
             openid_provider_id=openid_provider_id,
@@ -91,7 +93,6 @@ def create_api(client, resource_group_name, service_name, api_id,
         )
 
     return client.create_or_update(resource_group_name, service_name, api_id, parameters, if_match)
-
 
 # pylint: disable=too-many-branches
 def update_api(instance,
