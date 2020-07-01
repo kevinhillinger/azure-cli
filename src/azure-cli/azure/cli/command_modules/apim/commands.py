@@ -94,28 +94,11 @@ def load_command_table(self, _):
         g.custom_command('update', 'update_policy', table_transformer=policy_output_format, validator=validate_policy_xml_content)
 
     # subscription apis
-    with self.command_group('apim subscription', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True, client_factory=cf_subscription) as g:
+    with self.command_group('apim subscription', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True) as g:
         g.custom_command('create', 'create_subscription', table_transformer=subscription_output_format)
         g.custom_command('list', 'list_subscription', table_transformer=subscription_output_format, client_factory=cf_subscription)
         g.custom_command('show', 'get_subscription', table_transformer=subscription_output_format, client_factory=cf_subscription)
         g.custom_command('delete', 'delete_subscription', confirmation=True, table_transformer=subscription_output_format, client_factory=cf_subscription)
-        g.custom_command('update', 'update_subscription', table_transformer=subscription_output_format)        
-        g.custom_command('regenerate-primary-key', 'regenerate_primary_key', table_transformer=subscription_output_format, client_factory=cf_subscription),
-        g.custom_command('regenerate-secondary-key', 'regenerate_secondary_key', table_transformer=subscription_output_format, client_factory=cf_subscription)         
-        
-    # product
-    with self.command_group('apim product', product_sdk, custom_command_type=product_custom_type, is_preview=True, client_factory=cf_product) as g:
-        g.custom_command('create', 'create_product', table_transformer=product_output_format)
-        g.custom_command('list', 'list_product', table_transformer=product_output_format)
-        g.custom_command('show', 'get_product', table_transformer=product_output_format)
-        g.custom_command('delete', 'delete_product', table_transformer=product_output_format)
-        g.generic_update_command('update', custom_func_name='update_product', getter_name='get', setter_name='create_or_update', supports_no_wait=True)
-
-    # api apis
-    with self.command_group('apim api', api_sdk, custom_command_type=api_custom_type, client_factory=cf_api, is_preview=True) as g:
-        g.custom_command('create', 'create_api', supports_no_wait=True, table_transformer=None)
-        g.custom_command('delete', 'delete_api', confirmation=True, supports_no_wait=True)
-        # g.custom_command('show-etag', 'get_api_etag')
-        g.custom_show_command('show', 'get_api', table_transformer=None)
-        g.custom_command('list', 'list_api', table_transformer=None)
-        g.generic_update_command('update', custom_func_name='update_api', supports_no_wait=True)
+        g.custom_command('update', 'update_subscription', table_transformer=subscription_output_format)
+        g.custom_command('regenerate-primary-key', 'regenerate_primary_key', table_transformer=subscription_output_format, client_factory=cf_subscription)
+        g.custom_command('regenerate-secondary-key', 'regenerate_secondary_key', table_transformer=subscription_output_format, client_factory=cf_subscription)

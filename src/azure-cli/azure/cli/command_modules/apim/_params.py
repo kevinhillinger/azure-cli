@@ -16,7 +16,6 @@ VNET_TYPES = VirtualNetworkType
 STATE_TYPES = ProductState
 
 
-# pylint: disable=too-many-statements
 def load_arguments(self, _):
 
     from azure.cli.core.commands.parameters import tags_type
@@ -87,10 +86,10 @@ def load_arguments(self, _):
 
     with self.argument_context('apim subscription') as c:
         c.argument('sid', arg_group="Subscription", help='Subscription entity Identifier. The entity represents the association between a user and a product in API Management.')
-        c.argument('display_name', arg_group='Subscription', help='Subscription name')
+        c.argument('display_name', options_list=['--display_name', '-d'], arg_group='Subscription', help='Subscription name')
         c.argument('owner_id', arg_group='Subscription', help='User (user id path) for whom subscription is being created in form /users/{userId}')
-        c.argument('primary_key', arg_group='Subscription', help='Primary subscription key. If not specified during request key will be generated automatically.')
+        c.argument('primary_key', options_list=['--primary_key', '-p'], arg_group='Subscription', help='Primary subscription key. If not specified during request key will be generated automatically.')
         c.argument('secondary_key', arg_group='Subscription', help='Secondary subscription key. If not specified during request key will be generated automatically.')
         c.argument('state', get_enum_type(SUBSCRIPTION_TYPES), arg_group='Subscription', help='Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated. Possible values include: \'suspended\', \'active\', \'expired\', \'submitted\', \'rejected\', \'cancelled\'')
-        c.argument('allow_tracing', arg_type=get_three_state_flag(), arg_group='Subscription', help='Determines whether tracing can be enabled')
+        c.argument('allow_tracing', options_list=['--allow_tracing', '-a'], arg_type=get_three_state_flag(), arg_group='Subscription', help='Determines whether tracing can be enabled')
         c.argument('scope', arg_group='Subscription', help='Scope like /products/{productId} or /apis or /apis/{apiId}.')

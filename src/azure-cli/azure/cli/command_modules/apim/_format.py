@@ -6,7 +6,6 @@
 from collections import OrderedDict
 from knack.log import get_logger
 
-
 logger = get_logger(__name__)
 
 
@@ -65,7 +64,7 @@ def _get_value_as_object(item, *args):
 
 
 def _output_format(result, format_group):
-    if 'value' in result and isinstance(result['value'], list): 
+    if 'value' in result and isinstance(result['value'], list):
         result = result['value']
     obj_list = result if isinstance(result, list) else [result]
     return [format_group(item) for item in obj_list]
@@ -88,15 +87,17 @@ def policy_output_format(result):
         ('STATE', _service_status(_get_value_as_str(item, 'state')))
     ])))
 
+
 def subscription_output_format(result):
     return _output_format(result, _subscription_format_group)
 
+
 def _subscription_format_group(item):
-    return OrderedDict([   
+    return OrderedDict([
         ('DISPLAY NAME', _get_value_as_str(item, 'displayName')),
         ('PRIMARY KEY', _get_value_as_str(item, 'primaryKey')),
         ('SECONDARY KEY', _get_value_as_str(item, 'secondaryKey')),
         ('SCOPE', _get_value_as_str(item, 'scope')),
         ('STATE', _service_status(_get_value_as_str(item, 'state'))),
-        ('ALLOW TRACING', item['allowTracing'])                  
+        ('ALLOW TRACING', item['allowTracing'])
     ])

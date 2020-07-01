@@ -104,6 +104,11 @@ type: group
 short-summary: Manage Azure API Management products.
 """
 
+helps['apim subscription'] = """
+type: group
+short-summary: Manage Azure API Management Subscription services.
+"""
+
 helps['apim product list'] = """
 type: command
 short-summary: Lists a collection of products in the specified service instance.
@@ -148,187 +153,65 @@ examples:
         az apim product delete -g MyResourceGroup -n MyApim -p starter
 """
 
-helps['apim api'] = """
-type: group
-short-summary: Manage Azure API Management API services.
-"""
-
-helps['apim api create'] = """
+helps['apim subscription create'] = """
 type: command
-short-summary: Creates new API of the API Management service instance.
-parameters:
-  - name: --display-name
-    type: string
-    short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter.
-  - name: --oauth2-authorization-server-id
-    type: string
-    short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance.
-  - name: --oauth2-scope
-    type: string
-    short-summary: OAuth 2.0 operations scope.
-  - name: --openid-provider-id
-    type: string
-    short-summary: OpenID authorization server identifier. Authorization server definition must already exist in the API Management service instance.
-  - name: --service-url
-    type: string
-    short-summary: Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-  - name: --source-api-id
-    type: string
-    short-summary: API identifier of the source API, to clone an existing API.
-  - name: --subscription-key-header-name
-    type: string
-    short-summary: Subscription key HTTP header name.
-  - name: --subscription-key-query-string-name
-    type: string
-    short-summary: Subscription key query string parameter name.
-  - name: --value
-    type: string
-    short-summary: Content value when Importing an API.
-  - name: --wsdl-endpoint-name
-    type: string
-    short-summary: Name of endpoint(port) to import from WSDL.
-  - name: --wsdl-service-name
-    type: string
-    short-summary: CName of service to import from WSDL.
-  - name: --api-version
-    type: string
-    short-summary: Indicate the Version identifier of the API if the API is versioned.
-  - name: --api-version-set-id
-    type: string
-    short-summary: Identifier for existing API Version Set.
-  - name: --api-revision
-    type: string
-    short-summary: Describes the Revision of the Api. If no value is provided, default revision 1 is created.
-  - name: --api-revision-description
-    type: string
-    short-summary: Description of the API Revision.
-examples:
-  - name: Create an API, using the Echo service backend, enabling both protocols.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyApi --path MyApiPath --display-name "MyApi Display nName" --description "MyApi Description" --service-url "http://echoapi.cloudapp.net/api" --protocols "http https"
-  - name: Clone an existing API, changing the service URL.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyClonedApi --path MyClonedApiPath --service-url "http://httpbin.org" --display-name "MyClonedApi Display Name" --description "MyClonedApi Description" --source-api-id "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apis/MySourceApiId"
-  - name: Create a new API from an existing API version set. To create a new api version set, use the 'az apim api version-set create' command.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyApiFromVersionSet --path MyApiFromVersionSetPath --display-name "MyApiFromVersionSet Display Name" --service-url "http://echoapi.cloudapp.net/api" --protocols "http https" --source-api-id "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apis/MySourceApiId" --api-version v2 --api-version-set-id "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apiVersionSets/d072a59c-09e9-477d-9a3e-c675b254603e" --is-current
-  - name: Create an API revision from an existing API, changing the service URL.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a "MyApi;rev=2" --path MyApiPath --service-url "http://echoapi.cloudapp.net/apirev2" --api-revision-description "A Revision of an existing API" --source-api-id "subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apis/api-id"
-  - name: Create an API with OpenID Connect to the backend, sending the bearer token via the Authorization HTTP header.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyOpenIdConnectApi --display-name "Swagger Petstore" --description "This is a sample server Petstore server" --path petstore --openid-provider-id IdPid --openid-bearer-token-sending-methods authorizationHeader
-  - name: Import an API from a Swagger JSON link.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import-format "swagger-link-json" --value "http://petstore.swagger.io/v2/swagger.json" --path petstore
-  - name: Import an API from a Swagger JSON link, overwriting the service URL.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import-format "swagger-link-json" --value "http://apimpimportviaurl.azurewebsites.net/api/apidocs/" --path petstoreapi123 --service-url "http://petstore.swagger.wordnik.com/api"
-  - name: Import an API from an OpenAPI 3 URL.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyOai3Api --import-format "openapi-link" --value "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml" --path petstore
-  - name: Import an API with SOAP pass-through using a WSDL URL.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import-format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-soap" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type soap
-  - name: Import an API converting a WSDL SOAP endpoint to a REST endpoint.
-    text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyCalculatorApi --import-format "wsdl-link" --value "http://www.dneonline.com/calculator.asmx?wsdl" --path "calulator-http" --wsdl-service-name Calculator --wsdl-endpoint-name CalculatorSoap --api-type http
-"""
-
-helps['apim api update'] = """
-type: command
-short-summary: Updates API attributes specified by the parameters.
-parameters:
-  - name: --display-name
-    type: string
-    short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter.
-  - name: --oauth2-authorization-server-id
-    type: string
-    short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance.
-  - name: --oauth2-scope
-    type: string
-    short-summary: OAuth 2.0 operations scope.
-  - name: --openid-provider-id
-    type: string
-    short-summary: OpenID authorization server identifier. Authorization server definition must already exist in the API Management service instance.
-  - name: --service-url
-    type: string
-    short-summary: Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
-  - name: --source-api-id
-    type: string
-    short-summary: API identifier of the source API, to clone an existing API.
-  - name: --subscription-key-header-name
-    type: string
-    short-summary: Subscription key HTTP header name.
-  - name: --subscription-key-query-string-name
-    type: string
-    short-summary: Subscription key query string parameter name.
-  - name: --value
-    type: string
-    short-summary: Content value when Importing an API.
-  - name: --wsdl-endpoint-name
-    type: string
-    short-summary: Name of endpoint(port) to import from WSDL.
-  - name: --wsdl-service-name
-    type: string
-    short-summary: CName of service to import from WSDL.
-  - name: --api-version
-    type: string
-    short-summary: Indicate the Version identifier of the API if the API is versioned.
-  - name: --api-version-set-id
-    type: string
-    short-summary: Identifier for existing API Version Set.
-  - name: --api-revision
-    type: string
-    short-summary: Describes the Revision of the Api. If no value is provided, default revision 1 is created.
-  - name: --api-revision-description
-    type: string
-    short-summary: Description of the API Revision.
-examples:
-  - name: Update an API, setting a new path, display name, description, service URL and protocol(s).
-    text: >
-        az apim api update -n MyApim -g MyResourceGroup -a MyApi --path MyNewApiPath --display-name "MyApi New Display nName" --description "MyApi New Description" --service-url "http://echoapi.cloudapp.net/newapi" --protocols "https"
-"""
-
-helps['apim api delete'] = """
-type: command
-short-summary: Deletes the specified API of the API Management service instance.
-parameters:
-  - name: --delete-revisions
-    type: string
-    short-summary: Delete all revisions of the API.
+short-summary: Creates the subscription specified by its subscription ID, display name and scope. Other parameters are optional
 examples:
   - name: Common usage.
     text: >
-        az apim api delete -n MyApim -g MyResourceGroup -a MyApi
-  - name: Delete revision 3 of an API (use quotes for the --api-id parameter).
-    text: >
-        az apim api delete -n MyApim -g MyResourceGroup -a "MyApi;rev=3"
-  - name: Delete all revisions of an API (for a single revision, the API will be completely deleted).
-    text: >
-        az apim api delete -n MyApim -g MyResourceGroup -a MyApi --delete-revisions
+        az apim subscription create -g MyResourceGroup -n MyApim --sid mySubscriptionId -d myDisplayName --scope apis
 """
 
-helps['apim api show'] = """
+helps['apim subscription update'] = """
 type: command
-short-summary: Gets the details of the API specified by its identifier.
+short-summary: Updates the subscription specified by its identifier
 examples:
-  - name: Common usage (shows the 'current' revision).
+  - name: Common usage.
     text: >
-        az apim api show -n MyApim -g MyResourceGroup -a MyApi
-  - name: Show detail of revision 3 of an API (use quotes for the --api-id parameter).
-    text: >
-        az apim api show -n MyApim -g MyResourceGroup -a "MyApi;rev=3"
+        az apim subscription update -g MyResourceGroup -n MyApim --sid mySubscriptionId -d myDisplayName --scope apis
 """
 
-helps['apim api list'] = """
+helps['apim subscription delete'] = """
 type: command
-short-summary: Lists all APIs of the API Management service instance.
+short-summary: Deletes the subscription specified by its identifier
 examples:
-  - name: Common usage (lists only 'current' APIs). To list all revisions of an API, use the 'az apim api revision list' command.
+  - name: Common usage.
     text: >
-        az apim api list -n MyApim -g MyResourceGroup
-  - name: Lists all APIs, including the version set information.
+        az apim subscription delete -g MyResourceGroup -n MyApim --sid mySubscriptionId
+"""
+
+helps['apim subscription list'] = """
+type: command
+short-summary: Lists all subscriptions of the API Management service instance
+examples:
+  - name: Common usage.
     text: >
-        az apim api list -n MyApim -g MyResourceGroup --expand-api-version-set
+        az apim subscription list -g MyResourceGroup -n MyApim
+"""
+
+helps['apim subscription show'] = """
+type: command
+short-summary: Shows the specified subscription by its identifier
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription show -g MyResourceGroup -n MyApim --sid mySubscriptionId
+"""
+
+helps['apim subscription regenerate-primary-key'] = """
+type: command
+short-summary: Regenerates primary key of existing subscription of the API Management
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription regenerate-primary-key -g MyResourceGroup -n MyApim --sid mySubscriptionId 
+"""
+
+helps['apim subscription regenerate-secondary-key'] = """
+type: command
+short-summary: Regenerates secondary key of existing subscription of the API Management
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription regenerate-secondary-key -g MyResourceGroup -n MyApim --sid mySubscriptionId 
 """
