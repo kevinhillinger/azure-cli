@@ -229,3 +229,65 @@ examples:
     text: >
         az apim subscription regenerate-key --key-kind secondary -g MyResourceGroup -n MyApim --sid mySubscriptionId
 """
+helps['apim subscription create'] = """
+type: command
+short-summary: Creates the subscription specified by its subscription ID, display name and scope. Other parameters are optional
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription create -g MyResourceGroup -n MyApim --sid mySubscriptionId -d myDisplayName --scope apis
+"""
+
+helps['apim subscription update'] = """
+type: command
+short-summary: Updates the subscription specified by its identifier
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription update -g MyResourceGroup -n MyApim --sid mySubscriptionId -d myDisplayName --scope apis
+"""
+
+helps['apim subscription delete'] = """
+type: command
+short-summary: Deletes the subscription specified by its identifier
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription delete -g MyResourceGroup -n MyApim --sid mySubscriptionId
+"""
+
+helps['apim subscription list'] = """
+type: command
+short-summary: Lists all subscriptions of the API Management service instance
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription list -g MyResourceGroup -n MyApim
+"""
+
+helps['apim subscription show'] = """
+type: command
+short-summary: Shows the specified subscription by its identifier
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription show -g MyResourceGroup -n MyApim --sid mySubscriptionId
+"""
+
+helps['apim subscription regenerate-primary-key'] = """
+type: command
+short-summary: Regenerates primary key of existing subscription of the API Management
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription regenerate-primary-key -g MyResourceGroup -n MyApim --sid mySubscriptionId 
+"""
+
+helps['apim subscription regenerate-secondary-key'] = """
+type: command
+short-summary: Regenerates secondary key of existing subscription of the API Management
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription regenerate-secondary-key -g MyResourceGroup -n MyApim --sid mySubscriptionId 
+"""

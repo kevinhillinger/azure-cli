@@ -14,6 +14,7 @@ class SubscriptionKeyKind(Enum):
     secondary = "secondary"
 
 
+
 def list_subscription(client, resource_group_name, service_name):
     return client.list(resource_group_name, service_name)
 
@@ -23,16 +24,16 @@ def get_subscription(client, resource_group_name, service_name, sid):
 
 
 def create_subscription(cmd, resource_group_name, service_name, sid, display_name, scope, owner_id=None, primary_key=None, secondary_key=None, state=None, allow_tracing=None):
+
     from azure.cli.command_modules.apim._client_factory import (cf_service, cf_subscription)
-        
     client = cf_subscription(cmd.cli_ctx)
     service_client = cf_service(cmd.cli_ctx)
     apim_instance = service_client.get(resource_group_name, service_name)
     scope = apim_instance.id + scope
 
     parameters = SubscriptionCreateParameters(
-        display_name = display_name,
-        scope = scope        
+        display_name=display_name,
+        scope=scope
     )
     if owner_id is not None:
         owner_id = apim_instance.id + "/users/" + owner_id
@@ -75,9 +76,10 @@ def update_subscription(cmd, resource_group_name, service_name, sid, display_nam
 def delete_subscription(client, resource_group_name, service_name, sid):
     return client.delete(resource_group_name, service_name, sid, if_match='*')
 
+
 def regenerate_primary_key(client, resource_group_name, service_name, sid):
     return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
 
+
 def regenerate_secondary_key(client, resource_group_name, service_name, sid):
     return client.regenerate_secondary_key(resource_group_name, service_name, sid, if_match='*')
-
