@@ -15,10 +15,10 @@ TEST_DIR = os.path.abspath(os.path.join(os.path.abspath(__file__), '..'))
 
 # pylint: disable=line-too-long
 class ApimSubscriptionScenarioTest(ScenarioTest):
-    #@ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
-    #@ApiManagementPreparer(parameter_name='apim_name')
-    # sid, display_name, scope, owner_id, primary_key, secondary_key, state, allow_tracing
-    def test_apim_Subscription(self, resource_group='cli_test_apim-cc6tqoq6sacjdzziuuvlpva6ef3ht4ldl7kyzh4ywkov3biecxk52qpatrrd2', apim_name='clitesttp5l2vjlkpyy5ipyx'):
+    @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
+    @ApiManagementPreparer(parameter_name='apim_name')
+    
+    def test_apim_Subscription(self, resource_group, apim_name):
         # Set variable for subscription operations
       
         subscription_id = self.create_random_name('apim_subscription-', 50)
@@ -39,8 +39,7 @@ class ApimSubscriptionScenarioTest(ScenarioTest):
             'secondary_key': secondary_key,
             'allow_tracing': allow_tracing,
             'scope': scope,
-            'updated_display_name': updated_display_name,
-            'rg': resource_group
+            'updated_display_name': updated_display_name
         })
 
         # Get a count of the currently existing APIM subscriptions
