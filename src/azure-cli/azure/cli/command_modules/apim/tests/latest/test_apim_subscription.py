@@ -19,7 +19,7 @@ class ApimSubscriptionScenarioTest(ScenarioTest):
     @ApiManagementPreparer(parameter_name='apim_name')
     
     def test_apim_Subscription(self, resource_group, apim_name):
-        # Set variable for subscription operations
+        # Set variable for subscription operations 
       
         subscription_id = self.create_random_name('apim_subscription-', 50)
         display_name = 'foo-bar'
