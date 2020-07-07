@@ -82,3 +82,6 @@ def regenerate_key(client, resource_group_name, service_name, sid, key_kind=Subs
     if key_kind == SubscriptionKeyKind.primary.value:
         return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
     return client.regenerate_secondary_key(resource_group_name, service_name, sid, if_match='*')
+
+def list_keys(client, resource_group_name, service_name, sid):
+    return client.list_secrets(resource_group_name, service_name, sid, if_match='*')
