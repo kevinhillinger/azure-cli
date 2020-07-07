@@ -5,11 +5,24 @@
             "name": "Azure CLI Debug (Integrated Console)",
             "type": "python",
             "request": "launch",
-            "pythonPath": "${config:python.pythonPath}",
+            "pythonPath": "${command:python.interpreterPath}",
             "program": "${workspaceRoot}/src/azure-cli/azure/cli/__main__.py",
             "cwd": "${workspaceRoot}",
             "args": [
-                "--help"
+                "apim",
+                "subscription",
+                //"update",
+                "keys",   
+                "list",             
+                //"--key-kind", "primary",
+                "--resource-group", "petetest10",
+                "--name", "peterod",
+                "--sid", "petetestsub08",
+                
+                //"--display_name", "petetestsub09",
+                 //"--scope", "/apis",
+                // "--owner-id", "jeffseag",
+                // "--allow-tracing"
             ],
             "console": "integratedTerminal",
             "debugOptions": [
@@ -24,7 +37,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath": "${config:python.pythonPath}",
+            "pythonPath": "${command:python.interpreterPath}",
             "program": "${workspaceRoot}/src/azure-cli/azure/cli/__main__.py",
             "cwd": "${workspaceRoot}",
             "args": [
@@ -40,7 +53,7 @@
             "name": "Azdev Scripts",
             "type": "python",
             "request": "launch",
-            "pythonPath": "${config:python.pythonPath}",
+            "pythonPath": "${command:python.interpreterPath}",
             "program": "${workspaceRoot}/tools/automation/__main__.py",
             "cwd": "${workspaceRoot}",
             "args": [

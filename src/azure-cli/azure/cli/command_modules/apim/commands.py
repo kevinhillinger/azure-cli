@@ -137,4 +137,4 @@ def load_command_table(self, _):
         
     with self.command_group('apim subscription keys', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True) as g:
         g.custom_command('regenerate', 'regenerate_key')
-        
+        g.custom_command('list', 'list_keys')
