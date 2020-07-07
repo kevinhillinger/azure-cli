@@ -8,9 +8,11 @@
 from enum import Enum
 from azure.mgmt.apimanagement.models import SubscriptionCreateParameters, SubscriptionUpdateParameters
 
+
 class SubscriptionKeyKind(Enum):
     primary = "primary"
     secondary = "secondary"
+
 
 def list_subscription(client, resource_group_name, service_name):
     return client.list(resource_group_name, service_name)

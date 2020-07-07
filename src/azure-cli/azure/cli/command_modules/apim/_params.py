@@ -18,6 +18,7 @@ STATE_TYPES = ProductState
 SUBSCRIPTION_TYPES = SubscriptionState
 SUBSCRIPTION_KEY_KIND = SubscriptionKeyKind
 
+
 def load_arguments(self, _):
 
     from azure.cli.core.commands.parameters import tags_type
