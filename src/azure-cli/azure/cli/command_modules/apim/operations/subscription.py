@@ -79,7 +79,5 @@ def delete_subscription(client, resource_group_name, service_name, sid):
 def regenerate_key(client, resource_group_name, service_name, sid, key_kind=SubscriptionKeyKind.primary.value):
     if key_kind == SubscriptionKeyKind.primary.value:
         return client.regenerate_primary_key(resource_group_name, service_name, sid, if_match='*')
-    else: 
+    else:
         return client.regenerate_secondary_key(resource_group_name, service_name, sid, if_match='*')
-
-
