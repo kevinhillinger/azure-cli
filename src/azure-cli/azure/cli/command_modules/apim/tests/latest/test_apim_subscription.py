@@ -47,10 +47,10 @@ class ApimSubscriptionScenarioTest(ScenarioTest):
         self.cmd('apim subscription update -n {apim_name} -g {rg} --sid {subscription_id} -d {updated_display_name}')
         modified_sub = self.cmd('apim subscription show -n {apim_name} -g {rg} --sid {subscription_id}').get_output_in_json()
         assert original_sub['displayName'] != modified_sub['displayName']
-        original_keys = self.cmd('apim subscription keys show -n {apim_name} -g {rg} --sid {subscription_id}').get_output_in_json()
+        original_keys = self.cmd('apim subscription show -n {apim_name} -g {rg} --sid {subscription_id}').get_output_in_json()
         self.cmd('apim subscription keys regenerate --key-kind primary -n {apim_name} -g {rg} --sid {subscription_id}')
         self.cmd('apim subscription keys regenerate --key-kind secondary -n {apim_name} -g {rg} --sid {subscription_id}')
-        modified_keys = self.cmd('apim subscription key show -n {apim_name} -g {rg} --sid {subscription_id}').get_output_in_json()
+        modified_keys = self.cmd('apim subscription show -n {apim_name} -g {rg} --sid {subscription_id}').get_output_in_json()
         assert original_keys['primaryKey'] != modified_keys['primaryKey']
         assert original_keys['secondaryKey'] != modified_keys['secondaryKey']
         self.cmd('apim subscription delete -n {apim_name} -g {rg} --sid {subscription_id} --yes')
