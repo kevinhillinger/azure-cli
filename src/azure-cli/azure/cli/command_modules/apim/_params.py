@@ -18,6 +18,7 @@ STATE_TYPES = ProductState
 SUBSCRIPTION_TYPES = SubscriptionState
 SUBSCRIPTION_KEY_KIND = SubscriptionKeyKind
 
+
 def load_arguments(self, _):
 
     from azure.cli.core.commands.parameters import tags_type
@@ -93,6 +94,8 @@ def load_arguments(self, _):
         c.argument('state', get_enum_type(SUBSCRIPTION_TYPES), arg_group='Subscription', help='Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated. Possible values include: \'suspended\', \'active\', \'expired\', \'submitted\', \'rejected\', \'cancelled\'')
         c.argument('allow_tracing', options_list=['--allow_tracing', '-a'], arg_type=get_three_state_flag(), arg_group='Subscription', help='Determines whether tracing can be enabled')
         c.argument('scope', arg_group='Subscription', help='Scope like /products/{productId} or /apis or /apis/{apiId}.')
-    for scope in ['apim subscription keys regenerate', 'apim regenerate-key']:
+        c.argument('primary_key', arg_group="Subscription", help='The primary access key for the APIM subscription')
+        c.argument('secondary_key', arg_group="Subscription", help='The secondary access key for the APIM subscription')
+    for scope in ['apim subscription keys regenerate', 'apim subscription regenerate-key']:
         with self.argument_context(scope) as c:
-            c.argument('key_kind', arg_type=get_enum_type(SubscriptionKeyKind))
+            c.argument('key_kind', arg_type=get_enum_type(SubscriptionKeyKind), help='The type of key to regenerate: primary or secondary')
