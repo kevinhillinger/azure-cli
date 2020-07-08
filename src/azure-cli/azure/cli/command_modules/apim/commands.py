@@ -7,6 +7,7 @@
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import (service_output_format, product_output_format, policy_output_format, subscription_output_format)
 from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_policy, cf_product, cf_subscription)
+from azure.cli.command_modules.apim._format import (service_output_format, product_output_format, policy_output_format, subscription_output_format)
 from ._validators import validate_policy_xml_content
 from ._exception_handler import apim_api_exception_handler
 

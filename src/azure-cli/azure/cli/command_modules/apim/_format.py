@@ -88,7 +88,6 @@ def policy_output_format(result):
     ])))
 
 
-
 def subscription_output_format(result):
     return _output_format(result, _subscription_format_group)
 
