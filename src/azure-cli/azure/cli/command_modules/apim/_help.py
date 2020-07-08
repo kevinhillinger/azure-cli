@@ -304,6 +304,8 @@ examples:
   - name: Common usage.
     text: >
         az apim subscription regenerate-key --key-kind secondary -g MyResourceGroup -n MyApim --sid mySubscriptionId
+"""
+
 helps['apim api policy'] = """
 type: group
 short-summary: Manage Azure API Management API Policy services.
