@@ -212,6 +212,14 @@ examples:
         az apim subscription keys regenerate --key-kind secondary -g MyResourceGroup -n MyApim --sid mySubscriptionId
 """
 
+helps['apim subscription keys list'] = """
+type: command
+short-summary: Lists the keys of an existing subscription of the API Management service. 
+examples:
+  - name: Common usage.
+    text: >
+        az apim subscription keys list -g MyResourceGroup -n MyApim --sid mySubscriptionId
+"""
 
 helps['apim subscription regenerate-key'] = """
 type: command
