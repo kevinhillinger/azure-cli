@@ -101,3 +101,39 @@ def _subscription_format_group(item):
         ('STATE', _service_status(_get_value_as_str(item, 'state'))),
         ('ALLOW TRACING', item['allowTracing'])
     ])
+
+
+def subscription_output_format(result):
+    return _output_format(result, _subscription_format_group)
+
+
+def _subscription_format_group(item):
+    return OrderedDict([
+        ('DISPLAY NAME', _get_value_as_str(item, 'displayName')),
+        ('PRIMARY KEY', _get_value_as_str(item, 'primaryKey')),
+        ('SECONDARY KEY', _get_value_as_str(item, 'secondaryKey')),
+        ('SCOPE', _get_value_as_str(item, 'scope')),
+        ('STATE', _service_status(_get_value_as_str(item, 'state'))),
+        ('ALLOW TRACING', item['allowTracing'])
+    ])
+
+def api_policy_output_format(result):
+    return _output_format(result, _api_policy_format_group)
+
+
+def _api_policy_format_group(item):
+    return OrderedDict([
+        ('NAME', _get_value_as_str(item, 'name')),
+        ('COUNT', _get_value_as_str(item, 'count')),
+        ('VALUE', _get_value_as_str(item, 'value'))
+    ])
+
+def policy_description_format_group(result):
+    return _output_format(result, _policy_description_format_group)
+
+
+def _policy_description_format_group(item):
+    return OrderedDict([
+        ('POLICY DESCRIPTION COLLECTION', transform_string_array(_get_value_as_object(item, 'PolicyDescriptionCollection'))),
+        ('COUNT', _get_value_as_str(item, 'count'))
+    ])

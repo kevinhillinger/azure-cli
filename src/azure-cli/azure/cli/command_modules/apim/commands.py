@@ -5,9 +5,9 @@
 # pylint: disable=line-too-long
 
 from azure.cli.core.commands import CliCommandType
-from azure.cli.command_modules.apim._format import (service_output_format, product_output_format, policy_output_format, subscription_output_format)
-from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_policy, cf_product, cf_subscription)
-from azure.cli.command_modules.apim._format import (service_output_format, product_output_format, policy_output_format, subscription_output_format)
+from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_policy, cf_product, cf_subscription, cf_api_policy, cf_policy_description)
+from azure.cli.command_modules.apim._format import (service_output_format, product_output_format, policy_output_format, 
+                                                subscription_output_format, api_policy_output_format, policy_description_format_group, )
 from ._validators import validate_policy_xml_content
 from ._exception_handler import apim_api_exception_handler
 
@@ -78,6 +78,26 @@ def load_command_table(self, _):
         operations_tmpl='azure.cli.command_modules.apim.operations.subscription#{}',
         client_factory=cf_subscription
     )
+    
+    api_policy_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.apimanagement.operations#ApiPolicyOperations.{}',
+        client_factory=cf_api_policy
+    )
+
+    api_policy_custom_type = CliCommandType(
+        operations_tmpl='azure.cli.command_modules.apim.operations.api_policy#{}',
+        client_factory=cf_api_policy
+    )
+
+    policy_description_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.apimanagement.operations#PolicyDescriptionOperations.{}',
+        client_factory=cf_policy_description
+    )
+
+    policy_description_custom_type = CliCommandType(
+        operations_tmpl='azure.cli.command_modules.apim.operations.policy_description#{}',
+        client_factory=cf_policy_description
+    )
 
     # pylint: disable=line-too-long
     with self.command_group('apim', service_sdk, is_preview=True) as g:
@@ -135,7 +155,15 @@ def load_command_table(self, _):
         g.custom_command('delete', 'delete_subscription', confirmation=True, table_transformer=subscription_output_format, client_factory=cf_subscription)
         g.custom_command('update', 'update_subscription', table_transformer=subscription_output_format)
         g.custom_command('regenerate-key', 'regenerate_key', table_transformer=subscription_output_format, client_factory=cf_subscription)
-        
+    
     with self.command_group('apim subscription keys', subscription_sdk, custom_command_type=subscription_custom_type, is_preview=True) as g:
         g.custom_command('regenerate', 'regenerate_key')
         g.custom_command('list', 'list_keys')
+    
+    # api policy
+    with self.command_group('apim api policy', api_policy_sdk, custom_command_type=api_policy_custom_type, is_preview=True, client_factory=cf_api_policy) as g:
+        g.custom_command('create', 'create_api_policy', table_transformer=api_policy_output_format, validator=validate_policy_xml_content)
+        g.custom_command('update', 'update_api_policy', table_transformer=api_policy_output_format, validator=validate_policy_xml_content)
+        g.custom_command('list', 'list_api_policy', table_transformer=api_policy_output_format)
+        g.custom_command('show', 'show_api_policy', table_transformer=None)
+        g.custom_command('delete', 'delete_api_policy', table_transformer=api_policy_output_format)

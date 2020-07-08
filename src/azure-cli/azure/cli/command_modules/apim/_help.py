@@ -304,4 +304,45 @@ examples:
   - name: Common usage.
     text: >
         az apim subscription regenerate-key --key-kind secondary -g MyResourceGroup -n MyApim --sid mySubscriptionId
+helps['apim api policy'] = """
+type: group
+short-summary: Manage Azure API Management API Policy services.
+"""
+
+helps['apim api policy list'] = """
+type: command
+short-summary: Lists a collection of policies in the specified API.
+examples:
+  - name: Common usage.
+    text: >
+        az apim api policy list -g MyResourceGroup -n MyApim -a echo-api
+"""
+
+helps['apim api policy show'] = """
+type: command
+short-summary: Gets a collection of policies in the specified API.
+examples:
+  - name: Common usage.
+    text: >
+        az apim api policy list -g MyResourceGroup -n MyApim -a echo-api
+"""
+
+helps['apim api policy delete'] = """
+type: command
+short-summary: Delete the policies in the specified API.
+examples:
+  - name: Common usage.
+    text: >
+        az apim api policy delete -g MyResourceGroup -n MyApim -a echo-api
+"""
+
+helps['apim api policy create'] = """
+type: command
+short-summary: Creates the policies in the specified API.
+
+"""
+
+helps['apim api policy update'] = """
+type: command
+short-summary: Updates the policies in the specified API.
 """

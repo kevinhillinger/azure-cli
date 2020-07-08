@@ -100,3 +100,15 @@ def load_arguments(self, _):
     for scope in ['apim subscription keys regenerate', 'apim subscription regenerate-key']:
         with self.argument_context(scope) as c:
             c.argument('key_kind', arg_type=get_enum_type(SubscriptionKeyKind), help='The type of key to regenerate: primary or secondary')
+    
+    # api policy
+    with self.argument_context('apim api policy') as c:
+        c.argument('api_id', options_list=['--api_id', '-a'], help='API revision identifier. Must be unique in the current API Management service instance.')
+        c.argument('xml', options_list=['--xml-value', '-v'], help='The XML document value inline as a non-XML encoded string.')
+        c.argument('xml_path', options_list=['--xml-file', '-f'], help='The path to the policy XML document.')
+        c.argument('xml_uri', options_list=['--xml-uri', '-u'], help='The URI of the policy XML document from an HTTP endpoint accessible from the API Management service.')
+
+    # policy description
+    with self.argument_context('apim policy description') as c:
+        c.argument('service_name', options_list=['--name', '-n'], help="The name of the api management service instance", id_part=None)
+        c.argument('scope', help="Policy scope. Possible values include: 'Tenant', 'Product', 'Api', 'Operation', 'All'", id_part=None)
