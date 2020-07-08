@@ -11,16 +11,17 @@ from azure.cli.command_modules.apim._util import (get_xml_content)
 
 def create_api_policy(client, resource_group_name, service_name, api_id, xml=None, xml_path=None, xml_uri=None, no_wait=False):
     """Creates a policy in the specified API. """
-    _create_update_api(client, no_wait, resource_group_name, service_name, api_id, xml, xml_path, xml_uri, is_update=False)
+    return _create_update_api(client, no_wait, resource_group_name, service_name, api_id, xml, xml_path, xml_uri, is_update=False)
 
 
 def update_api_policy(client, resource_group_name, service_name, api_id, xml=None, xml_path=None, xml_uri=None, no_wait=False):
     """Updates a policy in the specified API. """
-    _create_update_api(client, no_wait, resource_group_name, service_name, api_id, xml, xml_path, xml_uri, is_update=True)
+    return _create_update_api(client, no_wait, resource_group_name, service_name, api_id, xml, xml_path, xml_uri, is_update=True)
 
 
 def _create_update_api(client, no_wait, resource_group_name, service_name, api_id, xml=None, xml_path=None, xml_uri=None, is_update=False):
     if_match = None if not is_update else client.get_entity_tag(resource_group_name, service_name, api_id)
+
     xml_format = _get_xml_format(xml, xml_path, xml_uri)
     xml_content = get_xml_content(xml, xml_path, xml_uri)
 
