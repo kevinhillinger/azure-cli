@@ -7,7 +7,7 @@
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_policy, cf_product, cf_subscription, cf_api_policy, cf_policy_description)
 from azure.cli.command_modules.apim._format import (service_output_format, product_output_format, policy_output_format, 
-                                                subscription_output_format, api_policy_output_format, policy_description_format_group, )
+                                                subscription_output_format, api_policy_output_format, policy_description_format_group)
 from ._validators import validate_policy_xml_content
 from ._exception_handler import apim_api_exception_handler
 
@@ -87,16 +87,6 @@ def load_command_table(self, _):
     api_policy_custom_type = CliCommandType(
         operations_tmpl='azure.cli.command_modules.apim.operations.api_policy#{}',
         client_factory=cf_api_policy
-    )
-
-    policy_description_sdk = CliCommandType(
-        operations_tmpl='azure.mgmt.apimanagement.operations#PolicyDescriptionOperations.{}',
-        client_factory=cf_policy_description
-    )
-
-    policy_description_custom_type = CliCommandType(
-        operations_tmpl='azure.cli.command_modules.apim.operations.policy_description#{}',
-        client_factory=cf_policy_description
     )
 
     # pylint: disable=line-too-long
