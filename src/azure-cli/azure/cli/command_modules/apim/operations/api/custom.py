@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 # pylint: disable=line-too-long
-
+# pylint: disable=too-many-branches
 
 from azure.mgmt.apimanagement.models import (ApiCreateOrUpdateParameter, Protocol,
                                              AuthenticationSettingsContract, OAuth2AuthenticationSettingsContract, OpenIdAuthenticationSettingsContract, BearerTokenSendingMethod,
@@ -94,7 +94,7 @@ def create_api(client, resource_group_name, service_name, api_id,
 
     return client.create_or_update(resource_group_name, service_name, api_id, parameters, if_match)
 
-# pylint: disable=too-many-branches
+
 def update_api(instance,
                path=None, display_name=None, description=None, service_url=None, protocols=None,
                api_revision=None, api_revision_description=None,

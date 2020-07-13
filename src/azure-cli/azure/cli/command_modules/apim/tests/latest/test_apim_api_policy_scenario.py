@@ -42,27 +42,25 @@ class ApimApiPolicyScenarioTest(ScenarioTest):
     def _create_policy_using_inline_xml(self):
         self._assert_xml_output_is_equal_to_expected('apim api policy create -n {apim_name} -g {rg} -a {api_id} -v "{xml_value}" --output tsv --query value')
 
-
     def _create_policy_using_xml_from_file(self):
         self._assert_xml_output_is_equal_to_expected('apim api policy create -n {apim_name} -g {rg} -a {api_id} -f {xml_file} --output tsv --query value')
 
-
-    def _assert_xml_output_is_equal_to_expected(self, cmd_statement): 
+    def _assert_xml_output_is_equal_to_expected(self, cmd_statement):
         result = xmltodict.parse(self.cmd(cmd_statement).output)
         expected = xmltodict.parse(self.data.xml_content)
-        self.assertDictEqual(expected, result)
 
+        self.assertDictEqual(expected, result)
 
     def _delete_policy_resets_xml_value(self):
         self.cmd('apim api policy delete -n {apim_name} -g {rg} -a {api_id}')
-
         final_count = len(self.cmd('apim api policy list -n {apim_name} -g {rg} -a {api_id}').get_output_in_json())
+
         self.assertLessEqual(0, final_count)  # 0 used here since the default APIM products were deleted
 
     class XmlPolicyData:
         """Test XML Policy data management for the scenario test"""
         POLICY_FILE_NAME = 'policy.xml'
-        
+
         xml_content = """<policies>
         <inbound></inbound>
         <backend>
@@ -86,7 +84,7 @@ class ApimApiPolicyScenarioTest(ScenarioTest):
 </policies>"""
 
         def __init__(self):
-             self.policy_file = os.path.join(TEST_DIR, self.POLICY_FILE_NAME).replace('\\', '\\\\')
+            self.policy_file = os.path.join(TEST_DIR, self.POLICY_FILE_NAME).replace('\\', '\\\\')
 
         def delete_xml_file(self):
             os.remove(self.policy_file)

@@ -75,7 +75,7 @@ short-summary: Update an API Management service instance.
 # policy
 helps['apim policy'] = """
 type: group
-short-summary: Manage Azure API Management policies.
+short-summary: Manage the global policy.
 """
 
 helps['apim policy show'] = """
@@ -101,12 +101,7 @@ short-summary: Delete a policy for an API Management instance.
 # product
 helps['apim product'] = """
 type: group
-short-summary: Manage Azure API Management products.
-"""
-
-helps['apim subscription'] = """
-type: group
-short-summary: Manage Azure API Management Subscription services.
+short-summary: Manage products.
 """
 
 helps['apim product list'] = """
@@ -229,6 +224,12 @@ examples:
     text: >
         az apim subscription regenerate-key --key-kind secondary -g MyResourceGroup -n MyApim --sid mySubscriptionId
 """
+
+helps['apim subscription'] = """
+type: group
+short-summary: Manage subscriptions.
+"""
+
 helps['apim subscription create'] = """
 type: command
 short-summary: Creates the subscription specified by its subscription ID, display name and scope. Other parameters are optional
@@ -290,7 +291,7 @@ examples:
 
 helps['apim subscription keys list'] = """
 type: command
-short-summary: Lists the keys of an existing subscription of the API Management service. 
+short-summary: Lists the keys of an existing subscription of the API Management service.
 examples:
   - name: Common usage.
     text: >
@@ -308,7 +309,7 @@ examples:
 
 helps['apim api policy'] = """
 type: group
-short-summary: Manage Azure API Management API Policy services.
+short-summary: Manage policies for an API.
 """
 
 helps['apim api policy list'] = """

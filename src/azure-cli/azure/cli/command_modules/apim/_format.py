@@ -75,7 +75,13 @@ def transform_string_array(item):
 
 
 def product_output_format(result):
-    return _output_format(result, _product_format_group)
+    return _output_format(result, (lambda item: OrderedDict([
+        ('NAME', _get_value_as_str(item, 'name')),
+        ('DISPLAY NAME', _get_value_as_str(item, 'displayName')),
+        ('STATE', _service_status(_get_value_as_str(item, 'state'))),
+        ('SUBSCRIPTION REQUIRED', _get_value_as_str(item, 'subscriptionRequired')),
+        ('APPROVAL REQUIRED', _get_value_as_str(item, 'approvalRequired'))
+    ])))
 
 
 def policy_output_format(result):
@@ -117,6 +123,7 @@ def _subscription_format_group(item):
         ('ALLOW TRACING', item['allowTracing'])
     ])
 
+
 def api_policy_output_format(result):
     return _output_format(result, _api_policy_format_group)
 
@@ -127,6 +134,7 @@ def _api_policy_format_group(item):
         ('COUNT', _get_value_as_str(item, 'count')),
         ('VALUE', _get_value_as_str(item, 'value'))
     ])
+
 
 def policy_description_format_group(result):
     return _output_format(result, _policy_description_format_group)

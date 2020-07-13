@@ -10,12 +10,10 @@ from azure.cli.command_modules.apim._util import (get_xml_content)
 
 
 def create_api_policy(client, resource_group_name, service_name, api_id, xml=None, xml_path=None, xml_uri=None, no_wait=False):
-    """Creates a policy in the specified API. """
     return _create_update_api(client, no_wait, resource_group_name, service_name, api_id, xml, xml_path, xml_uri, is_update=False)
 
 
 def update_api_policy(client, resource_group_name, service_name, api_id, xml=None, xml_path=None, xml_uri=None, no_wait=False):
-    """Updates a policy in the specified API. """
     return _create_update_api(client, no_wait, resource_group_name, service_name, api_id, xml, xml_path, xml_uri, is_update=True)
 
 
@@ -34,18 +32,14 @@ def _create_update_api(client, no_wait, resource_group_name, service_name, api_i
 
 
 def list_api_policy(client, resource_group_name, service_name, api_id):
-    """Lists a collection of policies in the specified API. """
-
     return client.list_by_api(resource_group_name, service_name, api_id)
 
 
 def show_api_policy(client, resource_group_name, service_name, api_id):
-    """Gets a collection of policies in the specified API. """
-
     return client.get(resource_group_name, service_name, api_id)
 
+
 def delete_api_policy(client, resource_group_name, service_name, api_id):
-    """Delete the policies for the specified API. """
     return client.delete(resource_group_name, service_name, api_id, if_match='*')
 
 

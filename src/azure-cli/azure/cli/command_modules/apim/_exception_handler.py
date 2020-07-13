@@ -4,9 +4,9 @@
 # --------------------------------------------------------------------------------------------
 
 
-def apim_api_exception_handler(ex):
+def default_exception_handler(ex):
     from azure.mgmt.apimanagement.models import ErrorResponseException
-    from azure.mgmt.apimanagement.models.error_field_contract_py3 import ErrorFieldContract
+    from azure.mgmt.apimanagement.models import ErrorFieldContract
     from msrest.exceptions import ValidationError
     from msrest.exceptions import HttpOperationError
     from knack.util import CLIError
@@ -14,8 +14,8 @@ def apim_api_exception_handler(ex):
     if isinstance(ex, ErrorResponseException) and ex.message:
         message = [ex.error.message, '\n']
         if (ex.error.details):
-           for error in ex.error.details:
-               message.append('- {}'.format(error.message))
+            for error in ex.error.details:
+                message.append('- {}'.format(error.message))
         raise CLIError("".join(message))
     if isinstance(ex, (ValidationError, IOError, ValueError)):
         raise CLIError(ex)

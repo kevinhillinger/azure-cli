@@ -79,7 +79,7 @@ class ApimApiScenarioTest(ScenarioTest):
             self.check('serviceUrl', '{service_url}'),
             self.check('subscriptionKeyParameterNames.header', '{subscription_key_header_name}'),
             self.check('subscriptionKeyParameterNames.query', '{subscription_key_query_string_name}')
-            ])
+        ])
 
         # Create a new revision from an existing API, using the --source-api-id parameter with value {source_api_id}
         api_id_revision2 = api_id + ';rev=2'
@@ -202,6 +202,6 @@ class ApimApiScenarioTest(ScenarioTest):
         self.kwargs.update({
             'api_id': api_id
         })
-        
+
         self.cmd('apim api delete -n {apim_name} -g {rg} -a {api_id} --delete-revisions --yes')
         self.assertEqual(len(self.cmd('apim api list -n {apim_name} -g {rg}').get_output_in_json()), created_apis - 1)
