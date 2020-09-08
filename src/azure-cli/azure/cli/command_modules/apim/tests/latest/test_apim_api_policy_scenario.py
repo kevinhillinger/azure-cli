@@ -2,6 +2,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
+# pylint: disable=line-too-long
 
 import os
 import unittest
@@ -13,7 +14,6 @@ from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagemen
 TEST_DIR = os.path.abspath(os.path.join(os.path.abspath(__file__), '..'))
 
 
-# pylint: disable=line-too-long
 class ApimApiPolicyScenarioTest(ScenarioTest):
     API_ID = 'echo-api'
 
@@ -51,15 +51,15 @@ class ApimApiPolicyScenarioTest(ScenarioTest):
 
         self.assertDictEqual(expected, result)
 
-    def _delete_policy_resets_xml_value(self):
+    def _delete_policy_removes_the_policy_resource(self):
         self.cmd('apim api policy delete -n {apim_name} -g {rg} -a {api_id}')
-        final_count = len(self.cmd('apim api policy list -n {apim_name} -g {rg} -a {api_id}').get_output_in_json())
+        final_count = self.cmd('apim api policy list -n {apim_name} -g {rg} -a {api_id}').get_output_in_json()['count']
 
-        self.assertLessEqual(0, final_count)  # 0 used here since the default APIM products were deleted
+        self.assertEqual(0, final_count)  # 0 used here since the default APIM products were deleted
 
     class XmlPolicyData:
         """Test XML Policy data management for the scenario test"""
-        POLICY_FILE_NAME = 'policy.xml'
+        POLICY_FILE_NAME = 'data/api_policy.xml'
 
         xml_content = """<policies>
         <inbound></inbound>
@@ -90,6 +90,12 @@ class ApimApiPolicyScenarioTest(ScenarioTest):
             os.remove(self.policy_file)
 
         def create_xml_file(self):
+            self._ensure_data_dir()
             file = open(self.policy_file, "w")
             file.write(self.xml_content)
             file.close()
+
+        def _ensure_data_dir(self):
+            dirname = os.path.dirname(self.policy_file)
+            if not os.path.exists(dirname):
+                os.makedirs(dirname)

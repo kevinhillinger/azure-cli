@@ -24,7 +24,7 @@ class ApimPolicyScenarioTest(ScenarioTest):
         <on-error />
 </policies>"""
 
-    policy_file = os.path.join(TEST_DIR, 'policy.xml').replace('\\', '\\\\')
+    policy_file = os.path.join(TEST_DIR, 'data/policy.xml').replace('\\', '\\\\')
 
     def setUp(self):
         self._create_xml_file()
@@ -65,17 +65,21 @@ class ApimPolicyScenarioTest(ScenarioTest):
         self.assertDictEqual(expected, result)
 
     def _delete_policy_resets_xml_value(self):
-        """When deleting, it should reset the global policy, not get rid of it where the count would equal 0"""
-        self.cmd('apim policy delete -n {apim_name} -g {rg}')
-        result = len(self.cmd('az apim policy show -n {apim_name} -g {rg}').get_output_in_json())
-        expected = 1
+        self.cmd('apim policy delete -n {apim_name} -g {rg} --yes')
 
-        self.assertEqual(expected, result)
+        with self.assertRaises(SystemExit):  # raises exit code 3 because of resource not found
+            self.cmd('az apim policy show -n {apim_name} -g {rg}')
 
     def _delete_xml_file(self):
         os.remove(self.policy_file)
 
     def _create_xml_file(self):
+        self._ensure_data_dir()
         file = open(self.policy_file, "w")
         file.write(self.xml_content)
         file.close()
+
+    def _ensure_data_dir(self):
+        dirname = os.path.dirname(self.policy_file)
+        if not os.path.exists(dirname):
+            os.makedirs(dirname)

@@ -13,55 +13,38 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions?api-version=2019-12-01
   response:
     body:
-      string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/5f04f4fda2e20a004d070001\",\r\n
+      string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/master\",\r\n
         \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
-        \"5f04f4fda2e20a004d070001\",\r\n      \"properties\": {\r\n        \"ownerId\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/users/1\",\r\n
-        \       \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/starter\",\r\n
-        \       \"displayName\": null,\r\n        \"state\": \"active\",\r\n        \"createdDate\":
-        \"2020-07-07T22:19:41.083Z\",\r\n        \"startDate\": null,\r\n        \"expirationDate\":
-        null,\r\n        \"endDate\": null,\r\n        \"notificationDate\": null,\r\n
-        \       \"stateComment\": null,\r\n        \"allowTracing\": true\r\n      }\r\n
-        \   },\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/5f04f4fea2e20a004d070002\",\r\n
-        \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
-        \"5f04f4fea2e20a004d070002\",\r\n      \"properties\": {\r\n        \"ownerId\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/users/1\",\r\n
-        \       \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/unlimited\",\r\n
-        \       \"displayName\": null,\r\n        \"state\": \"active\",\r\n        \"createdDate\":
-        \"2020-07-07T22:19:42.113Z\",\r\n        \"startDate\": null,\r\n        \"expirationDate\":
-        null,\r\n        \"endDate\": null,\r\n        \"notificationDate\": null,\r\n
-        \       \"stateComment\": null,\r\n        \"allowTracing\": true\r\n      }\r\n
-        \   },\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/master\",\r\n
-        \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
-        \"master\",\r\n      \"properties\": {\r\n        \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/\",\r\n
+        \"master\",\r\n      \"properties\": {\r\n        \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/\",\r\n
         \       \"displayName\": \"Built-in all-access subscription\",\r\n        \"state\":
-        \"active\",\r\n        \"createdDate\": \"2020-07-07T22:37:47.38Z\",\r\n        \"startDate\":
-        null,\r\n        \"expirationDate\": null,\r\n        \"endDate\": null,\r\n
-        \       \"notificationDate\": null,\r\n        \"stateComment\": null,\r\n
-        \       \"allowTracing\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
-        3\r\n}"
+        \"active\",\r\n        \"createdDate\": \"2020-09-08T20:28:32.733Z\",\r\n
+        \       \"startDate\": null,\r\n        \"expirationDate\": null,\r\n        \"endDate\":
+        null,\r\n        \"notificationDate\": null,\r\n        \"stateComment\":
+        null,\r\n        \"allowTracing\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
+        1\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '3378'
+      - '975'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:37 GMT
+      - Tue, 08 Sep 2020 20:29:32 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -88,27 +71,27 @@ interactions:
       ParameterSetName:
       - -n -g --sid --scope -d
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003?api-version=2019-12-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002","name":"clitest000002","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
-        US","etag":"AAAAAAAKiB4=","properties":{"publisherEmail":"publisher@contsoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contsoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-07-07T22:14:18.7890259Z","gatewayUrl":"https://clitest000002.azure-api.net","gatewayRegionalUrl":"https://clitest000002-westus-01.regional.azure-api.net","portalUrl":"https://clitest000002.portal.azure-api.net","developerPortalUrl":"https://clitest000002.developer.azure-api.net","managementApiUrl":"https://clitest000002.management.azure-api.net","scmUrl":"https://clitest000002.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"clitest000002.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["13.91.40.76"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003","name":"clitest000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANP4E=","properties":{"publisherEmail":"publisher@contsoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contsoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-08T20:28:29.0674571Z","gatewayUrl":"https://clitest000003.azure-api.net","gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":"clitest000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Consumption","capacity":0},"identity":null}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '2258'
+      - '1813'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:38 GMT
+      - Tue, 08 Sep 2020 20:29:33 GMT
       etag:
-      - '"AAAAAAAKiB4="'
+      - '"AAAAAAANP4E="'
       expires:
       - '-1'
       pragma:
@@ -127,7 +110,7 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: 'b''b\''{"properties": {"scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis",
+    body: 'b''b\''{"properties": {"scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/apis",
       "displayName": "foo-bar"}}\'''''
     headers:
       Accept:
@@ -145,21 +128,21 @@ interactions:
       ParameterSetName:
       - -n -g --sid --scope -d
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001?api-version=2019-12-01
   response:
     body:
-      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003\",\r\n
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001\",\r\n
         \ \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n  \"name\":
-        \"apim_subscription-000003\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis\",\r\n
+        \"apim_subscription-000001\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/apis\",\r\n
         \   \"displayName\": \"foo-bar\",\r\n    \"state\": \"active\",\r\n    \"createdDate\":
-        \"2020-07-07T22:45:40.1819768Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
+        \"2020-09-08T20:29:35.3636735Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
         null,\r\n    \"endDate\": null,\r\n    \"notificationDate\": null,\r\n    \"primaryKey\":
-        \"cfda28757cf144c5af75d0b4752b54f3\",\r\n    \"secondaryKey\": \"896387aa40054c01814cd3ca5ef3451a\",\r\n
+        \"caff8417a1ce4760804f0447101ac192\",\r\n    \"secondaryKey\": \"018da9c6d8d444b28ee41b7607a9609d\",\r\n
         \   \"stateComment\": null\r\n  }\r\n}"
     headers:
       cache-control:
@@ -169,14 +152,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:40 GMT
+      - Tue, 08 Sep 2020 20:29:34 GMT
       etag:
-      - '"AAAAAAAACQw="'
+      - '"AAAAAAAiP9A="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -201,19 +185,19 @@ interactions:
       ParameterSetName:
       - -n -g --sid
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001?api-version=2019-12-01
   response:
     body:
-      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003\",\r\n
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001\",\r\n
         \ \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n  \"name\":
-        \"apim_subscription-000003\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis\",\r\n
+        \"apim_subscription-000001\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/apis\",\r\n
         \   \"displayName\": \"foo-bar\",\r\n    \"state\": \"active\",\r\n    \"createdDate\":
-        \"2020-07-07T22:45:40.183Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
+        \"2020-09-08T20:29:35.363Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
         null,\r\n    \"endDate\": null,\r\n    \"notificationDate\": null,\r\n    \"stateComment\":
         null\r\n  }\r\n}"
     headers:
@@ -224,14 +208,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:40 GMT
+      - Tue, 08 Sep 2020 20:29:36 GMT
       etag:
-      - '"AAAAAAAACQw="'
+      - '"AAAAAAAiP9A="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -264,12 +249,12 @@ interactions:
       ParameterSetName:
       - -n -g --sid -d
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PATCH
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001?api-version=2019-12-01
   response:
     body:
       string: ''
@@ -277,12 +262,13 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Tue, 07 Jul 2020 22:45:43 GMT
+      - Tue, 08 Sep 2020 20:29:37 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -301,25 +287,25 @@ interactions:
       Accept-Encoding:
       - gzip, deflate
       CommandName:
-      - apim subscription show
+      - apim subscription update
       Connection:
       - keep-alive
       ParameterSetName:
-      - -n -g --sid
+      - -n -g --sid -d
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001?api-version=2019-12-01
   response:
     body:
-      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003\",\r\n
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001\",\r\n
         \ \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n  \"name\":
-        \"apim_subscription-000003\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis\",\r\n
+        \"apim_subscription-000001\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/apis\",\r\n
         \   \"displayName\": \"bar-foo\",\r\n    \"state\": \"active\",\r\n    \"createdDate\":
-        \"2020-07-07T22:45:40.183Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
+        \"2020-09-08T20:29:35.363Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
         null,\r\n    \"endDate\": null,\r\n    \"notificationDate\": null,\r\n    \"stateComment\":
         null\r\n  }\r\n}"
     headers:
@@ -330,14 +316,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:47 GMT
+      - Tue, 08 Sep 2020 20:29:38 GMT
       etag:
-      - '"AAAAAAAACQ4="'
+      - '"AAAAAAAiP9I="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -366,15 +353,15 @@ interactions:
       ParameterSetName:
       - -n -g --sid
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003/listSecrets?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001/listSecrets?api-version=2019-12-01
   response:
     body:
-      string: '{"primaryKey":"cfda28757cf144c5af75d0b4752b54f3","secondaryKey":"896387aa40054c01814cd3ca5ef3451a"}'
+      string: '{"primaryKey":"caff8417a1ce4760804f0447101ac192","secondaryKey":"018da9c6d8d444b28ee41b7607a9609d"}'
     headers:
       cache-control:
       - no-cache
@@ -383,14 +370,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:48 GMT
+      - Tue, 08 Sep 2020 20:29:38 GMT
       etag:
-      - '"AAAAAAAACQ4="'
+      - '"AAAAAAAiP9I="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -421,12 +409,12 @@ interactions:
       ParameterSetName:
       - --key-kind -n -g --sid
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003/regeneratePrimaryKey?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001/regeneratePrimaryKey?api-version=2019-12-01
   response:
     body:
       string: ''
@@ -434,12 +422,13 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Tue, 07 Jul 2020 22:45:51 GMT
+      - Tue, 08 Sep 2020 20:29:39 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -466,12 +455,12 @@ interactions:
       ParameterSetName:
       - --key-kind -n -g --sid
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003/regenerateSecondaryKey?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001/regenerateSecondaryKey?api-version=2019-12-01
   response:
     body:
       string: ''
@@ -479,12 +468,13 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Tue, 07 Jul 2020 22:45:53 GMT
+      - Tue, 08 Sep 2020 20:29:41 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -511,15 +501,15 @@ interactions:
       ParameterSetName:
       - -n -g --sid
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003/listSecrets?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001/listSecrets?api-version=2019-12-01
   response:
     body:
-      string: '{"primaryKey":"30f99b07de224294b701e073277c134e","secondaryKey":"c2bd9584819d49d088f62b8031e4b634"}'
+      string: '{"primaryKey":"e8dff0021c204bf4a45fae46e92e5d98","secondaryKey":"d7919a6b79704ee0a729333d9c20b3b1"}'
     headers:
       cache-control:
       - no-cache
@@ -528,14 +518,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:54 GMT
+      - Tue, 08 Sep 2020 20:29:41 GMT
       etag:
-      - '"AAAAAAAACRQ="'
+      - '"AAAAAAAiP9g="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -546,7 +537,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1199'
+      - '1198'
     status:
       code: 200
       message: OK
@@ -568,12 +559,12 @@ interactions:
       ParameterSetName:
       - -n -g --sid --yes
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/apim_subscription-000003?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001?api-version=2019-12-01
   response:
     body:
       string: ''
@@ -583,12 +574,13 @@ interactions:
       content-length:
       - '0'
       date:
-      - Tue, 07 Jul 2020 22:45:55 GMT
+      - Tue, 08 Sep 2020 20:29:42 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -613,55 +605,38 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (Windows-10-10.0.18362-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-apimanagement/0.2.0
-        Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions?api-version=2019-12-01
   response:
     body:
-      string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/5f04f4fda2e20a004d070001\",\r\n
+      string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/master\",\r\n
         \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
-        \"5f04f4fda2e20a004d070001\",\r\n      \"properties\": {\r\n        \"ownerId\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/users/1\",\r\n
-        \       \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/starter\",\r\n
-        \       \"displayName\": null,\r\n        \"state\": \"active\",\r\n        \"createdDate\":
-        \"2020-07-07T22:19:41.083Z\",\r\n        \"startDate\": null,\r\n        \"expirationDate\":
-        null,\r\n        \"endDate\": null,\r\n        \"notificationDate\": null,\r\n
-        \       \"stateComment\": null,\r\n        \"allowTracing\": true\r\n      }\r\n
-        \   },\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/5f04f4fea2e20a004d070002\",\r\n
-        \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
-        \"5f04f4fea2e20a004d070002\",\r\n      \"properties\": {\r\n        \"ownerId\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/users/1\",\r\n
-        \       \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/unlimited\",\r\n
-        \       \"displayName\": null,\r\n        \"state\": \"active\",\r\n        \"createdDate\":
-        \"2020-07-07T22:19:42.113Z\",\r\n        \"startDate\": null,\r\n        \"expirationDate\":
-        null,\r\n        \"endDate\": null,\r\n        \"notificationDate\": null,\r\n
-        \       \"stateComment\": null,\r\n        \"allowTracing\": true\r\n      }\r\n
-        \   },\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/subscriptions/master\",\r\n
-        \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
-        \"master\",\r\n      \"properties\": {\r\n        \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/\",\r\n
+        \"master\",\r\n      \"properties\": {\r\n        \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/\",\r\n
         \       \"displayName\": \"Built-in all-access subscription\",\r\n        \"state\":
-        \"active\",\r\n        \"createdDate\": \"2020-07-07T22:37:47.38Z\",\r\n        \"startDate\":
-        null,\r\n        \"expirationDate\": null,\r\n        \"endDate\": null,\r\n
-        \       \"notificationDate\": null,\r\n        \"stateComment\": null,\r\n
-        \       \"allowTracing\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
-        3\r\n}"
+        \"active\",\r\n        \"createdDate\": \"2020-09-08T20:28:32.733Z\",\r\n
+        \       \"startDate\": null,\r\n        \"expirationDate\": null,\r\n        \"endDate\":
+        null,\r\n        \"notificationDate\": null,\r\n        \"stateComment\":
+        null,\r\n        \"allowTracing\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
+        1\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '3378'
+      - '975'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 07 Jul 2020 22:45:56 GMT
+      - Tue, 08 Sep 2020 20:29:44 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains

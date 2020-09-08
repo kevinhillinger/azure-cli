@@ -14,16 +14,15 @@ from azure.mgmt.apimanagement.models import (ApiCreateOrUpdateParameter, Protoco
 # API Operations
 # pylint: disable=too-many-locals
 def create_api(client, resource_group_name, service_name, api_id,
-               path, display_name=None, description=None, service_url=None, protocols=None,
-               api_revision=None, api_revision_description=None,
-               api_version=None, api_version_set_id=None,
-               source_api_id=None,
+               path, display_name=None, description=None, service_url=None,
+               protocols=None, api_revision=None, api_revision_description=None,
+               api_version=None, api_version_set_id=None, source_api_id=None,
                oauth2_authorization_server_id=None, oauth2_scope=None,
                openid_provider_id=None, openid_bearer_token_sending_methods=None,
-               subscription_required=None, subscription_key_header_name=None, subscription_key_query_string_name=None,
-               is_current=None, is_online=None,
-               import_format=None, value=None,
-               wsdl_service_name=None, wsdl_endpoint_name=None, api_type=None,
+               subscription_required=None, subscription_key_header_name=None,
+               subscription_key_query_string_name=None, is_current=None, is_online=None,
+               import_format=None, value=None, wsdl_service_name=None,
+               wsdl_endpoint_name=None, api_type=None
                ):
 
     # Revsion indicator

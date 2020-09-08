@@ -13,16 +13,16 @@ interactions:
       Content-Length:
       - '0'
       If-Match:
-      - 'True'
+      - '*'
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/Starter?deleteSubscriptions=true&api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/Starter?deleteSubscriptions=true&api-version=2019-12-01
   response:
     body:
       string: ''
@@ -32,7 +32,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 15 Apr 2020 16:09:03 GMT
+      - Tue, 08 Sep 2020 16:59:32 GMT
       expires:
       - '-1'
       pragma:
@@ -62,16 +62,16 @@ interactions:
       Content-Length:
       - '0'
       If-Match:
-      - 'True'
+      - '*'
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/Unlimited?deleteSubscriptions=true&api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/Unlimited?deleteSubscriptions=true&api-version=2019-12-01
   response:
     body:
       string: ''
@@ -81,7 +81,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 15 Apr 2020 16:09:05 GMT
+      - Tue, 08 Sep 2020 16:59:33 GMT
       expires:
       - '-1'
       pragma:
@@ -117,12 +117,12 @@ interactions:
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003\",\r\n
@@ -144,9 +144,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 15 Apr 2020 16:09:07 GMT
+      - Tue, 08 Sep 2020 16:59:36 GMT
       etag:
-      - '"AAAAAAAACRg="'
+      - '"AAAAAAAACRY="'
       expires:
       - '-1'
       pragma:
@@ -176,12 +176,12 @@ interactions:
       ParameterSetName:
       - -n -g -p --description --state
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003\",\r\n
@@ -198,9 +198,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 15 Apr 2020 16:09:08 GMT
+      - Tue, 08 Sep 2020 16:59:36 GMT
       etag:
-      - '"AAAAAAAACRg="'
+      - '"AAAAAAAACRY="'
       expires:
       - '-1'
       pragma:
@@ -237,12 +237,12 @@ interactions:
       ParameterSetName:
       - -n -g -p --description --state
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003\",\r\n
@@ -259,9 +259,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 15 Apr 2020 16:09:09 GMT
+      - Tue, 08 Sep 2020 16:59:37 GMT
       etag:
-      - '"AAAAAAAACR0="'
+      - '"AAAAAAAACRs="'
       expires:
       - '-1'
       pragma:
@@ -295,12 +295,12 @@ interactions:
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003\",\r\n
@@ -317,9 +317,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 15 Apr 2020 16:09:10 GMT
+      - Tue, 08 Sep 2020 16:59:38 GMT
       etag:
-      - '"AAAAAAAACR0="'
+      - '"AAAAAAAACRs="'
       expires:
       - '-1'
       pragma:
@@ -351,16 +351,16 @@ interactions:
       Content-Length:
       - '0'
       If-Match:
-      - 'True'
+      - '*'
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?deleteSubscriptions=true&api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products/apim_product-000003?deleteSubscriptions=true&api-version=2019-12-01
   response:
     body:
       string: ''
@@ -370,7 +370,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 15 Apr 2020 16:09:11 GMT
+      - Tue, 08 Sep 2020 16:59:38 GMT
       expires:
       - '-1'
       pragma:
@@ -400,12 +400,12 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.7.7 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.2.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/products?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"value\": [],\r\n  \"count\": 0\r\n}"
@@ -417,7 +417,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 15 Apr 2020 16:09:12 GMT
+      - Tue, 08 Sep 2020 16:59:39 GMT
       expires:
       - '-1'
       pragma:

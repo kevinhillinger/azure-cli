@@ -1,5 +1,105 @@
 interactions:
 - request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api list
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-12-01
+  response:
+    body:
+      string: "{\r\n  \"value\": [],\r\n  \"count\": 0\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '34'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 08 Sep 2020 20:59:57 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api list
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-12-01
+  response:
+    body:
+      string: "{\r\n  \"value\": [],\r\n  \"count\": 0\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '34'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 08 Sep 2020 20:59:59 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
     body: '{"properties": {"description": "api description", "authenticationSettings":
       {}, "subscriptionKeyParameterNames": {"header": "header1234", "query": "query1234"},
       "displayName": "api display name", "serviceUrl": "http://echoapi.cloudapp.net/api",
@@ -21,12 +121,12 @@ interactions:
       - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
@@ -46,9 +146,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:26:40 GMT
+      - Tue, 08 Sep 2020 21:00:00 GMT
       etag:
-      - '"AAAAAAAaow0="'
+      - '"AAAAAAAiQmU="'
       expires:
       - '-1'
       pragma:
@@ -61,7 +161,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1199'
+      - '1197'
     status:
       code: 201
       message: Created
@@ -80,10 +180,10 @@ interactions:
       - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
@@ -103,9 +203,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:27:11 GMT
+      - Tue, 08 Sep 2020 21:00:31 GMT
       etag:
-      - '"AAAAAAAaow0="'
+      - '"AAAAAAAiQmU="'
       expires:
       - '-1'
       pragma:
@@ -145,12 +245,12 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --display-name --description --source-api-id
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
@@ -171,9 +271,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:27:13 GMT
+      - Tue, 08 Sep 2020 21:00:33 GMT
       etag:
-      - '"AAAAAAAaoxE="'
+      - '"AAAAAAAiQnM="'
       expires:
       - '-1'
       pragma:
@@ -186,7 +286,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
+      - '1197'
     status:
       code: 201
       message: Created
@@ -204,10 +304,10 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --display-name --description --source-api-id
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
@@ -228,9 +328,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:27:44 GMT
+      - Tue, 08 Sep 2020 21:01:04 GMT
       etag:
-      - '"AAAAAAAaoxE="'
+      - '"AAAAAAAiQnM="'
       expires:
       - '-1'
       pragma:
@@ -269,12 +369,12 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --api-revision-description --service-url --source-api-id
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
@@ -295,9 +395,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:27:46 GMT
+      - Tue, 08 Sep 2020 21:01:06 GMT
       etag:
-      - '"AAAAAAAaoxU="'
+      - '"AAAAAAAiQnc="'
       expires:
       - '-1'
       pragma:
@@ -328,10 +428,10 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --api-revision-description --service-url --source-api-id
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
@@ -352,9 +452,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:28:18 GMT
+      - Tue, 08 Sep 2020 21:01:37 GMT
       etag:
-      - '"AAAAAAAaoxU="'
+      - '"AAAAAAAiQnc="'
       expires:
       - '-1'
       pragma:
@@ -394,12 +494,12 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value --service-url
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-12-01
   response:
     body:
       string: ''
@@ -409,11 +509,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 01 Jul 2020 19:28:20 GMT
+      - Tue, 08 Sep 2020 21:01:38 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5efce3d59d1f2019f81cd4c1&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-12-01&asyncId=5f57f1329d1f201d18e541a3&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -442,10 +542,10 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value --service-url
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-01-01&asyncId=5efce3d59d1f2019f81cd4c1&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-12-01&asyncId=5f57f1329d1f201d18e541a3&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger\",\r\n
@@ -469,9 +569,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:28:54 GMT
+      - Tue, 08 Sep 2020 21:02:09 GMT
       etag:
-      - '"AAAAAAAaoxk="'
+      - '"AAAAAAAiQn0="'
       expires:
       - '-1'
       pragma:
@@ -506,12 +606,12 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-12-01
   response:
     body:
       string: ''
@@ -521,121 +621,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 01 Jul 2020 19:28:56 GMT
+      - Tue, 08 Sep 2020 21:02:11 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5efce3f8ae678d288cd478e7&asyncCode=201
-      pragma:
-      - no-cache
-      server:
-      - Microsoft-HTTPAPI/2.0
-      - Microsoft-HTTPAPI/2.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      x-content-type-options:
-      - nosniff
-      x-ms-ratelimit-remaining-subscription-writes:
-      - '1197'
-    status:
-      code: 202
-      message: Accepted
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - apim api create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - -n -g -a --path --import-format --value
-      User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-01-01&asyncId=5efce3f8ae678d288cd478e7&asyncCode=201
-  response:
-    body:
-      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import\",\r\n
-        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id-oai3-import\",\r\n
-        \ \"properties\": {\r\n    \"displayName\": \"Swagger Petstore\",\r\n    \"apiRevision\":
-        \"1\",\r\n    \"description\": null,\r\n    \"subscriptionRequired\": true,\r\n
-        \   \"serviceUrl\": \"http://petstore.swagger.io/v1\",\r\n    \"path\": \"api-path-oai3-import\",\r\n
-        \   \"protocols\": [\r\n      \"https\"\r\n    ],\r\n    \"authenticationSettings\":
-        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
-        {\r\n      \"header\": \"Ocp-Apim-Subscription-Key\",\r\n      \"query\":
-        \"subscription-key\"\r\n    },\r\n    \"isCurrent\": true\r\n  }\r\n}"
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '854'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Wed, 01 Jul 2020 19:29:29 GMT
-      etag:
-      - '"AAAAAAAaoz4="'
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      server:
-      - Microsoft-HTTPAPI/2.0
-      - Microsoft-HTTPAPI/2.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      x-content-type-options:
-      - nosniff
-    status:
-      code: 201
-      message: Created
-- request:
-    body: '{"properties": {"authenticationSettings": {}, "type": "http", "displayName":
-      "api-path-wsdl", "path": "api-path-wsdl", "protocols": ["https"], "value": "http://www.dneonline.com/calculator.asmx?wsdl",
-      "format": "wsdl-link", "wsdlSelector": {"wsdlServiceName": "Calculator", "wsdlEndpointName":
-      "CalculatorSoap"}}}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - apim api create
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '313'
-      Content-Type:
-      - application/json; charset=utf-8
-      ParameterSetName:
-      - -n -g -a --path --import-format --value --wsdl-service-name --wsdl-endpoint-name
-        --api-type
-      User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
-      accept-language:
-      - en-US
-    method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01
-  response:
-    body:
-      string: ''
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '0'
-      date:
-      - Wed, 01 Jul 2020 19:29:31 GMT
-      expires:
-      - '-1'
-      location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5efce41c9d1f2019f81cd4d0&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-12-01&asyncId=5f57f154a578e91ff8eabf90&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -662,13 +652,123 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -n -g -a --path --import-format --value --wsdl-service-name --wsdl-endpoint-name
-        --api-type
+      - -n -g -a --path --import-format --value
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-01-01&asyncId=5efce41c9d1f2019f81cd4d0&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-12-01&asyncId=5f57f154a578e91ff8eabf90&asyncCode=201
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id-oai3-import\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"Swagger Petstore\",\r\n    \"apiRevision\":
+        \"1\",\r\n    \"description\": null,\r\n    \"subscriptionRequired\": true,\r\n
+        \   \"serviceUrl\": \"http://petstore.swagger.io/v1\",\r\n    \"path\": \"api-path-oai3-import\",\r\n
+        \   \"protocols\": [\r\n      \"https\"\r\n    ],\r\n    \"authenticationSettings\":
+        {\r\n      \"oAuth2\": null,\r\n      \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"Ocp-Apim-Subscription-Key\",\r\n      \"query\":
+        \"subscription-key\"\r\n    },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '854'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 08 Sep 2020 21:03:03 GMT
+      etag:
+      - '"AAAAAAAiQrI="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"properties": {"authenticationSettings": {}, "type": "http", "displayName":
+      "Calculator", "path": "api-path-wsdl", "protocols": ["https"], "value": "https://kehillihack007store.blob.core.windows.net/apim/calculator.wsdl.xml",
+      "format": "wsdl-link", "wsdlSelector": {"wsdlServiceName": "Calculator", "wsdlEndpointName":
+      "CalculatorSoap"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '339'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g --api-id --path --display-name --import-format --value --wsdl-service-name
+        --wsdl-endpoint-name --api-type
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Tue, 08 Sep 2020 21:03:07 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-12-01&asyncId=5f57f18bae678d1598576765&asyncCode=201
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --api-id --path --display-name --import-format --value --wsdl-service-name
+        --wsdl-endpoint-name --api-type
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-12-01&asyncId=5f57f18bae678d1598576765&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl\",\r\n
@@ -688,9 +788,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:30:02 GMT
+      - Tue, 08 Sep 2020 21:03:38 GMT
       etag:
-      - '"AAAAAAAao00="'
+      - '"AAAAAAAiQsQ="'
       expires:
       - '-1'
       pragma:
@@ -720,12 +820,12 @@ interactions:
       - -n -g -a --path --display-name --description --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
@@ -745,9 +845,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:30:04 GMT
+      - Tue, 08 Sep 2020 21:03:39 GMT
       etag:
-      - '"AAAAAAAaow0="'
+      - '"AAAAAAAiQmU="'
       expires:
       - '-1'
       pragma:
@@ -789,12 +889,12 @@ interactions:
       - -n -g -a --path --display-name --description --subscription-key-header-name
         --subscription-key-query-string-name
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
@@ -815,9 +915,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:30:05 GMT
+      - Tue, 08 Sep 2020 21:03:40 GMT
       etag:
-      - '"AAAAAAAao2o="'
+      - '"AAAAAAAiQuI="'
       expires:
       - '-1'
       pragma:
@@ -846,141 +946,18 @@ interactions:
       Accept-Encoding:
       - gzip, deflate
       CommandName:
-      - apim api show
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - -n -g -a
-      User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
-      accept-language:
-      - en-US
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-01-01
-  response:
-    body:
-      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
-        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id\",\r\n
-        \ \"properties\": {\r\n    \"displayName\": \"api display name updated\",\r\n
-        \   \"apiRevision\": \"1\",\r\n    \"description\": \"api description updated\",\r\n
-        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n
-        \   \"path\": \"api-path-updated\",\r\n    \"protocols\": [\r\n      \"http\"\r\n
-        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
-        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
-        {\r\n      \"header\": \"updatedheader1234\",\r\n      \"query\": \"updatedquery1234\"\r\n
-        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '848'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Wed, 01 Jul 2020 19:30:06 GMT
-      etag:
-      - '"AAAAAAAao2o="'
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      server:
-      - Microsoft-HTTPAPI/2.0
-      - Microsoft-HTTPAPI/2.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - apim api show
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - -n -g -a
-      User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
-      accept-language:
-      - en-US
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-01-01
-  response:
-    body:
-      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
-        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id;rev=2\",\r\n
-        \ \"properties\": {\r\n    \"displayName\": \"api display name updated\",\r\n
-        \   \"apiRevision\": \"2\",\r\n    \"description\": \"api description updated\",\r\n
-        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api2\",\r\n
-        \   \"path\": \"api-path-updated\",\r\n    \"protocols\": [\r\n      \"http\"\r\n
-        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
-        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
-        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
-        \   },\r\n    \"apiRevisionDescription\": \"api description revision 2\"\r\n
-        \ }\r\n}"
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '884'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Wed, 01 Jul 2020 19:30:06 GMT
-      etag:
-      - '"AAAAAAAao2s="'
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      server:
-      - Microsoft-HTTPAPI/2.0
-      - Microsoft-HTTPAPI/2.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
       - apim api list
       Connection:
       - keep-alive
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
@@ -992,7 +969,16 @@ interactions:
         \"api-path-clone\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
         \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
         null,\r\n        \"isCurrent\": true\r\n      }\r\n    },\r\n    {\r\n      \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
+        \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
+        \"api-id;rev=2\",\r\n      \"properties\": {\r\n        \"displayName\": \"api
+        display name updated\",\r\n        \"apiRevision\": \"2\",\r\n        \"description\":
+        \"api description updated\",\r\n        \"subscriptionRequired\": true,\r\n
+        \       \"serviceUrl\": \"http://echoapi.cloudapp.net/api2\",\r\n        \"path\":
+        \"api-path-updated\",\r\n        \"protocols\": [\r\n          \"http\"\r\n
+        \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
+        null,\r\n        \"apiRevisionDescription\": \"api description revision 2\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
         \     \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n      \"name\":
         \"api-id\",\r\n      \"properties\": {\r\n        \"displayName\": \"api display
         name updated\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\":
@@ -1029,16 +1015,139 @@ interactions:
         \       \"path\": \"api-path-swagger\",\r\n        \"protocols\": [\r\n          \"https\"\r\n
         \       ],\r\n        \"authenticationSettings\": null,\r\n        \"subscriptionKeyParameterNames\":
         null,\r\n        \"isCurrent\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
-        5\r\n}"
+        6\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '4296'
+      - '5147'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:30:09 GMT
+      - Tue, 08 Sep 2020 21:03:41 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-12-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name updated\",\r\n
+        \   \"apiRevision\": \"1\",\r\n    \"description\": \"api description updated\",\r\n
+        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api\",\r\n
+        \   \"path\": \"api-path-updated\",\r\n    \"protocols\": [\r\n      \"http\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"updatedheader1234\",\r\n      \"query\": \"updatedquery1234\"\r\n
+        \   },\r\n    \"isCurrent\": true\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 08 Sep 2020 21:03:42 GMT
+      etag:
+      - '"AAAAAAAiQuI="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim api show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -a
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-12-01
+  response:
+    body:
+      string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id;rev=2\",\r\n
+        \ \"type\": \"Microsoft.ApiManagement/service/apis\",\r\n  \"name\": \"api-id;rev=2\",\r\n
+        \ \"properties\": {\r\n    \"displayName\": \"api display name updated\",\r\n
+        \   \"apiRevision\": \"2\",\r\n    \"description\": \"api description updated\",\r\n
+        \   \"subscriptionRequired\": true,\r\n    \"serviceUrl\": \"http://echoapi.cloudapp.net/api2\",\r\n
+        \   \"path\": \"api-path-updated\",\r\n    \"protocols\": [\r\n      \"http\"\r\n
+        \   ],\r\n    \"authenticationSettings\": {\r\n      \"oAuth2\": null,\r\n
+        \     \"openid\": null\r\n    },\r\n    \"subscriptionKeyParameterNames\":
+        {\r\n      \"header\": \"header1234\",\r\n      \"query\": \"query1234\"\r\n
+        \   },\r\n    \"apiRevisionDescription\": \"api description revision 2\"\r\n
+        \ }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '884'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 08 Sep 2020 21:03:43 GMT
+      etag:
+      - '"AAAAAAAiQuM="'
       expires:
       - '-1'
       pragma:
@@ -1075,12 +1184,12 @@ interactions:
       ParameterSetName:
       - -n -g -a --delete-revisions --yes
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?deleteRevisions=true&api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?deleteRevisions=true&api-version=2019-12-01
   response:
     body:
       string: ''
@@ -1090,7 +1199,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 01 Jul 2020 19:30:10 GMT
+      - Tue, 08 Sep 2020 21:03:44 GMT
       expires:
       - '-1'
       pragma:
@@ -1121,12 +1230,12 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.6.8 (Darwin-17.7.0-x86_64-i386-64bit) msrest/0.6.16 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.1.0 Azure-SDK-For-Python AZURECLI/2.8.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-01-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis?api-version=2019-12-01
   response:
     body:
       string: "{\r\n  \"value\": [\r\n    {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone\",\r\n
@@ -1175,7 +1284,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 01 Jul 2020 19:30:10 GMT
+      - Tue, 08 Sep 2020 21:03:45 GMT
       expires:
       - '-1'
       pragma:

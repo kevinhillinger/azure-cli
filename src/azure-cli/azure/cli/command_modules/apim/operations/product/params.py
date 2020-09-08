@@ -4,6 +4,12 @@
 # --------------------------------------------------------------------------------------------
 # pylint: disable=line-too-long
 
+from azure.cli.core.commands.parameters import (get_enum_type, get_three_state_flag)
+from azure.mgmt.apimanagement.models import ProductState
+
+STATE_TYPES = ProductState
+
+
 def load_arguments(commands_loader, _):
     with commands_loader.argument_context('apim product') as c:
         c.argument('product_id', options_list=['--product_id', '-p'], help='Product identifier. Must be unique in the current API Management service instance.')

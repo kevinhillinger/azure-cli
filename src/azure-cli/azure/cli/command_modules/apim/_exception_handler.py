@@ -13,7 +13,7 @@ def default_exception_handler(ex):
 
     if isinstance(ex, ErrorResponseException) and ex.message:
         message = [ex.error.message, '\n']
-        if (ex.error.details):
+        if ex.error.details:
             for error in ex.error.details:
                 message.append('- {}'.format(error.message))
         raise CLIError("".join(message))
