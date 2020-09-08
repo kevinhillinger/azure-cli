@@ -3,16 +3,18 @@
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 
+import json
+
 from knack.prompting import prompt_y_n
 from knack.util import CLIError
 from knack.log import get_logger
-import json
 
-from azure.cli.command_modules.cognitiveservices._client_factory import cf_accounts, cf_resource_skus
 from azure.mgmt.cognitiveservices.models import CognitiveServicesAccount, Sku,\
     VirtualNetworkRule, IpRule, NetworkRuleSet, NetworkRuleAction,\
     CognitiveServicesAccountProperties, CognitiveServicesAccountApiProperties,\
     Identity, IdentityType
+from azure.cli.command_modules.cognitiveservices._client_factory import cf_accounts, cf_resource_skus
+
 
 logger = get_logger(__name__)
 
@@ -83,7 +85,9 @@ def create(
         'Microsoft offers policy controls that may be used to disable new Cognitive'\
         ' Services deployments (https://docs.microsoft.com/azure/cognitive-servic'\
         'es/cognitive-services-apis-create-account).'
-    hint = '\nPlease select'
+    terms_not_police = 'Notice\n' \
+                       'I certify that use of this service is not by or for a police department in the United States.'
+    hint = 'Please select'
     import re
     pattern = re.compile("^[Bb]ing\\..*$")
     if pattern.match(kind):
@@ -94,6 +98,15 @@ def create(
             option = prompt_y_n(hint)
             if not option:
                 raise CLIError('Operation cancelled.')
+    if kind.lower() == 'face' or kind.lower() == 'cognitiveservices':
+        if yes:
+            logger.warning(terms_not_police)
+        else:
+            logger.warning(terms_not_police)
+            option = prompt_y_n(hint)
+            if not option:
+                raise CLIError('Operation cancelled.')
+
     sku = Sku(name=sku_name)
 
     properties = CognitiveServicesAccountProperties()

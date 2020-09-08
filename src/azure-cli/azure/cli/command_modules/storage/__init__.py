@@ -13,22 +13,25 @@ import azure.cli.command_modules.storage._help  # pylint: disable=unused-import
 class StorageCommandsLoader(AzCommandsLoader):
     def __init__(self, cli_ctx=None):
         from azure.cli.core.commands import CliCommandType
-
+        from azure.cli.core import ModExtensionSuppress
         storage_custom = CliCommandType(operations_tmpl='azure.cli.command_modules.storage.custom#{}')
         super(StorageCommandsLoader, self).__init__(cli_ctx=cli_ctx,
                                                     resource_type=ResourceType.DATA_STORAGE,
                                                     custom_command_type=storage_custom,
                                                     command_group_cls=StorageCommandGroup,
-                                                    argument_context_cls=StorageArgumentContext)
+                                                    argument_context_cls=StorageArgumentContext,
+                                                    suppress_extension=ModExtensionSuppress(
+                                                        __name__, 'storage-or-preview', '0.4.0',
+                                                        reason='The storage account or policy commands are now in CLI.',
+                                                        recommend_remove=True)
+                                                    )
 
     def load_command_table(self, args):
-        super(StorageCommandsLoader, self).load_command_table(args)
         from azure.cli.command_modules.storage.commands import load_command_table
         load_command_table(self, args)
         return self.command_table
 
     def load_arguments(self, command):
-        super(StorageCommandsLoader, self).load_arguments(command)
         from azure.cli.command_modules.storage._params import load_arguments
         load_arguments(self, command)
 
@@ -62,7 +65,7 @@ class StorageArgumentContext(AzArgumentContext):
         self.argument('ip', type=ipv4_range_type,
                       help='Specifies the IP address or range of IP addresses from which to accept requests. Supports '
                            'only IPv4 style addresses.')
-        self.argument('expiry', type=get_datetime_type(True), required=True,
+        self.argument('expiry', type=get_datetime_type(True),
                       help='Specifies the UTC datetime (Y-m-d\'T\'H:M\'Z\') at which the SAS becomes invalid. Do not '
                            'use if a stored access policy is referenced with --id that specifies this value.')
         self.argument('start', type=get_datetime_type(True),
@@ -155,6 +158,25 @@ class StorageArgumentContext(AzArgumentContext):
             self.argument('encryption_services', arg_type=get_enum_type(encryption_choices),
                           resource_type=ResourceType.MGMT_STORAGE, min_api='2016-12-01', nargs='+',
                           validator=validate_encryption_services, help='Specifies which service(s) to encrypt.')
+
+    def register_precondition_options(self):
+        self.extra('if_modified_since')
+        self.extra('if_unmodified_since')
+        self.extra('if_match', help="An ETag value, or the wildcard character (*). Specify this header to perform the "
+                   "operation only if the resource's ETag matches the value specified.")
+        self.extra('if_none_match', help="An ETag value, or the wildcard character (*). Specify this header to perform "
+                   "the operation only if the resource's ETag does not match the value specified. Specify the wildcard "
+                   "character (*) to perform the operation only if the resource does not exist, and fail the operation "
+                   "if it does exist.")
+
+    def register_blob_arguments(self):
+        self.extra('blob_name', required=True)
+        self.extra('container_name', required=True)
+        self.extra('timeout', help='Request timeout in seconds. Applies to each call to the service.', type=int)
+
+    def register_container_arguments(self):
+        self.extra('container_name', required=True)
+        self.extra('timeout', help='Request timeout in seconds. Applies to each call to the service.', type=int)
 
 
 class StorageCommandGroup(AzCommandGroup):

@@ -11,6 +11,14 @@ SKU_TYPES = SkuType
 VNET_TYPES = VirtualNetworkType
 
 
+class ImportFormat(Enum):
+    Wadl = "Wadl"
+    Swagger = "Swagger"
+    OpenApi = "OpenApi"
+    OpenApiJson = "OpenApiJson"
+    Wsdl = "Wsdl"
+
+
 def load_arguments(self, _):
     
     from azure.cli.core.commands.parameters import tags_type
