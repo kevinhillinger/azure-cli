@@ -25,5 +25,5 @@ def load_command_table(commands_loader, _):
         g.custom_command('create', 'create_api_policy', supports_no_wait=True, table_transformer=api_policy_output_format, validator=validate_policy_xml_content)
         g.custom_command('update', 'update_api_policy', supports_no_wait=True, table_transformer=api_policy_output_format, validator=validate_policy_xml_content)
         g.custom_command('list', 'list_api_policy', table_transformer=api_policy_output_format)
-        g.custom_command('show', 'show_api_policy', table_transformer=None)
+        g.custom_show_command('show', 'show_api_policy', table_transformer=None)
         g.custom_command('delete', 'delete_api_policy', table_transformer=api_policy_output_format)

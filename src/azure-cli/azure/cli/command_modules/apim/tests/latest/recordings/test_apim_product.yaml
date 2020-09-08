@@ -17,8 +17,8 @@ interactions:
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: DELETE
@@ -29,25 +29,24 @@ interactions:
     headers:
       cache-control:
       - no-cache
-      content-length:
-      - '0'
       date:
-      - Tue, 08 Sep 2020 16:59:32 GMT
+      - Tue, 08 Sep 2020 22:36:10 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
       - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-deletes:
-      - '14999'
+      - '14998'
     status:
-      code: 200
-      message: OK
+      code: 204
+      message: No Content
 - request:
     body: null
     headers:
@@ -66,8 +65,8 @@ interactions:
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: DELETE
@@ -78,15 +77,14 @@ interactions:
     headers:
       cache-control:
       - no-cache
-      content-length:
-      - '0'
       date:
-      - Tue, 08 Sep 2020 16:59:33 GMT
+      - Tue, 08 Sep 2020 22:36:10 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -95,8 +93,8 @@ interactions:
       x-ms-ratelimit-remaining-subscription-deletes:
       - '14999'
     status:
-      code: 200
-      message: OK
+      code: 204
+      message: No Content
 - request:
     body: '{"properties": {"displayName": "apim_product-000003"}}'
     headers:
@@ -117,8 +115,8 @@ interactions:
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: PUT
@@ -144,14 +142,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 16:59:36 GMT
+      - Tue, 08 Sep 2020 22:36:11 GMT
       etag:
-      - '"AAAAAAAACRY="'
+      - '"AAAAAAAiRw8="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -176,8 +175,8 @@ interactions:
       ParameterSetName:
       - -n -g -p --description --state
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: GET
@@ -198,14 +197,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 16:59:36 GMT
+      - Tue, 08 Sep 2020 22:36:12 GMT
       etag:
-      - '"AAAAAAAACRY="'
+      - '"AAAAAAAiRw8="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -237,8 +237,8 @@ interactions:
       ParameterSetName:
       - -n -g -p --description --state
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: PUT
@@ -259,14 +259,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 16:59:37 GMT
+      - Tue, 08 Sep 2020 22:36:13 GMT
       etag:
-      - '"AAAAAAAACRs="'
+      - '"AAAAAAAiRxk="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -295,8 +296,8 @@ interactions:
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: GET
@@ -317,14 +318,15 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 16:59:38 GMT
+      - Tue, 08 Sep 2020 22:36:14 GMT
       etag:
-      - '"AAAAAAAACRs="'
+      - '"AAAAAAAiRxk="'
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -355,8 +357,8 @@ interactions:
       ParameterSetName:
       - -n -g -p
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: DELETE
@@ -370,12 +372,13 @@ interactions:
       content-length:
       - '0'
       date:
-      - Tue, 08 Sep 2020 16:59:38 GMT
+      - Tue, 08 Sep 2020 22:36:14 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
@@ -400,8 +403,8 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: GET
@@ -417,12 +420,13 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 16:59:39 GMT
+      - Tue, 08 Sep 2020 22:36:15 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       server:
+      - Microsoft-HTTPAPI/2.0
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains

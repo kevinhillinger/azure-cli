@@ -17,10 +17,10 @@ def create_api(client, resource_group_name, service_name, api_id,
                path, display_name=None, description=None, service_url=None,
                protocols=None, api_revision=None, api_revision_description=None,
                api_version=None, api_version_set_id=None, source_api_id=None,
-               oauth2_authorization_server_id=None, oauth2_scope=None,
+               oauth2_server_id=None, oauth2_scope=None,
                openid_provider_id=None, openid_bearer_token_sending_methods=None,
-               subscription_required=None, subscription_key_header_name=None,
-               subscription_key_query_string_name=None, is_current=None, is_online=None,
+               subscription_required=None, header_name=None,
+               querystring_name=None, is_current=None, is_online=None,
                import_format=None, value=None, wsdl_service_name=None,
                wsdl_endpoint_name=None, api_type=None
                ):
@@ -37,9 +37,9 @@ def create_api(client, resource_group_name, service_name, api_id,
     # Set the authentication settings
     authentication_settings = AuthenticationSettingsContract()
 
-    if oauth2_authorization_server_id is not None:
+    if oauth2_server_id is not None:
         o_auth2 = OAuth2AuthenticationSettingsContract(
-            authorization_server_id=oauth2_authorization_server_id,
+            authorization_server_id=oauth2_server_id,
             scope=oauth2_scope
         )
         authentication_settings.o_auth2 = o_auth2
@@ -78,10 +78,10 @@ def create_api(client, resource_group_name, service_name, api_id,
         parameters.protocols = list(map(lambda x: Protocol(x), protocols[0].split()))  # pylint: disable=unnecessary-lambda
 
     # Set the subscription_key_parameter_names
-    if subscription_key_header_name is not None or subscription_key_query_string_name is not None:
+    if header_name is not None or querystring_name is not None:
         parameters.subscription_key_parameter_names = SubscriptionKeyParameterNamesContract(
-            header=subscription_key_header_name,
-            query=subscription_key_query_string_name
+            header=header_name,
+            query=querystring_name
         )
 
     # Set the wsdl_selector
@@ -99,9 +99,9 @@ def update_api(instance,
                api_revision=None, api_revision_description=None,
                api_version=None, api_version_set_id=None,
                source_api_id=None,
-               oauth2_authorization_server_id=None, oauth2_scope=None,
+               oauth2_server_id=None, oauth2_scope=None,
                openid_provider_id=None, openid_bearer_token_sending_methods=None,
-               subscription_required=None, subscription_key_header_name=None, subscription_key_query_string_name=None,
+               subscription_required=None, header_name=None, querystring_name=None,
                is_current=None, is_online=None,
                import_format=None, value=None,
                wsdl_service_name=None, wsdl_endpoint_name=None, api_type=None,
@@ -137,23 +137,23 @@ def update_api(instance,
         instance.source_api_id = source_api_id
 
     # Set the authentication settings
-    if oauth2_authorization_server_id is not None:
-        instance.authentication_settings.oauth2_authorization_server_id = oauth2_authorization_server_id
+    if oauth2_server_id is not None:
+        instance.authentication_settings.authorization_server_id = oauth2_server_id
     if oauth2_scope is not None:
-        instance.authentication_settings.oauth2_scope = oauth2_scope
+        instance.authentication_settings.scope = oauth2_scope
     if openid_provider_id is not None:
         instance.authentication_settings.openid_provider_id = openid_provider_id
     if openid_bearer_token_sending_methods is not None:
-        instance.authentication_settings.openid_bearer_token_sending_methods = list(map(lambda x: BearerTokenSendingMethod(x), openid_bearer_token_sending_methods[0].split()))  # pylint: disable=unnecessary-lambda
+        instance.authentication_settings.bearer_token_sending_methods = list(map(lambda x: BearerTokenSendingMethod(x), openid_bearer_token_sending_methods[0].split()))  # pylint: disable=unnecessary-lambda
 
     if subscription_required is not None:
         instance.subscription_required = subscription_required
 
     # Set the subscription_key_parameter_names
-    if subscription_key_header_name is not None:
-        instance.subscription_key_parameter_names.header = subscription_key_header_name
-    if subscription_key_query_string_name is not None:
-        instance.subscription_key_parameter_names.query = subscription_key_query_string_name
+    if header_name is not None:
+        instance.subscription_key_parameter_names.header = header_name
+    if querystring_name is not None:
+        instance.subscription_key_parameter_names.query = querystring_name
 
     if is_current is not None:
         instance.is_current = is_current

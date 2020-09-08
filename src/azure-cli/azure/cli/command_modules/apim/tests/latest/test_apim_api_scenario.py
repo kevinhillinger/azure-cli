@@ -92,8 +92,8 @@ class ApimApiScenarioTest(ScenarioTest):
                     --description "{description}" \
                     --service-url {service_url} \
                     --protocols {protocols} \
-                    --subscription-key-header-name {subscription_key_header_name} \
-                    --subscription-key-query-string-name {subscription_key_query_string_name}""", checks=[
+                    --header-name {subscription_key_header_name} \
+                    --querystring-name {subscription_key_query_string_name}""", checks=[
                 self.check('name', '{api_id}'),
                 self.check('path', '{path}'),
                 self.check('displayName', '{display_name}'),
@@ -216,7 +216,7 @@ class ApimApiScenarioTest(ScenarioTest):
             'updated_subscription_key_query_string_name': 'updatedquery1234'
         })
 
-        self.cmd("""apim api update -n {apim_name} -g {rg} -a {api_id} --path {updated_path} --display-name "{updated_display_name}" --description "{updated_description}" --subscription-key-header-name {updated_subscription_key_header_name} --subscription-key-query-string-name {updated_subscription_key_query_string_name}""", checks=[
+        self.cmd("""apim api update -n {apim_name} -g {rg} -a {api_id} --path {updated_path} --display-name "{updated_display_name}" --description "{updated_description}" --header-name {updated_subscription_key_header_name} --querystring-name {updated_subscription_key_query_string_name}""", checks=[
             self.check('name', '{api_id}'),
             self.check('path', '{updated_path}'),
             self.check('displayName', '{updated_display_name}'),

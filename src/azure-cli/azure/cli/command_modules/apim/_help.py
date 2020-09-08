@@ -331,19 +331,7 @@ examples:
 
 helps['apim subscription create'] = """
 type: command
-short-summary: Create an API Management API.
-parameters:
-  - name: --api-id
-    type: string
-    short-summary: unique name of the api to be created
-    long-summary: |
-        API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
-  - name: --path
-    type: string
-    short-summary: Path to the API
-  - name: --display-name
-    type: string
-    short-summary: Display name of the API to be created
+short-summary: Creates the subscription specified by its subscription ID, display name and scope. Other parameters are optional
 examples:
   - name: Common usage.
     text: >
@@ -352,13 +340,7 @@ examples:
 
 helps['apim subscription update'] = """
 type: command
-short-summary: Update an API Management API.
-parameters:
-  - name: --api-id
-    type: string
-    short-summary: unique name of the api to be created
-    long-summary: |
-        API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+short-summary: Updates the subscription specified by its identifier
 examples:
   - name: Common usage.
     text: >
@@ -546,9 +528,4 @@ short-summary: Creates a policyfor an API.
 helps['apim api policy update'] = """
 type: command
 short-summary: Updates the policy for an API.
-"""
-
-helps['apim api import'] = """
-type: command
-short-summary: Import an API Management service instance.
 """

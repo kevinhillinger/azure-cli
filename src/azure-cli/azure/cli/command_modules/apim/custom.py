@@ -2,11 +2,8 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
-# pylint: disable=line-too-long, too-many-locals, too-many-arguments, too-many-statements, too-many-branches, no-else-return
+# pylint: disable=line-too-long
 
-import uuid
-from knack.util import CLIError
-from azure.cli.command_modules.apim._params import ImportFormat
 from azure.cli.core.util import sdk_no_wait
 from azure.mgmt.apimanagement.models import (ApiManagementServiceResource, ApiManagementServiceIdentity,
                                              ApiManagementServiceSkuProperties, ApiManagementServiceBackupRestoreParameters,

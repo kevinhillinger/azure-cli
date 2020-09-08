@@ -4,8 +4,8 @@
 # --------------------------------------------------------------------------------------------
 # pylint: disable=line-too-long
 
-from azure.cli.core.util import sdk_no_wait
 from enum import Enum
+from azure.cli.core.util import sdk_no_wait
 from azure.mgmt.apimanagement.models import SubscriptionCreateParameters, SubscriptionUpdateParameters
 
 

@@ -23,6 +23,6 @@ def load_command_table(commands_loader, _):
     with commands_loader.command_group('apim product', product_sdk, custom_command_type=product_custom_type, is_preview=True, client_factory=cf_product) as g:
         g.custom_command('create', 'create_product', table_transformer=product_output_format)
         g.custom_command('list', 'list_product', table_transformer=product_output_format)
-        g.custom_command('show', 'get_product', table_transformer=product_output_format)
+        g.custom_show_command('show', 'get_product', table_transformer=product_output_format)
         g.custom_command('delete', 'delete_product', table_transformer=product_output_format)
         g.generic_update_command('update', custom_func_name='update_product', getter_name='get', setter_name='create_or_update', supports_no_wait=True)
