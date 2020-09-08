@@ -8,6 +8,7 @@ from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._client_factory import cf_product
 from azure.cli.command_modules.apim._format import product_output_format
 
+
 def load_command_table(commands_loader, _):
     product_sdk = CliCommandType(
         operations_tmpl='azure.mgmt.apimanagement.operations#ProductOperations.{}',
@@ -25,5 +26,3 @@ def load_command_table(commands_loader, _):
         g.custom_command('show', 'get_product', table_transformer=product_output_format)
         g.custom_command('delete', 'delete_product', table_transformer=product_output_format)
         g.generic_update_command('update', custom_func_name='update_product', getter_name='get', setter_name='create_or_update', supports_no_wait=True)
-
-

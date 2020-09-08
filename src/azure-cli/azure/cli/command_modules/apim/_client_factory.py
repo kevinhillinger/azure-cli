@@ -30,9 +30,5 @@ def cf_subscription(cli_ctx, *_):
     return cf_apim(cli_ctx).subscription
 
 
-def cf_policy_description(cli_ctx, *_):
-    return cf_apim(cli_ctx).policy_description
-
-
 def cf_api_policy(cli_ctx, *_):
     return cf_apim(cli_ctx).api_policy

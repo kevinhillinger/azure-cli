@@ -5,11 +5,12 @@
 # pylint: disable=line-too-long
 
 from azure.cli.core.commands.parameters import (get_enum_type, get_three_state_flag)
-from azure.mgmt.apimanagement.models import (SkuType, Protocol, ApiType, ContentFormat)
+from azure.mgmt.apimanagement.models import (Protocol, ApiType, ContentFormat)
 
 PROTOCOL_TYPES = Protocol
 API_TYPES = ApiType
 CONTENT_FORMATS = ContentFormat
+
 
 def load_arguments(commands_loader, _):
     with commands_loader.argument_context('apim api') as c:

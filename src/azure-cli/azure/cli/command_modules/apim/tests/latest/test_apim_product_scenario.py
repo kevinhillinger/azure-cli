@@ -16,7 +16,7 @@ TEST_DIR = os.path.abspath(os.path.join(os.path.abspath(__file__), '..'))
 # pylint: disable=line-too-long
 class ApimProductScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
-    @ApiManagementPreparer(parameter_name='apim_name')
+    @ApiManagementPreparer(parameter_name='apim_name', sku_name='Consumption')
     def test_apim_product(self, resource_group, apim_name):
         # Set variable for product operations
         product_id = self.create_random_name('apim_product-', 50)

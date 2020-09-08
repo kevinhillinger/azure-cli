@@ -12,9 +12,9 @@ class ApimCommandsLoader(AzCommandsLoader):
         from azure.cli.core.commands import CliCommandType
         from azure.cli.core.profiles import ResourceType
         from azure.cli.command_modules.apim._client_factory import cf_apim
-        from azure.cli.command_modules.apim.operations import ApimOperationsLoader
+        from azure.cli.command_modules.apim.operations import ApimSubgroupsLoader
 
-        self.operations_loader = ApimOperationsLoader(self)
+        self.subgroups_loader = ApimSubgroupsLoader(self)
         apim_custom = CliCommandType(operations_tmpl='azure.cli.command_modules.apim.custom#{}', client_factory=cf_apim)
 
         super(ApimCommandsLoader, self).__init__(cli_ctx=cli_ctx, custom_command_type=apim_custom,
@@ -23,14 +23,14 @@ class ApimCommandsLoader(AzCommandsLoader):
     def load_command_table(self, args):
         from azure.cli.command_modules.apim.commands import load_command_table
         load_command_table(self, args)
-        self.operations_loader.load_command_table(args)
+        self.subgroups_loader.load_command_table(args)
 
         return self.command_table
 
     def load_arguments(self, command):
         from azure.cli.command_modules.apim._params import load_arguments
         load_arguments(self, command)
-        self.operations_loader.load_arguments(args)
+        self.subgroups_loader.load_arguments(command)
 
 
 COMMAND_LOADER_CLS = ApimCommandsLoader

@@ -9,12 +9,13 @@ from azure.cli.command_modules.apim.operations.policy import PolicyOperations
 from azure.cli.command_modules.apim.operations.product import ProductOperations
 from azure.cli.command_modules.apim.operations.subscription import SubscriptionOperations
 
-class ApimOperationsLoader():
+
+class ApimSubgroupsLoader():
     operations = ['api', 'api_policy', 'policy', 'product', 'subscription']
-    
+
     def __init__(self, commands_loader):
         self.commands_loader = commands_loader
-        
+
         self.api = ApiOperations(self)
         self.api_policy = ApiPolicyOperations(self)
         self.policy = PolicyOperations(self)

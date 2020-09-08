@@ -9,6 +9,7 @@ from azure.cli.command_modules.apim._client_factory import cf_api_policy
 from azure.cli.command_modules.apim._format import api_policy_output_format
 from .validators import validate_policy_xml_content
 
+
 def load_command_table(commands_loader, _):
     api_policy_sdk = CliCommandType(
         operations_tmpl='azure.mgmt.apimanagement.operations#ApiPolicyOperations.{}',
