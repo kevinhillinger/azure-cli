@@ -51,7 +51,6 @@ def create_api(client, resource_group_name, service_name, api_id,
         )
         authentication_settings.openid = openid
 
-    # Set the remaining parameters
     parameters = ApiCreateOrUpdateParameter(
         path=path,
         display_name=display_name,
@@ -70,6 +69,9 @@ def create_api(client, resource_group_name, service_name, api_id,
         format=import_format,
         value=value
     )
+
+    if source_api_id is not None:
+        parameters.source_api_id = _parse_api_id(source_api_id)
 
     # Default and set the protocol(s) - DO NOT DEFAULT when creating a new revision
     if protocols is None and REVISION_INDICATOR not in api_id:
@@ -134,15 +136,18 @@ def update_api(instance,
         instance.api_version_set_id = api_version_set_id
 
     if source_api_id is not None:
-        instance.source_api_id = source_api_id
+        instance.source_api_id = _parse_api_id(source_api_id)
 
     # Set the authentication settings
     if oauth2_server_id is not None:
         instance.authentication_settings.authorization_server_id = oauth2_server_id
+
     if oauth2_scope is not None:
         instance.authentication_settings.scope = oauth2_scope
+
     if openid_provider_id is not None:
         instance.authentication_settings.openid_provider_id = openid_provider_id
+
     if openid_bearer_token_sending_methods is not None:
         instance.authentication_settings.bearer_token_sending_methods = list(map(lambda x: BearerTokenSendingMethod(x), openid_bearer_token_sending_methods[0].split()))  # pylint: disable=unnecessary-lambda
 
@@ -152,6 +157,7 @@ def update_api(instance,
     # Set the subscription_key_parameter_names
     if header_name is not None:
         instance.subscription_key_parameter_names.header = header_name
+
     if querystring_name is not None:
         instance.subscription_key_parameter_names.query = querystring_name
 
@@ -167,8 +173,6 @@ def update_api(instance,
     if value is not None:
         instance.value = value
 
-    # TODO:
-    # Set the WSDL selector
     if wsdl_service_name is not None and wsdl_endpoint_name is not None:
         instance.wsdl_selector = ApiCreateOrUpdatePropertiesWsdlSelector(
             wsdl_service_name=wsdl_service_name,
@@ -190,8 +194,17 @@ def get_api(client, resource_group_name, service_name, api_id):
     return client.get(resource_group_name, service_name, api_id)
 
 
-# def get_api_etag(client, resource_group_name, service_name, api_id):
-#     return client.get_entity_tag(resource_group_name, service_name, api_id)
-
 def list_api(client, resource_group_name, service_name, tags=None, expand_api_version_set=None):
     return client.list_by_service(resource_group_name, service_name, None, None, None, tags, expand_api_version_set)
+
+
+def _parse_api_id(value):
+    """parses and Id for an API, whether it's the fully qualified version or just the 'short name' """
+    if value is None:
+        return None
+    can_id_be_identified_as_fully_qualified = '/' in value and value.find('/apis/') == 0
+
+    if can_id_be_identified_as_fully_qualified:
+        return value
+    clean_value = value.replace('/', '')  # in case they included '/' at the beginning or end
+    return '/apis/{}'.format(clean_value)

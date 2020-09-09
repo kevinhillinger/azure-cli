@@ -80,7 +80,7 @@ parameters:
   - name: --display-name
     type: string
     short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter.
-  - name: --oauth2-authorization-server-id
+  - name: --oauth2-server-id
     type: string
     short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance.
   - name: --oauth2-scope
@@ -95,10 +95,10 @@ parameters:
   - name: --source-api-id
     type: string
     short-summary: API identifier of the source API, to clone an existing API.
-  - name: --subscription-key-header-name
+  - name: --header-name
     type: string
     short-summary: Subscription key HTTP header name.
-  - name: --subscription-key-query-string-name
+  - name: --querystring-name
     type: string
     short-summary: Subscription key query string parameter name.
   - name: --value
@@ -115,11 +115,11 @@ parameters:
     short-summary: Indicate the Version identifier of the API if the API is versioned.
   - name: --api-version-set-id
     type: string
-    short-summary: Identifier for existing API Version Set.
+    short-summary: Resource identifier for existing API Version Set.
   - name: --api-revision
     type: string
     short-summary: Describes the Revision of the Api. If no value is provided, default revision 1 is created.
-  - name: --api-revision-description
+  - name: --revision-description
     type: string
     short-summary: Description of the API Revision.
 examples:
@@ -128,16 +128,16 @@ examples:
         az apim api create -n MyApim -g MyResourceGroup -a MyApi --path MyApiPath --display-name "MyApi Display nName" --description "MyApi Description" --service-url "http://echoapi.cloudapp.net/api" --protocols "http https"
   - name: Clone an existing API, changing the service URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyClonedApi --path MyClonedApiPath --service-url "http://httpbin.org" --display-name "MyClonedApi Display Name" --description "MyClonedApi Description" --source-api-id "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apis/MySourceApiId"
+        az apim api create -n MyApim -g MyResourceGroup -a MyClonedApi --path MyClonedApiPath --service-url "http://httpbin.org" --display-name "MyClonedApi Display Name" --description "MyClonedApi Description" --source-api-id my-api-id
   - name: Create a new API from an existing API version set. To create a new api version set, use the 'az apim api version-set create' command.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyApiFromVersionSet --path MyApiFromVersionSetPath --display-name "MyApiFromVersionSet Display Name" --service-url "http://echoapi.cloudapp.net/api" --protocols "http https" --source-api-id "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apis/MySourceApiId" --api-version v2 --api-version-set-id "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apiVersionSets/d072a59c-09e9-477d-9a3e-c675b254603e" --is-current
+        az apim api create -n MyApim -g MyResourceGroup -a MyApiFromVersionSet --path MyApiFromVersionSetPath --display-name "MyApiFromVersionSet Display Name" --service-url "http://echoapi.cloudapp.net/api" --protocols "http https" --source-api-id my-api-id --api-version v2 --api-version-set-id "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apiVersionSets/d072a59c-09e9-477d-9a3e-c675b254603e" --is-current
   - name: Create an API revision from an existing API, changing the service URL.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a "MyApi;rev=2" --path MyApiPath --service-url "http://echoapi.cloudapp.net/apirev2" --api-revision-description "A Revision of an existing API" --source-api-id "subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/SourceResourceGroupName/providers/Microsoft.ApiManagement/service/SourceApimInstanceName/apis/api-id"
+        az apim api create -n MyApim -g MyResourceGroup -a "MyApi;rev=2" --path MyApiPath --service-url "http://echoapi.cloudapp.net/apirev2" --revision-description "A Revision of an existing API" --source-api-id my-api-id
   - name: Create an API with OpenID Connect to the backend, sending the bearer token via the Authorization HTTP header.
     text: >
-        az apim api create -n MyApim -g MyResourceGroup -a MyOpenIdConnectApi --display-name "Swagger Petstore" --description "This is a sample server Petstore server" --path petstore --openid-provider-id IdPid --openid-bearer-token-sending-methods authorizationHeader
+        az apim api create -n MyApim -g MyResourceGroup -a MyOpenIdConnectApi --display-name "Swagger Petstore" --description "This is a sample server Petstore server" --path petstore --openid-provider-id IdPid --openid-token-methods authorizationHeader
   - name: Import an API from a Swagger JSON link.
     text: >
         az apim api create -n MyApim -g MyResourceGroup -a MySwaggerApi --import-format "swagger-link-json" --value "http://petstore.swagger.io/v2/swagger.json" --path petstore
@@ -162,7 +162,7 @@ parameters:
   - name: --display-name
     type: string
     short-summary: Display name of the api to be created. Must be 1 to 300 characters long. If no supplied, defaults to the value of the path parameter.
-  - name: --oauth2-authorization-server-id
+  - name: --oauth2-server-id
     type: string
     short-summary: OAuth 2.0 authorization server identifier. Authorization server definition must already exist in the API Management service instance.
   - name: --oauth2-scope
@@ -177,10 +177,10 @@ parameters:
   - name: --source-api-id
     type: string
     short-summary: API identifier of the source API, to clone an existing API.
-  - name: --subscription-key-header-name
+  - name: --header-name
     type: string
     short-summary: Subscription key HTTP header name.
-  - name: --subscription-key-query-string-name
+  - name: --querystring-name
     type: string
     short-summary: Subscription key query string parameter name.
   - name: --value
@@ -201,7 +201,7 @@ parameters:
   - name: --api-revision
     type: string
     short-summary: Describes the Revision of the Api. If no value is provided, default revision 1 is created.
-  - name: --api-revision-description
+  - name: --revision-description
     type: string
     short-summary: Description of the API Revision.
 examples:
@@ -250,7 +250,7 @@ examples:
         az apim api list -n MyApim -g MyResourceGroup
   - name: Lists all APIs, including the version set information.
     text: >
-        az apim api list -n MyApim -g MyResourceGroup --expand-api-version-set
+        az apim api list -n MyApim -g MyResourceGroup --expand-version-set
 """
 
 # policy

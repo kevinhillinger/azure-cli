@@ -25,7 +25,7 @@ interactions:
         \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
         \"master\",\r\n      \"properties\": {\r\n        \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/\",\r\n
         \       \"displayName\": \"Built-in all-access subscription\",\r\n        \"state\":
-        \"active\",\r\n        \"createdDate\": \"2020-09-08T22:35:12.227Z\",\r\n
+        \"active\",\r\n        \"createdDate\": \"2020-09-09T10:57:13.197Z\",\r\n
         \       \"startDate\": null,\r\n        \"expirationDate\": null,\r\n        \"endDate\":
         null,\r\n        \"notificationDate\": null,\r\n        \"stateComment\":
         null,\r\n        \"allowTracing\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
@@ -38,7 +38,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:10 GMT
+      - Wed, 09 Sep 2020 10:58:11 GMT
       expires:
       - '-1'
       pragma:
@@ -80,18 +80,18 @@ interactions:
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003","name":"clitest000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
-        US","etag":"AAAAAAANQR8=","properties":{"publisherEmail":"publisher@contsoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contsoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-08T22:35:07.7939148Z","gatewayUrl":"https://clitest000003.azure-api.net","gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":"clitest000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Consumption","capacity":0},"identity":null}'
+        US","etag":"AAAAAAANRUc=","properties":{"publisherEmail":"publisher@contsoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contsoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-09T10:57:08.890776Z","gatewayUrl":"https://clitest000003.azure-api.net","gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":"clitest000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Consumption","capacity":0},"identity":null}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '1813'
+      - '1812'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:10 GMT
+      - Wed, 09 Sep 2020 10:58:12 GMT
       etag:
-      - '"AAAAAAANQR8="'
+      - '"AAAAAAANRUc="'
       expires:
       - '-1'
       pragma:
@@ -140,21 +140,21 @@ interactions:
         \ \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n  \"name\":
         \"apim_subscription-000001\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/apis\",\r\n
         \   \"displayName\": \"foo-bar\",\r\n    \"state\": \"active\",\r\n    \"createdDate\":
-        \"2020-09-08T22:36:12.4777923Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
+        \"2020-09-09T10:58:13.885245Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
         null,\r\n    \"endDate\": null,\r\n    \"notificationDate\": null,\r\n    \"primaryKey\":
-        \"4281805bfe1142b1b86df4546f1d82f9\",\r\n    \"secondaryKey\": \"853bcc4650364f8ab1f08cfd7c5c5576\",\r\n
+        \"9b07df76727c4408b38c2cf4a11757a4\",\r\n    \"secondaryKey\": \"678fb7da23ec4f98b433dc09cd75b665\",\r\n
         \   \"stateComment\": null\r\n  }\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '1023'
+      - '1022'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:12 GMT
+      - Wed, 09 Sep 2020 10:58:13 GMT
       etag:
-      - '"AAAAAAAiRxY="'
+      - '"AAAAAAAiTz0="'
       expires:
       - '-1'
       pragma:
@@ -197,7 +197,7 @@ interactions:
         \ \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n  \"name\":
         \"apim_subscription-000001\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/apis\",\r\n
         \   \"displayName\": \"foo-bar\",\r\n    \"state\": \"active\",\r\n    \"createdDate\":
-        \"2020-09-08T22:36:12.477Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
+        \"2020-09-09T10:58:13.887Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
         null,\r\n    \"endDate\": null,\r\n    \"notificationDate\": null,\r\n    \"stateComment\":
         null\r\n  }\r\n}"
     headers:
@@ -208,9 +208,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:12 GMT
+      - Wed, 09 Sep 2020 10:58:14 GMT
       etag:
-      - '"AAAAAAAiRxY="'
+      - '"AAAAAAAiTz0="'
       expires:
       - '-1'
       pragma:
@@ -262,7 +262,7 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Tue, 08 Sep 2020 22:36:13 GMT
+      - Wed, 09 Sep 2020 10:58:14 GMT
       expires:
       - '-1'
       pragma:
@@ -305,7 +305,7 @@ interactions:
         \ \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n  \"name\":
         \"apim_subscription-000001\",\r\n  \"properties\": {\r\n    \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/apis\",\r\n
         \   \"displayName\": \"bar-foo\",\r\n    \"state\": \"active\",\r\n    \"createdDate\":
-        \"2020-09-08T22:36:12.477Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
+        \"2020-09-09T10:58:13.887Z\",\r\n    \"startDate\": null,\r\n    \"expirationDate\":
         null,\r\n    \"endDate\": null,\r\n    \"notificationDate\": null,\r\n    \"stateComment\":
         null\r\n  }\r\n}"
     headers:
@@ -316,9 +316,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:13 GMT
+      - Wed, 09 Sep 2020 10:58:15 GMT
       etag:
-      - '"AAAAAAAiRxw="'
+      - '"AAAAAAAiT0Q="'
       expires:
       - '-1'
       pragma:
@@ -361,7 +361,7 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001/listSecrets?api-version=2019-12-01
   response:
     body:
-      string: '{"primaryKey":"4281805bfe1142b1b86df4546f1d82f9","secondaryKey":"853bcc4650364f8ab1f08cfd7c5c5576"}'
+      string: '{"primaryKey":"9b07df76727c4408b38c2cf4a11757a4","secondaryKey":"678fb7da23ec4f98b433dc09cd75b665"}'
     headers:
       cache-control:
       - no-cache
@@ -370,9 +370,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:14 GMT
+      - Wed, 09 Sep 2020 10:58:16 GMT
       etag:
-      - '"AAAAAAAiRxw="'
+      - '"AAAAAAAiT0Q="'
       expires:
       - '-1'
       pragma:
@@ -422,7 +422,7 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Tue, 08 Sep 2020 22:36:15 GMT
+      - Wed, 09 Sep 2020 10:58:16 GMT
       expires:
       - '-1'
       pragma:
@@ -468,7 +468,7 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Tue, 08 Sep 2020 22:36:15 GMT
+      - Wed, 09 Sep 2020 10:58:17 GMT
       expires:
       - '-1'
       pragma:
@@ -509,7 +509,7 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/subscriptions/apim_subscription-000001/listSecrets?api-version=2019-12-01
   response:
     body:
-      string: '{"primaryKey":"fe2b24d3f01540e7a64c618d8c1ce991","secondaryKey":"e32b478a46a642c48b1890ee8a093c18"}'
+      string: '{"primaryKey":"ac04577b93194b9bb0b73d04315cbe16","secondaryKey":"82584efca51d4766b2b3900c3dde0ea7"}'
     headers:
       cache-control:
       - no-cache
@@ -518,9 +518,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:15 GMT
+      - Wed, 09 Sep 2020 10:58:18 GMT
       etag:
-      - '"AAAAAAAiRyQ="'
+      - '"AAAAAAAiT08="'
       expires:
       - '-1'
       pragma:
@@ -574,7 +574,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Tue, 08 Sep 2020 22:36:17 GMT
+      - Wed, 09 Sep 2020 10:58:19 GMT
       expires:
       - '-1'
       pragma:
@@ -617,7 +617,7 @@ interactions:
         \     \"type\": \"Microsoft.ApiManagement/service/subscriptions\",\r\n      \"name\":
         \"master\",\r\n      \"properties\": {\r\n        \"scope\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000002/providers/Microsoft.ApiManagement/service/clitest000003/\",\r\n
         \       \"displayName\": \"Built-in all-access subscription\",\r\n        \"state\":
-        \"active\",\r\n        \"createdDate\": \"2020-09-08T22:35:12.227Z\",\r\n
+        \"active\",\r\n        \"createdDate\": \"2020-09-09T10:57:13.197Z\",\r\n
         \       \"startDate\": null,\r\n        \"expirationDate\": null,\r\n        \"endDate\":
         null,\r\n        \"notificationDate\": null,\r\n        \"stateComment\":
         null,\r\n        \"allowTracing\": true\r\n      }\r\n    }\r\n  ],\r\n  \"count\":
@@ -630,7 +630,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:17 GMT
+      - Wed, 09 Sep 2020 10:58:19 GMT
       expires:
       - '-1'
       pragma:

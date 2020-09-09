@@ -34,7 +34,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:35:27 GMT
+      - Wed, 09 Sep 2020 10:57:30 GMT
       expires:
       - '-1'
       pragma:
@@ -83,7 +83,7 @@ interactions:
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
-        US","etag":"AAAAAAANQRU=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Created","targetProvisioningState":"Activating","createdAtUtc":"2020-09-08T22:35:30.2950186Z","gatewayUrl":null,"gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":null,"encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":null,"virtualNetworkType":"None","certificates":null,"enableClientCertificate":true,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Consumption","capacity":0},"identity":null}'
+        US","etag":"AAAAAAANRT0=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Created","targetProvisioningState":"Activating","createdAtUtc":"2020-09-09T10:57:34.6346519Z","gatewayUrl":null,"gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":null,"encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":null,"virtualNetworkType":"None","certificates":null,"enableClientCertificate":true,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Consumption","capacity":0},"identity":null}'
     headers:
       cache-control:
       - no-cache
@@ -92,13 +92,13 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:35:31 GMT
+      - Wed, 09 Sep 2020 10:57:35 GMT
       etag:
-      - '"AAAAAAANQRU="'
+      - '"AAAAAAANRT0="'
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tNG00aHpuNGZ3amVjaDd6NDU3Ynd5bG56d3VpN2oyZmR5bHJzX0FjdF9hNTY4MjExMA==?api-version=2019-12-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0teG5veXY1eDRzeXNydXkzaTZ4dnZ6Z2twbWxnMnJzeWxzem5lX0FjdF9lNzQ3OWE0Zg==?api-version=2019-12-01
       pragma:
       - no-cache
       server:
@@ -130,13 +130,13 @@ interactions:
       - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
         azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tNG00aHpuNGZ3amVjaDd6NDU3Ynd5bG56d3VpN2oyZmR5bHJzX0FjdF9hNTY4MjExMA==?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0teG5veXY1eDRzeXNydXkzaTZ4dnZ6Z2twbWxnMnJzeWxzem5lX0FjdF9lNzQ3OWE0Zg==?api-version=2019-12-01
   response:
     body:
       string: '{"error":{"code":"ActivationFailed","message":"Unable to activate API
         service at this time. Please open a support case for your API management service
-        using the Azure portal.Please provide correlationId 84218a71-09b7-4f79-9975-97c3971e5eb6
-        and TimeStamp 9/8/2020 10:35:32 PM.","details":null,"innerError":null}}'
+        using the Azure portal.Please provide correlationId fa30309a-a859-43b1-a6bd-72eb6a46082f
+        and TimeStamp 9/9/2020 10:57:36 AM.","details":null,"innerError":null}}'
     headers:
       cache-control:
       - no-cache
@@ -145,7 +145,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 22:36:32 GMT
+      - Wed, 09 Sep 2020 10:58:36 GMT
       expires:
       - '-1'
       pragma:

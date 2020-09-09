@@ -85,7 +85,7 @@ class ApimApiScenarioTest(ScenarioTest):
         ])
 
     def _create_an_api(self):
-        source_api_id = self.cmd(
+        output = self.cmd(
             """apim api create -n {apim_name} -g {rg} -a {api_id} \
                     --path {path} \
                     --display-name "{display_name}" \
@@ -101,7 +101,9 @@ class ApimApiScenarioTest(ScenarioTest):
                 self.check('serviceUrl', '{service_url}'),
                 self.check('subscriptionKeyParameterNames.header', '{subscription_key_header_name}'),
                 self.check('subscriptionKeyParameterNames.query', '{subscription_key_query_string_name}')
-            ]).get_output_in_json()['id']
+            ]).get_output_in_json()
+
+        source_api_id = output['id'].rpartition('/')[2]
 
         self.created_api_count += 1
         assert source_api_id is not None
@@ -137,7 +139,7 @@ class ApimApiScenarioTest(ScenarioTest):
             'revision_service_url': self.service_url + '2'
         })
 
-        self.cmd('apim api create -n {apim_name} -g {rg} -a "{revision_api_id}" --path {path} --api-revision-description "{revision_description}" --service-url {revision_service_url} --source-api-id "{source_api_id}"', checks=[
+        self.cmd('apim api create -n {apim_name} -g {rg} -a "{revision_api_id}" --path {path} --revision-description "{revision_description}" --service-url {revision_service_url} --source-api-id "{source_api_id}"', checks=[
             self.check('name', '{revision_api_id}'),
             self.check('apiRevisionDescription', '{revision_description}'),
             self.check('apiRevision', '2'),
