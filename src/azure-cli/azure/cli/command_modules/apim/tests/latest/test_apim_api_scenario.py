@@ -5,6 +5,7 @@
 # pylint: disable=line-too-long
 
 import os
+import datetime
 from azure_devtools.scenario_tests import AllowLargeResponse
 from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagementPreparer,
                                StorageAccountPreparer, live_only)
@@ -18,11 +19,37 @@ class ApimApiScenarioTest(ScenarioTest):
         self._initialize_variables()
         super(ApimApiScenarioTest, self).setUp()
 
+    def _setup_test_data(self, resource_group, apim_name, storage_account):
+        storage_account_key = self.cmd('storage account keys list -g {} -n {} --query [0].value'.format(resource_group, storage_account)).get_output_in_json()
+
+        # create the container
+        container_name = self.create_random_name(prefix='apimtestdata', length=24)
+        self.cmd('storage container create --account-name {} --name {}'.format(storage_account, container))
+        sas_token_expiry = (datetime.datetime.now() + datetime.timedelta(days=1, hours=3)).strftime("\"%Y-%m-%dT%H:%MZ\"")
+        storage_sas_token = self.cmd('storage container generate-sas --account-name {} --expiry {} --permissions dlrw'.format(storage_account, test_file, sas_token_expiry))
+
+        self.kwargs.update({
+            'apim_name': apim_name,
+            'storage_account_key': storage_account_key,
+            'storage_sas_token': storage_sas_token
+        })
+
+        # upload test data
+        local_dir = os.path.join(TEST_DIR, 'data/').replace('\\', '\\\\')
+        self.cmd('az storage blob upload-batch -d {} --account-name {} --account-key {} --source {}'.format(container_name, storage_account, storage_account_key, local_dir))
+        
+        url_template = sasurl = '\"https://{}.blob.core.windows.net/{}/{}?{}\"'
+
+        self.test_data = {
+            wsdl
+        }
+
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
+    @StorageAccountPreparer()
     @ApiManagementPreparer(sku_name='Consumption', parameter_name='apim_name')
-    def test_apim_api(self, resource_group, apim_name):
+    def test_apim_api(self, resource_group, apim_name, storage_account_info):
         # setup
-        self.kwargs.update({'apim_name': apim_name})
+        self._setup_resources()
         self._clear_apis_from_instance()
 
         # act out creation scenarios

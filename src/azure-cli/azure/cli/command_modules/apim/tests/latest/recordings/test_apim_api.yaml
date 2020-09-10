@@ -13,8 +13,8 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
@@ -30,7 +30,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:58:11 GMT
+      - Tue, 08 Sep 2020 20:59:57 GMT
       expires:
       - '-1'
       pragma:
@@ -63,8 +63,8 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
@@ -80,7 +80,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:58:12 GMT
+      - Tue, 08 Sep 2020 20:59:59 GMT
       expires:
       - '-1'
       pragma:
@@ -118,11 +118,11 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
-      - -n -g -a --path --display-name --description --service-url --protocols --header-name
-        --querystring-name
+      - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
+        --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
@@ -146,9 +146,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:58:12 GMT
+      - Tue, 08 Sep 2020 21:00:00 GMT
       etag:
-      - '"AAAAAAAiTzg="'
+      - '"AAAAAAAiQmU="'
       expires:
       - '-1'
       pragma:
@@ -161,7 +161,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
+      - '1197'
     status:
       code: 201
       message: Created
@@ -177,11 +177,11 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -n -g -a --path --display-name --description --service-url --protocols --header-name
-        --querystring-name
+      - -n -g -a --path --display-name --description --service-url --protocols --subscription-key-header-name
+        --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id?api-version=2019-12-01
   response:
@@ -203,9 +203,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:58:43 GMT
+      - Tue, 08 Sep 2020 21:00:31 GMT
       etag:
-      - '"AAAAAAAiTzg="'
+      - '"AAAAAAAiQmU="'
       expires:
       - '-1'
       pragma:
@@ -225,10 +225,10 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"properties": {"description": "api description clone", "authenticationSettings":
+    body: 'b''b\''{"properties": {"description": "api description clone", "authenticationSettings":
       {}, "sourceApiId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id",
       "displayName": "api display name clone", "path": "api-path-clone", "protocols":
-      ["https"]}}'
+      ["https"]}}\'''''
     headers:
       Accept:
       - application/json
@@ -245,8 +245,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --display-name --description --source-api-id
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
@@ -271,9 +271,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:58:45 GMT
+      - Tue, 08 Sep 2020 21:00:33 GMT
       etag:
-      - '"AAAAAAAiT1Q="'
+      - '"AAAAAAAiQnM="'
       expires:
       - '-1'
       pragma:
@@ -304,8 +304,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --display-name --description --source-api-id
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-clone?api-version=2019-12-01
   response:
@@ -328,9 +328,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:59:15 GMT
+      - Tue, 08 Sep 2020 21:01:04 GMT
       etag:
-      - '"AAAAAAAiT1Q="'
+      - '"AAAAAAAiQnM="'
       expires:
       - '-1'
       pragma:
@@ -350,9 +350,9 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"properties": {"authenticationSettings": {}, "apiRevisionDescription":
+    body: 'b''b\''{"properties": {"authenticationSettings": {}, "apiRevisionDescription":
       "api description revision 2", "sourceApiId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id",
-      "serviceUrl": "http://echoapi.cloudapp.net/api2", "path": "api-path"}}'
+      "serviceUrl": "http://echoapi.cloudapp.net/api2", "path": "api-path"}}\'''''
     headers:
       Accept:
       - application/json
@@ -367,10 +367,10 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
-      - -n -g -a --path --revision-description --service-url --source-api-id
+      - -n -g -a --path --api-revision-description --service-url --source-api-id
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
@@ -395,9 +395,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:59:17 GMT
+      - Tue, 08 Sep 2020 21:01:06 GMT
       etag:
-      - '"AAAAAAAiT1g="'
+      - '"AAAAAAAiQnc="'
       expires:
       - '-1'
       pragma:
@@ -410,7 +410,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
+      - '1199'
     status:
       code: 201
       message: Created
@@ -426,10 +426,10 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -n -g -a --path --revision-description --service-url --source-api-id
+      - -n -g -a --path --api-revision-description --service-url --source-api-id
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id%3Brev%3D2?api-version=2019-12-01
   response:
@@ -452,9 +452,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 10:59:48 GMT
+      - Tue, 08 Sep 2020 21:01:37 GMT
       etag:
-      - '"AAAAAAAiT1g="'
+      - '"AAAAAAAiQnc="'
       expires:
       - '-1'
       pragma:
@@ -494,8 +494,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value --service-url
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
@@ -509,11 +509,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 09 Sep 2020 10:59:51 GMT
+      - Tue, 08 Sep 2020 21:01:38 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-12-01&asyncId=5f58b5a7b2738c11b4aef0f5&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-12-01&asyncId=5f57f1329d1f201d18e541a3&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -542,10 +542,10 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value --service-url
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-12-01&asyncId=5f58b5a7b2738c11b4aef0f5&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger?api-version=2019-12-01&asyncId=5f57f1329d1f201d18e541a3&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-swagger\",\r\n
@@ -569,9 +569,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:00:21 GMT
+      - Tue, 08 Sep 2020 21:02:09 GMT
       etag:
-      - '"AAAAAAAiT14="'
+      - '"AAAAAAAiQn0="'
       expires:
       - '-1'
       pragma:
@@ -606,8 +606,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
@@ -621,11 +621,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 09 Sep 2020 11:00:24 GMT
+      - Tue, 08 Sep 2020 21:02:11 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-12-01&asyncId=5f58b5c8b2738c11b4aef105&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-12-01&asyncId=5f57f154a578e91ff8eabf90&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -654,10 +654,10 @@ interactions:
       ParameterSetName:
       - -n -g -a --path --import-format --value
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-12-01&asyncId=5f58b5c8b2738c11b4aef105&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import?api-version=2019-12-01&asyncId=5f57f154a578e91ff8eabf90&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-oai3-import\",\r\n
@@ -677,9 +677,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:00:55 GMT
+      - Tue, 08 Sep 2020 21:03:03 GMT
       etag:
-      - '"AAAAAAAiT4M="'
+      - '"AAAAAAAiQrI="'
       expires:
       - '-1'
       pragma:
@@ -716,8 +716,8 @@ interactions:
       - -n -g --api-id --path --display-name --import-format --value --wsdl-service-name
         --wsdl-endpoint-name --api-type
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
@@ -731,11 +731,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 09 Sep 2020 11:00:57 GMT
+      - Tue, 08 Sep 2020 21:03:07 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-12-01&asyncId=5f58b5e93a838a3268312f2d&asyncCode=201
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-12-01&asyncId=5f57f18bae678d1598576765&asyncCode=201
       pragma:
       - no-cache
       server:
@@ -746,7 +746,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
+      - '1199'
     status:
       code: 202
       message: Accepted
@@ -765,10 +765,10 @@ interactions:
       - -n -g --api-id --path --display-name --import-format --value --wsdl-service-name
         --wsdl-endpoint-name --api-type
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-12-01&asyncId=5f58b5e93a838a3268312f2d&asyncCode=201
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl?api-version=2019-12-01&asyncId=5f57f18bae678d1598576765&asyncCode=201
   response:
     body:
       string: "{\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/clitest000002/apis/api-id-wsdl\",\r\n
@@ -788,9 +788,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:01:27 GMT
+      - Tue, 08 Sep 2020 21:03:38 GMT
       etag:
-      - '"AAAAAAAiT5I="'
+      - '"AAAAAAAiQsQ="'
       expires:
       - '-1'
       pragma:
@@ -817,10 +817,11 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -n -g -a --path --display-name --description --header-name --querystring-name
+      - -n -g -a --path --display-name --description --subscription-key-header-name
+        --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
@@ -844,9 +845,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:01:29 GMT
+      - Tue, 08 Sep 2020 21:03:39 GMT
       etag:
-      - '"AAAAAAAiTzg="'
+      - '"AAAAAAAiQmU="'
       expires:
       - '-1'
       pragma:
@@ -885,10 +886,11 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
-      - -n -g -a --path --display-name --description --header-name --querystring-name
+      - -n -g -a --path --display-name --description --subscription-key-header-name
+        --subscription-key-query-string-name
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: PUT
@@ -913,9 +915,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:01:31 GMT
+      - Tue, 08 Sep 2020 21:03:40 GMT
       etag:
-      - '"AAAAAAAiT7k="'
+      - '"AAAAAAAiQuI="'
       expires:
       - '-1'
       pragma:
@@ -950,8 +952,8 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
@@ -1022,7 +1024,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:01:32 GMT
+      - Tue, 08 Sep 2020 21:03:41 GMT
       expires:
       - '-1'
       pragma:
@@ -1055,8 +1057,8 @@ interactions:
       ParameterSetName:
       - -n -g -a
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
@@ -1081,9 +1083,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:01:33 GMT
+      - Tue, 08 Sep 2020 21:03:42 GMT
       etag:
-      - '"AAAAAAAiT7k="'
+      - '"AAAAAAAiQuI="'
       expires:
       - '-1'
       pragma:
@@ -1116,8 +1118,8 @@ interactions:
       ParameterSetName:
       - -n -g -a
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
@@ -1143,9 +1145,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:01:33 GMT
+      - Tue, 08 Sep 2020 21:03:43 GMT
       etag:
-      - '"AAAAAAAiT7o="'
+      - '"AAAAAAAiQuM="'
       expires:
       - '-1'
       pragma:
@@ -1182,8 +1184,8 @@ interactions:
       ParameterSetName:
       - -n -g -a --delete-revisions --yes
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: DELETE
@@ -1197,7 +1199,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Wed, 09 Sep 2020 11:01:35 GMT
+      - Tue, 08 Sep 2020 21:03:44 GMT
       expires:
       - '-1'
       pragma:
@@ -1228,8 +1230,8 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
       accept-language:
       - en-US
     method: GET
@@ -1282,7 +1284,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Sep 2020 11:01:36 GMT
+      - Tue, 08 Sep 2020 21:03:45 GMT
       expires:
       - '-1'
       pragma:
