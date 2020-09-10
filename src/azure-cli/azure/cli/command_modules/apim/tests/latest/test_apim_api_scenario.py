@@ -195,10 +195,10 @@ class ApimApiScenarioTest(ScenarioTest):
         })
 
         self.cmd('apim api create -n {apim_name} -g {rg} --api-id {wsdl_api_id} --path {wsdl_path} --display-name "{wsdl_display_name}" --import-format {wsdl_import_format} --value {wsdl_url} --wsdl-service-name {wsdl_service_name} --wsdl-endpoint-name {wsdl_endpoint_name} --api-type {wsdl_api_type}', checks=[
-                self.check('name', '{wsdl_api_id}'),
-                self.check('path', '{wsdl_path}'),
-                self.check('displayName', '{wsdl_display_name}')
-            ])
+            self.check('name', '{wsdl_api_id}'),
+            self.check('path', '{wsdl_path}'),
+            self.check('displayName', '{wsdl_display_name}')
+        ])
         self.created_api_count += 1
 
     def _update_an_api(self):
