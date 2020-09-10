@@ -17,8 +17,8 @@ interactions:
       ParameterSetName:
       - -n -o
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: POST
@@ -34,7 +34,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 20:46:57 GMT
+      - Thu, 10 Sep 2020 15:35:38 GMT
       expires:
       - '-1'
       pragma:
@@ -55,8 +55,8 @@ interactions:
 - request:
     body: '{"properties": {"notificationSenderEmail": "publisher@contoso.com", "enableClientCertificate":
       true, "disableGateway": false, "virtualNetworkType": "None", "publisherEmail":
-      "publisher@contoso.com", "publisherName": "Contoso"}, "sku": {"name": "Consumption",
-      "capacity": 0}, "location": "westus"}'
+      "publisher@contoso.com", "publisherName": "Contoso"}, "sku": {"name": "Developer",
+      "capacity": 1}, "location": "westus"}'
     headers:
       Accept:
       - application/json
@@ -67,15 +67,15 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '296'
+      - '294'
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
       - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
         --enable-client-certificate
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
       accept-language:
       - en-US
     method: PUT
@@ -83,22 +83,22 @@ interactions:
   response:
     body:
       string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
-        US","etag":"AAAAAAANP7c=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Created","targetProvisioningState":"Activating","createdAtUtc":"2020-09-08T20:47:00.2824602Z","gatewayUrl":null,"gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":null,"encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":null,"virtualNetworkType":"None","certificates":null,"enableClientCertificate":true,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Consumption","capacity":0},"identity":null}'
+        US","etag":"AAAAAAANUM8=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Created","targetProvisioningState":"Activating","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":null,"gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":null,"encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":null,"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '1323'
+      - '1290'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 20:47:01 GMT
+      - Thu, 10 Sep 2020 15:35:43 GMT
       etag:
-      - '"AAAAAAANP7c="'
+      - '"AAAAAAANUM8="'
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0td2trN2xpZXZxYXdpZnhyNDVsZ3ZxZWlnYTN4d2R5a3FsbXpxX0FjdF9hZGUyOGQ0YQ==?api-version=2019-12-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
       pragma:
       - no-cache
       server:
@@ -108,7 +108,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
+      - '1199'
     status:
       code: 201
       message: Created
@@ -127,25 +127,2470 @@ interactions:
       - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
         --enable-client-certificate
       User-Agent:
-      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.17 msrest_azure/0.6.3
-        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0td2trN2xpZXZxYXdpZnhyNDVsZ3ZxZWlnYTN4d2R5a3FsbXpxX0FjdF9hZGUyOGQ0YQ==?api-version=2019-12-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
   response:
     body:
-      string: '{"error":{"code":"ActivationFailed","message":"Unable to activate API
-        service at this time. Please open a support case for your API management service
-        using the Azure portal.Please provide correlationId b5dc5d92-c712-473a-9749-7ebdd986bd39
-        and TimeStamp 9/8/2020 8:47:02 PM.","details":null,"innerError":null}}'
+      string: ''
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '310'
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:36:44 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:37:44 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:38:45 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:39:45 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:40:46 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:41:50 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:42:51 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:43:52 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:44:53 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:45:54 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:46:55 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:47:56 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:48:57 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:49:57 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:50:58 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:51:58 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:52:59 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:53:59 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:55:00 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:56:01 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:57:02 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:58:02 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 15:59:04 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:00:04 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:01:05 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:02:05 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:03:06 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:04:06 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:05:06 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:06:08 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:07:08 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:08:08 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:09:09 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:10:10 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:11:11 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:12:11 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name -g -l --sku-name --sku-capacity --publisher-email --publisher-name
+        --enable-client-certificate
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0FjdF85Y2Y0ZTRhOQ==?api-version=2019-12-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANUSQ=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":"https://cli-test-apim-000003.azure-api.net","gatewayRegionalUrl":"https://cli-test-apim-000003-wu-01.regional.azure-api.net","portalUrl":"https://cli-test-apim-000003.portal.azure-api.net","developerPortalUrl":"https://cli-test-apim-000003.developer.azure-api.net","managementApiUrl":"https://cli-test-apim-000003.management.azure-api.net","scmUrl":"https://cli-test-apim-000003.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"cli-test-apim-000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["168.62.8.174"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2487'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 08 Sep 2020 20:48:02 GMT
+      - Thu, 10 Sep 2020 16:13:11 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"name": "cli-test-apim-000003"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim check-name
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '62'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2019-12-01
+  response:
+    body:
+      string: '{"nameAvailable":false,"reason":"AlreadyExists","message":"cli-test-apim-000003
+        is already in use. Please select a different name."}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '162'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:13:13 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim update
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --publisher-name --set
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003?api-version=2019-12-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANUSQ=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":"https://cli-test-apim-000003.azure-api.net","gatewayRegionalUrl":"https://cli-test-apim-000003-wu-01.regional.azure-api.net","portalUrl":"https://cli-test-apim-000003.portal.azure-api.net","developerPortalUrl":"https://cli-test-apim-000003.developer.azure-api.net","managementApiUrl":"https://cli-test-apim-000003.management.azure-api.net","scmUrl":"https://cli-test-apim-000003.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"cli-test-apim-000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["168.62.8.174"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2487'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:13:14 GMT
+      etag:
+      - '"AAAAAAANUSQ="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"tags": {}, "properties": {"notificationSenderEmail": "publisher@contoso.com",
+      "hostnameConfigurations": [{"type": "Proxy", "hostName": "cli-test-apim-000003.azure-api.net",
+      "defaultSslBinding": true, "negotiateClientCertificate": false}], "customProperties":
+      {"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10": "False",
+      "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11": "False",
+      "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30": "False",
+      "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":
+      "False", "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":
+      "False", "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":
+      "False", "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":
+      "False", "Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":
+      "False"}, "disableGateway": false, "virtualNetworkType": "None", "apiVersionConstraint":
+      {}, "publisherEmail": "publisher@contoso.com", "publisherName": "Contoso"},
+      "sku": {"name": "Developer", "capacity": 1}, "location": "West US"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim update
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1198'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g --publisher-name --set
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003?api-version=2019-12-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANUSQ=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":"https://cli-test-apim-000003.azure-api.net","gatewayRegionalUrl":"https://cli-test-apim-000003-wu-01.regional.azure-api.net","portalUrl":"https://cli-test-apim-000003.portal.azure-api.net","developerPortalUrl":"https://cli-test-apim-000003.developer.azure-api.net","managementApiUrl":"https://cli-test-apim-000003.management.azure-api.net","scmUrl":"https://cli-test-apim-000003.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"cli-test-apim-000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["168.62.8.174"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2487'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:13:16 GMT
+      etag:
+      - '"AAAAAAANUSQ="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim list
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ApiManagement/service?api-version=2019-12-01
+  response:
+    body:
+      string: '{"value":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANUSQ=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":"https://cli-test-apim-000003.azure-api.net","gatewayRegionalUrl":"https://cli-test-apim-000003-wu-01.regional.azure-api.net","portalUrl":"https://cli-test-apim-000003.portal.azure-api.net","developerPortalUrl":"https://cli-test-apim-000003.developer.azure-api.net","managementApiUrl":"https://cli-test-apim-000003.management.azure-api.net","scmUrl":"https://cli-test-apim-000003.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"cli-test-apim-000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["168.62.8.174"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/apim/providers/Microsoft.ApiManagement/service/apimhack008","name":"apimhack008","type":"Microsoft.ApiManagement/service","tags":{},"location":"East
+        US","etag":"AAAAAAAVvW0=","properties":{"publisherEmail":"kehilli@microsoft.com","publisherName":"msft","notificationSenderEmail":"apimgmt-noreply@mail.windowsazure.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-09T19:34:12.8069525Z","gatewayUrl":"https://apimhack008.azure-api.net","gatewayRegionalUrl":"https://apimhack008-eastus-01.regional.azure-api.net","portalUrl":"https://apimhack008.portal.azure-api.net","developerPortalUrl":"https://apimhack008.developer.azure-api.net","managementApiUrl":"https://apimhack008.management.azure-api.net","scmUrl":"https://apimhack008.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"apimhack008.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["40.114.92.12"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/apim/providers/Microsoft.ApiManagement/service/apimhack007","name":"apimhack007","type":"Microsoft.ApiManagement/service","tags":{},"location":"East
+        US","etag":"AAAAAAAQ8ME=","properties":{"publisherEmail":"kehilli@microsoft.com","publisherName":"msft","notificationSenderEmail":"apimgmt-noreply@mail.windowsazure.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-03-10T16:33:35.0851527Z","gatewayUrl":"https://apimhack007.azure-api.net","gatewayRegionalUrl":null,"portalUrl":null,"developerPortalUrl":null,"managementApiUrl":null,"scmUrl":null,"hostnameConfigurations":[{"type":"Proxy","hostName":"apimhack007.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":null,"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"enableClientCertificate":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Consumption","capacity":0},"identity":null}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '6293'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:13:17 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-original-request-ids:
+      - e0e644a2-dc3f-44b1-afa3-66a97bda34c2
+      - adf17955-7414-4043-9711-6a9f1f4a30d4
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003?api-version=2019-12-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANUSQ=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":"https://cli-test-apim-000003.azure-api.net","gatewayRegionalUrl":"https://cli-test-apim-000003-wu-01.regional.azure-api.net","portalUrl":"https://cli-test-apim-000003.portal.azure-api.net","developerPortalUrl":"https://cli-test-apim-000003.developer.azure-api.net","managementApiUrl":"https://cli-test-apim-000003.management.azure-api.net","scmUrl":"https://cli-test-apim-000003.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"cli-test-apim-000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["168.62.8.174"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2487'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:13:18 GMT
+      etag:
+      - '"AAAAAAANUSQ="'
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - storage account keys list
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      ParameterSetName:
+      - -n -g --query -o
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-storage/11.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.Storage/storageAccounts/clitest000002/listKeys?api-version=2019-06-01
+  response:
+    body:
+      string: '{"keys":[{"keyName":"key1","value":"veryFakedStorageAccountKey==","permissions":"FULL"},{"keyName":"key2","value":"veryFakedStorageAccountKey==","permissions":"FULL"}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '288'
+      content-type:
+      - application/json
+      date:
+      - Thu, 10 Sep 2020 16:13:18 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-Azure-Storage-Resource-Provider/1.0,Microsoft-HTTPAPI/2.0 Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-resource-requests:
+      - '11999'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - Azure-Storage/2.0.0-2.0.1 (Python CPython 3.8.3; Darwin 17.7.0) AZURECLI/2.11.1
+      x-ms-date:
+      - Thu, 10 Sep 2020 16:13:19 GMT
+      x-ms-version:
+      - '2018-11-09'
+    method: PUT
+    uri: https://clitest000002.blob.core.windows.net/backups?restype=container
+  response:
+    body:
+      string: ''
+    headers:
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:13:20 GMT
+      etag:
+      - '"0x8D855A46F3672E9"'
+      last-modified:
+      - Thu, 10 Sep 2020 16:13:20 GMT
+      server:
+      - Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0
+      x-ms-version:
+      - '2018-11-09'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"storageAccount": "clitest000002", "accessKey": "veryFakedStorageAccountKey==",
+      "containerName": "backups", "backupName": "cli-test-apim-000003_test_backup"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '259'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/backup?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:13:21 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003//operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:14:22 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:15:23 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:16:23 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:17:24 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:18:25 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:19:25 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim backup
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --backup-name --storage-account-name --storage-account-container --storage-account-key
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X0JhY2t1cF8zOTA5YTM0Mg==?api-version=2019-12-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANUTY=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Succeeded","targetProvisioningState":"","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":"https://cli-test-apim-000003.azure-api.net","gatewayRegionalUrl":"https://cli-test-apim-000003-wu-01.regional.azure-api.net","portalUrl":"https://cli-test-apim-000003.portal.azure-api.net","developerPortalUrl":"https://cli-test-apim-000003.developer.azure-api.net","managementApiUrl":"https://cli-test-apim-000003.management.azure-api.net","scmUrl":"https://cli-test-apim-000003.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"cli-test-apim-000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["168.62.8.174"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2487'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:20:25 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim delete
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      ParameterSetName:
+      - -g -n -y
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: DELETE
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003?api-version=2019-12-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003","name":"cli-test-apim-000003","type":"Microsoft.ApiManagement/service","tags":{},"location":"West
+        US","etag":"AAAAAAANUTg=","properties":{"publisherEmail":"publisher@contoso.com","publisherName":"Contoso","notificationSenderEmail":"publisher@contoso.com","provisioningState":"Succeeded","targetProvisioningState":"Deleting","createdAtUtc":"2020-09-10T15:35:41.1801718Z","gatewayUrl":"https://cli-test-apim-000003.azure-api.net","gatewayRegionalUrl":"https://cli-test-apim-000003-wu-01.regional.azure-api.net","portalUrl":"https://cli-test-apim-000003.portal.azure-api.net","developerPortalUrl":"https://cli-test-apim-000003.developer.azure-api.net","managementApiUrl":"https://cli-test-apim-000003.management.azure-api.net","scmUrl":"https://cli-test-apim-000003.scm.azure-api.net","hostnameConfigurations":[{"type":"Proxy","hostName":"cli-test-apim-000003.azure-api.net","encodedCertificate":null,"keyVaultId":null,"certificatePassword":null,"negotiateClientCertificate":false,"certificate":null,"defaultSslBinding":true}],"publicIPAddresses":["168.62.8.174"],"privateIPAddresses":null,"additionalLocations":null,"virtualNetworkConfiguration":null,"customProperties":{"Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30":"False","Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2":"False"},"virtualNetworkType":"None","certificates":null,"disableGateway":false,"apiVersionConstraint":{"minApiVersion":null}},"sku":{"name":"Developer","capacity":1},"identity":null}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2495'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:20:28 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X1Rlcm1fNzIyNjBlOWI=?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-deletes:
+      - '14999'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim delete
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n -y
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X1Rlcm1fNzIyNjBlOWI=?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:21:29 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X1Rlcm1fNzIyNjBlOWI=?api-version=2019-12-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim delete
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n -y
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003/operationresults/d2VzdHVzOmNsaS10ZXN0LWFwaW0tZnhla21uYzN1eG1qNmRtd2xvc2k2Mmxibnh1Mm9zYjdmbmo0X1Rlcm1fNzIyNjBlOWI=?api-version=2019-12-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 10 Sep 2020 16:22:29 GMT
       expires:
       - '-1'
       pragma:
@@ -157,6 +2602,52 @@ interactions:
       x-content-type-options:
       - nosniff
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apim show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.8.3 (macOS-10.13.6-x86_64-i386-64bit) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-apimanagement/0.2.0 Azure-SDK-For-Python AZURECLI/2.11.1
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_apim-000001/providers/Microsoft.ApiManagement/service/cli-test-apim-000003?api-version=2019-12-01
+  response:
+    body:
+      string: '{"error":{"code":"ServiceNotFound","message":"Api service does not
+        exist: cli-test-apim-000003","details":null,"innerError":null}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '160'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 10 Sep 2020 16:22:31 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 404
+      message: Not Found
 version: 1

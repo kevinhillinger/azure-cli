@@ -33,8 +33,8 @@ class ApimScenarioTest(ScenarioTest):
             'notification_sender_email': 'notifications@contoso.com',
             'publisher_email': 'publisher@contoso.com',
             'publisher_name': 'Contoso',
-            'sku_name': 'Consumption',
-            'sku_capacity': 0,
+            'sku_name': 'Developer',
+            'sku_capacity': 1,
             'enable_cert': True,
             'tags': ["foo=boo"]
         })
@@ -47,7 +47,6 @@ class ApimScenarioTest(ScenarioTest):
                          self.check('location', '{rg_loc_displayName}'),
                          self.check('sku.name', '{sku_name}'),
                          self.check('provisioningState', 'Succeeded'),
-                         # expect None for Developer sku, even though requested value was True - only works with Consumption sku
                          self.check('enableClientCertificate', None),
                          self.check('publisherName', '{publisher_name}'),
                          self.check('publisherEmail', '{publisher_email}')])
@@ -93,7 +92,7 @@ class ApimScenarioTest(ScenarioTest):
         # service delete command
         self.cmd('apim delete -g {rg} -n {service_name} -y')
 
-        with self.assertRaises(Exception):
+        with self.assertRaises(SystemExit):
             self.cmd('az apim show -n {service_name} -g {rg}')
 
 

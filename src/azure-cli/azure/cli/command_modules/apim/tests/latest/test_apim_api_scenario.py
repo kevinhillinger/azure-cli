@@ -257,4 +257,3 @@ class ApimApiScenarioTest(ScenarioTest):
             'wsdl_url': url_template.format(storage_account, container_name, 'calculator.wsdl.xml', storage_sas_token),
             'openapi_url': url_template.format(storage_account, container_name, 'petstore.openapi.yaml', storage_sas_token)
         })
-        print(self.kwargs)
