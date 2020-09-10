@@ -19,37 +19,12 @@ class ApimApiScenarioTest(ScenarioTest):
         self._initialize_variables()
         super(ApimApiScenarioTest, self).setUp()
 
-    def _setup_test_data(self, resource_group, apim_name, storage_account):
-        storage_account_key = self.cmd('storage account keys list -g {} -n {} --query [0].value'.format(resource_group, storage_account)).get_output_in_json()
-
-        # create the container
-        container_name = self.create_random_name(prefix='apimtestdata', length=24)
-        self.cmd('storage container create --account-name {} --name {}'.format(storage_account, container))
-        sas_token_expiry = (datetime.datetime.now() + datetime.timedelta(days=1, hours=3)).strftime("\"%Y-%m-%dT%H:%MZ\"")
-        storage_sas_token = self.cmd('storage container generate-sas --account-name {} --expiry {} --permissions dlrw'.format(storage_account, test_file, sas_token_expiry))
-
-        self.kwargs.update({
-            'apim_name': apim_name,
-            'storage_account_key': storage_account_key,
-            'storage_sas_token': storage_sas_token
-        })
-
-        # upload test data
-        local_dir = os.path.join(TEST_DIR, 'data/').replace('\\', '\\\\')
-        self.cmd('az storage blob upload-batch -d {} --account-name {} --account-key {} --source {}'.format(container_name, storage_account, storage_account_key, local_dir))
-        
-        url_template = sasurl = '\"https://{}.blob.core.windows.net/{}/{}?{}\"'
-
-        self.test_data = {
-            wsdl
-        }
-
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
-    @StorageAccountPreparer()
+    @StorageAccountPreparer(parameter_name='test_data_storage_account')
     @ApiManagementPreparer(sku_name='Consumption', parameter_name='apim_name')
-    def test_apim_api(self, resource_group, apim_name, storage_account_info):
+    def test_apim_api(self, resource_group, apim_name, test_data_storage_account):
         # setup
-        self._setup_resources()
+        self._setup_test_data(resource_group, apim_name, test_data_storage_account)
         self._clear_apis_from_instance()
 
         # act out creation scenarios
@@ -180,10 +155,10 @@ class ApimApiScenarioTest(ScenarioTest):
             'swagger_path': self.path + '-swagger',
             'swagger_service_url': 'http://petstore.swagger.wordnik.com/api',
             'swagger_import_format': 'swagger-link-json',
-            'swagger_value': 'http://apimpimportviaurl.azurewebsites.net/api/apidocs/'
+            'swagger_url': 'http://apimpimportviaurl.azurewebsites.net/api/apidocs/'
         })
 
-        self.cmd('apim api create -n {apim_name} -g {rg} -a {swagger_api_id} --path {swagger_path} --import-format {swagger_import_format} --value {swagger_value} --service-url {swagger_service_url}', checks=[
+        self.cmd('apim api create -n {apim_name} -g {rg} -a {swagger_api_id} --path {swagger_path} --import-format {swagger_import_format} --value {swagger_url} --service-url {swagger_service_url}', checks=[
             self.check('name', '{swagger_api_id}'),
             self.check('path', '{swagger_path}'),
             self.check('serviceUrl', '{swagger_service_url}')
@@ -199,7 +174,7 @@ class ApimApiScenarioTest(ScenarioTest):
             'openapi_value': 'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml'
         })
 
-        self.cmd('apim api create -n {apim_name} -g {rg} -a {openapi_api_id} --path {openapi_path} --import-format {openapi_import_format} --value {openapi_value}', checks=[
+        self.cmd('apim api create -n {apim_name} -g {rg} -a {openapi_api_id} --path {openapi_path} --import-format {openapi_import_format} --value {openapi_url}', checks=[
             self.check('name', '{openapi_api_id}'),
             self.check('path', '{openapi_path}'),
             self.check('displayName', '{openapi_display_name}')
@@ -219,16 +194,7 @@ class ApimApiScenarioTest(ScenarioTest):
             'wsdl_api_type': 'http'
         })
 
-        self.cmd(
-            """apim api create -n {apim_name} -g {rg} \
-                --api-id {wsdl_api_id} \
-                --path {wsdl_path} \
-                --display-name "{wsdl_display_name}"
-                --import-format {wsdl_import_format} \
-                --value \"{wsdl_value}\" \
-                --wsdl-service-name {wsdl_service_name} \
-                --wsdl-endpoint-name {wsdl_endpoint_name} \
-                --api-type {wsdl_api_type}""", checks=[
+        self.cmd('apim api create -n {apim_name} -g {rg} --api-id {wsdl_api_id} --path {wsdl_path} --display-name "{wsdl_display_name}" --import-format {wsdl_import_format} --value {wsdl_url} --wsdl-service-name {wsdl_service_name} --wsdl-endpoint-name {wsdl_endpoint_name} --api-type {wsdl_api_type}', checks=[
                 self.check('name', '{wsdl_api_id}'),
                 self.check('path', '{wsdl_path}'),
                 self.check('displayName', '{wsdl_display_name}')
@@ -266,3 +232,29 @@ class ApimApiScenarioTest(ScenarioTest):
             self.cmd('apim api delete -n {} -g {} -a {}'.format(self.kwargs['apim_name'], self.kwargs['rg'], api['name']))
         self.created_api_count = 0
         self.assertEqual(self._get_current_api_count(), self.created_api_count)
+
+    def _setup_test_data(self, resource_group, apim_name, storage_account):
+        # create the container to hold the test files for creating APIs from HTTP endpoints
+        storage_account_key = self.cmd('storage account keys list -g {} -n {} --query [0].value'.format(resource_group, storage_account)).get_output_in_json()
+
+        container_name = self.create_random_name(prefix='apimtestdata', length=24)
+        self.cmd('storage container create --account-name {} --name {}'.format(storage_account, container_name))
+
+        sas_token_expiry = (datetime.datetime.now() + datetime.timedelta(days=1, hours=3)).strftime("\"%Y-%m-%dT%H:%MZ\"")
+        storage_sas_token = self.cmd('storage container generate-sas --account-name {} --account-key {} --name {} --expiry {} --permissions dlrw -o tsv'.format(storage_account, storage_account_key, container_name, sas_token_expiry)).output.strip()
+
+        # upload test data
+        local_dir = os.path.join(TEST_DIR, 'data/').replace('\\', '\\\\')
+        self.cmd('az storage blob upload-batch -d {} --account-name {} --account-key {} --source {}'.format(container_name, storage_account, storage_account_key, local_dir))
+
+        url_template = 'https://{}.blob.core.windows.net/{}/{}?{}'
+
+        self.kwargs.update({
+            'apim_name': apim_name,
+            'storage_account': storage_account,
+            'storage_account_key': storage_account_key,
+            'storage_sas_token': storage_sas_token,
+            'wsdl_url': url_template.format(storage_account, container_name, 'calculator.wsdl.xml', storage_sas_token),
+            'openapi_url': url_template.format(storage_account, container_name, 'petstore.openapi.yaml', storage_sas_token)
+        })
+        print(self.kwargs)

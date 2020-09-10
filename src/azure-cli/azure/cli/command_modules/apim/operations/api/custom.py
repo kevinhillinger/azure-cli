@@ -20,7 +20,7 @@ def create_api(client, resource_group_name, service_name, api_id,
                oauth2_server_id=None, oauth2_scope=None,
                openid_provider_id=None, openid_bearer_token_sending_methods=None,
                subscription_required=None, header_name=None,
-               querystring_name=None, is_current=None, is_online=None,
+               querystring_name=None, is_current=None,
                import_format=None, value=None, wsdl_service_name=None,
                wsdl_endpoint_name=None, api_type=None
                ):
@@ -65,7 +65,6 @@ def create_api(client, resource_group_name, service_name, api_id,
         authentication_settings=authentication_settings,
         api_type=api_type,
         is_current=is_current,
-        is_online=is_online,
         format=import_format,
         value=value
     )
@@ -104,8 +103,7 @@ def update_api(instance,
                oauth2_server_id=None, oauth2_scope=None,
                openid_provider_id=None, openid_bearer_token_sending_methods=None,
                subscription_required=None, header_name=None, querystring_name=None,
-               is_current=None, is_online=None,
-               import_format=None, value=None,
+               is_current=None, import_format=None, value=None,
                wsdl_service_name=None, wsdl_endpoint_name=None, api_type=None,
                ):
 
@@ -163,9 +161,6 @@ def update_api(instance,
 
     if is_current is not None:
         instance.is_current = is_current
-
-    if is_online is not None:
-        instance.is_online = is_online
 
     if import_format is not None:
         instance.format = import_format
