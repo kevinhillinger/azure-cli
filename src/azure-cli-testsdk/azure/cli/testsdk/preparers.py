@@ -105,6 +105,7 @@ class ApiManagementPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
         self.skip_delete = skip_delete
         self.parameter_name = parameter_name
         self.dev_setting_name = os.environ.get(dev_setting_name, None)
+        self.key = key
 
     def create_resource(self, name, **kwargs):
         group = self._get_resource_group(**kwargs)
@@ -112,9 +113,9 @@ class ApiManagementPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
         if not self.dev_setting_name:
             template = 'az apim create --name  {} -g {} -l {} --publisher-email {} --publisher-name {} --sku-name {}'
             self.live_only_execute(self.cli_ctx, template.format(name, group, self.location, self.publisher_email, self.publisher_name, self.sku_name))
+            self.test_class_instance.kwargs[self.key] = name
             return {self.parameter_name: name}
 
-        self.test_class_instance.kwargs[self.key] = name
         return {self.parameter_name: self.dev_setting_name}
 
     def remove_resource(self, name, **kwargs):
