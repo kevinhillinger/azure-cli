@@ -20,7 +20,7 @@ class ApimSubscriptionScenarioTest(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @ApiManagementPreparer(parameter_name='apim_name', sku_name='Consumption')
-    def test_apim_Subscription(self, resource_group, apim_name):
+    def test_apim_subscription(self, resource_group, apim_name):
         # setup
         self.kwargs.update({'apim_name': apim_name})
         self._set_subscription_count(self._get_subscription_count())

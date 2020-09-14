@@ -14,7 +14,7 @@ from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagemen
 class ApimApiOperationScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @ApiManagementPreparer(parameter_name='apim_name')
-    def test_apim_api_policy(self, resource_group, apim_name):
+    def test_apim_api_operation(self, resource_group, apim_name):
         # setup
         self._initialize_variables()
         self._create_an_api()

@@ -14,7 +14,7 @@ from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagemen
 class ApimApiVersionSetScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @ApiManagementPreparer(parameter_name='apim_name')
-    def test_apim_api_policy(self, resource_group, apim_name):
+    def test_apim_api_versionset(self, resource_group, apim_name):
         # setup
 
         # list API version set

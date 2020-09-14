@@ -13,7 +13,7 @@ from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagemen
 class ApimProductApiScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @ApiManagementPreparer(parameter_name='apim_name', sku_name='Consumption')
-    def test_apim_product(self, resource_group, apim_name):
+    def test_apim_product_api(self, resource_group, apim_name):
         self.kwargs.update({
             'service_name': apim_name,
             'api_id': self.create_random_name('az-cli', 10),
