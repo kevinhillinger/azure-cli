@@ -32,3 +32,23 @@ def cf_subscription(cli_ctx, *_):
 
 def cf_api_policy(cli_ctx, *_):
     return cf_apim(cli_ctx).api_policy
+
+
+def cf_nv(cli_ctx, *_):
+    return cf_apim(cli_ctx).named_value
+
+
+def cf_apiops(cli_ctx, *_):
+    return cf_apim(cli_ctx).api_operation
+
+
+def cf_apirelease(cli_ctx, *_):
+    return cf_apim(cli_ctx).api_release
+
+
+def cf_apirevision(cli_ctx, *_):
+    return cf_apim(cli_ctx).api_revision
+
+
+def cf_apiversionset(cli_ctx, *_):
+    return cf_apim(cli_ctx).api_version_set
