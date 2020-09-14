@@ -94,7 +94,7 @@ class ResourceGroupPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
 class ApiManagementPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
     def __init__(self, name_prefix='clitest', sku_name='Developer', location='westus', parameter_name='api_management',
                  resource_group_parameter_name='resource_group', skip_delete=True, dev_setting_name='AZURE_CLI_TEST_DEV_APIM_NAME',
-                 publisher_email='publisher@contsoso.com', publisher_name='Contoso'):
+                 publisher_email='publisher@contsoso.com', publisher_name='Contoso', key='apim'):
         super(ApiManagementPreparer, self).__init__(name_prefix, 24)
         self.cli_ctx = get_dummy_cli()
         self.location = location
@@ -114,8 +114,7 @@ class ApiManagementPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
             self.live_only_execute(self.cli_ctx, template.format(name, group, self.location, self.publisher_email, self.publisher_name, self.sku_name))
             return {self.parameter_name: name}
 
-#        name = self.dev_setting_name
-#        self.test_class_instance.kwargs[self.key] = name
+        self.test_class_instance.kwargs[self.key] = name
         return {self.parameter_name: self.dev_setting_name}
 
     def remove_resource(self, name, **kwargs):

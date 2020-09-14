@@ -12,6 +12,7 @@ STATE_TYPES = ProductState
 
 def load_arguments(commands_loader, _):
     with commands_loader.argument_context('apim product') as c:
+        c.argument('service_name', options_list=['--service-name', '-n'], help="The name of the API Management service instance", id_part=None)
         c.argument('product_id', options_list=['--product-id', '-p'], help='Product identifier. Must be unique in the current API Management service instance.')
         c.argument('description', options_list=['--description', '-d'], help='Product description. May include HTML formatting tags.')
         c.argument('terms', help='Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.')
