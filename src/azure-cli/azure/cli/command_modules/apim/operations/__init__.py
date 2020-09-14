@@ -5,19 +5,21 @@
 
 from azure.cli.command_modules.apim.operations.api import ApiOperations
 from azure.cli.command_modules.apim.operations.api_policy import ApiPolicyOperations
+from azure.cli.command_modules.apim.operations.named_value import NamedValueOperations
 from azure.cli.command_modules.apim.operations.policy import PolicyOperations
 from azure.cli.command_modules.apim.operations.product import ProductOperations
 from azure.cli.command_modules.apim.operations.subscription import SubscriptionOperations
 
 
 class ApimSubgroupsLoader():
-    operations = ['api', 'api_policy', 'policy', 'product', 'subscription']
+    operations = ['api', 'api_policy', 'named_value', 'policy', 'product', 'subscription']
 
     def __init__(self, commands_loader):
         self.commands_loader = commands_loader
 
         self.api = ApiOperations(self)
         self.api_policy = ApiPolicyOperations(self)
+        self.named_value = NamedValueOperations(self)
         self.policy = PolicyOperations(self)
         self.product = ProductOperations(self)
         self.subscription = SubscriptionOperations(self)

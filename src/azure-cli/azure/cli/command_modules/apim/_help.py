@@ -23,7 +23,7 @@ type: group
 short-summary: Manage Azure API Management Product's.
 """
 
-helps['apim nv'] = """
+helps['apim named-value'] = """
 type: group
 short-summary: Manage Azure API Management Named Values.
 """
@@ -647,27 +647,22 @@ examples:
         az apim product delete --resource-group MyResourceGroup  --service-name MyServiceName --product-id MyProductID --delete-subscriptions true
 """
 
-helps['apim nv list'] = """
+helps['apim named-value list'] = """
 type: command
 short-summary: List API Management Named Values.
 """
 
-helps['apim nv show'] = """
+helps['apim named-value show'] = """
 type: command
 short-summary: Show details of an API Management Named Value.
 """
 
-helps['apim nv show-secret'] = """
-type: command
-short-summary: Gets the secret of an API Management Named Value.
-"""
-
-helps['apim nv delete'] = """
+helps['apim named-value delete'] = """
 type: command
 short-summary: Delete an API Management Named Value.
 """
 
-helps['apim nv create'] = """
+helps['apim named-value create'] = """
 type: command
 short-summary: Create an API Management Named Value.
 parameters:
@@ -685,10 +680,10 @@ parameters:
 examples:
   - name: Create a Named Value.
     text: |-
-        az apim nv create --service-name MyApim -g MyResourceGroup --named-value-id MyNamedValue --display-name 'My Named Value' --value 'foo'
+        az apim named-value create --service-name MyApim -g MyResourceGroup --named-value-id MyNamedValue --display-name 'My Named Value' --value 'foo'
 """
 
-helps['apim nv update'] = """
+helps['apim named-value update'] = """
 type: command
 short-summary: Update an API Management Named Value.
 parameters:
@@ -703,7 +698,7 @@ parameters:
 examples:
   - name: Create a basic API.
     text: |-
-        az apim nv update --service-name MyApim -g MyResourceGroup --named-value-id MyNamedValue --value foo
+        az apim named-value update --service-name MyApim -g MyResourceGroup --named-value-id MyNamedValue --value foo
 """
 
 helps['apim api operation list'] = """

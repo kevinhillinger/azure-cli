@@ -84,14 +84,6 @@ def load_arguments(self, _):
         c.argument('delete_subscriptions', help="Delete existing subscriptions associated with the product or not.")
         c.argument('if_match', help='ETag of the Entity.')
 
-    with self.argument_context('apim nv') as c:
-        c.argument('service_name', options_list=['--service-name', '-n'], help='The name of the API Management service instance.')
-        c.argument('named_value_id', help='Identifier of the NamedValue.')
-        c.argument('display_name', help='Required. Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.')
-        c.argument('value', help='Required. Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on GET operations! Use /listSecrets POST request to get the value.')
-        c.argument('secret', arg_type=get_three_state_flag(), help='Determines whether the value is a secret and should be encrypted or not. Default value is false.')
-        c.argument('tags', tags_type)
-
     with self.argument_context('apim api operation') as c:
         c.argument('service_name', options_list=['--service-name', '-n'], help="The name of the API Management service instance.")
         c.argument('api_id', help='API identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.')

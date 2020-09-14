@@ -34,7 +34,7 @@ def cf_api_policy(cli_ctx, *_):
     return cf_apim(cli_ctx).api_policy
 
 
-def cf_nv(cli_ctx, *_):
+def cf_named_value(cli_ctx, *_):
     return cf_apim(cli_ctx).named_value
 
 

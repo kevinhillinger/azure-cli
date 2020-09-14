@@ -9,7 +9,7 @@
 
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._format import service_output_format
-from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_product, cf_nv, cf_apiops,
+from azure.cli.command_modules.apim._client_factory import (cf_service, cf_api, cf_product, cf_apiops,
                                                             cf_apirelease, cf_apirevision, cf_apiversionset)
 
 
@@ -24,11 +24,6 @@ def load_command_table(self, _):
     product_sdk = CliCommandType(
         operations_tmpl='azure.mgmt.apimanagement.operations#ProductOperations.{}',
         client_factory=cf_product
-    )
-
-    nv_sdk = CliCommandType(
-        operations_tmpl='azure.mgmt.apimanagement.operations#NamedValueOperations.{}',
-        client_factory=cf_nv
     )
 
     apiops_sdk = CliCommandType(
@@ -68,14 +63,6 @@ def load_command_table(self, _):
         g.custom_command('check', 'check_product_exists')
         g.custom_command('add', 'add_product_api')
         g.custom_command('delete', 'delete_product_api')
-
-    with self.command_group('apim nv', nv_sdk, is_preview=True) as g:
-        g.custom_command('create', 'create_apim_nv')
-        g.custom_show_command('show', 'get_apim_nv')
-        g.custom_command('list', 'list_apim_nv')
-        g.custom_command('delete', 'delete_apim_nv', confirmation=True)
-        g.custom_command('show-secret', 'get_apim_nv_secret')
-        g.generic_update_command('update', custom_func_name='update_apim_nv')
 
     with self.command_group('apim api operation', apiops_sdk, is_preview=True) as g:
         g.custom_command('list', 'list_api_operation')
