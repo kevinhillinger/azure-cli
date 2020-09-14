@@ -238,22 +238,18 @@ class ApimApiScenarioTest(ScenarioTest):
         storage_account_key = self.cmd('storage account keys list -g {} -n {} --query [0].value'.format(resource_group, storage_account)).get_output_in_json()
 
         container_name = self.create_random_name(prefix='apimtestdata', length=24)
-        self.cmd('storage container create --account-name {} --name {}'.format(storage_account, container_name))
-
-        sas_token_expiry = (datetime.datetime.now() + datetime.timedelta(days=1, hours=3)).strftime("\"%Y-%m-%dT%H:%MZ\"")
-        storage_sas_token = self.cmd('storage container generate-sas --account-name {} --account-key {} --name {} --expiry {} --permissions dlrw -o tsv'.format(storage_account, storage_account_key, container_name, sas_token_expiry)).output.strip()
+        self.cmd('storage container create --account-name {} --name {} --public-access blob'.format(storage_account, container_name))
 
         # upload test data
         local_dir = os.path.join(TEST_DIR, 'data/').replace('\\', '\\\\')
         self.cmd('az storage blob upload-batch -d {} --account-name {} --account-key {} --source {}'.format(container_name, storage_account, storage_account_key, local_dir))
 
-        url_template = 'https://{}.blob.core.windows.net/{}/{}?{}'
+        url_template = 'https://{}.blob.core.windows.net/{}/{}'
 
         self.kwargs.update({
             'apim_name': apim_name,
             'storage_account': storage_account,
             'storage_account_key': storage_account_key,
-            'storage_sas_token': storage_sas_token,
-            'wsdl_url': url_template.format(storage_account, container_name, 'calculator.wsdl.xml', storage_sas_token),
-            'openapi_url': url_template.format(storage_account, container_name, 'petstore.openapi.yaml', storage_sas_token)
+            'wsdl_url': url_template.format(storage_account, container_name, 'calculator.wsdl.xml'),
+            'openapi_url': url_template.format(storage_account, container_name, 'petstore.openapi.yaml')
         })
