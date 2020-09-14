@@ -13,7 +13,7 @@ from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagemen
 
 class ApimApiOperationScenarioTest(ScenarioTest):
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
-    @ApiManagementPreparer(parameter_name='apim_name')
+    @ApiManagementPreparer(parameter_name='apim_name', sku_name='Consumption')
     def test_apim_api_operation(self, resource_group, apim_name):
         # setup
         self._initialize_variables()
@@ -84,7 +84,7 @@ class ApimApiOperationScenarioTest(ScenarioTest):
         })
 
     def _create_an_api(self):
-        output = self.cmd('apim api create -n {apim} -g {rg} -a {api_id} --path {path} --display-name "{display_name}" --description "{description}"  --service-url {service_url}  --protocols {protocols} --header-name {subscription_key_header_name} --querystring-name {subscription_key_query_string_name}')
+        output = self.cmd('apim api create -n {apim} -g {rg} -a {api_id} --path {path} --display-name "{display_name}" --description "{description}"  --service-url {service_url}  --protocols {protocols} --header-name {subscription_key_header_name} --querystring-name {subscription_key_query_string_name}').get_output_in_json()
         self.kwargs.update({
             'source_api_id': output['id'].rpartition('/')[2]
         })

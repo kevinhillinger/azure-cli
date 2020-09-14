@@ -19,7 +19,7 @@ def load_command_table(commands_loader, _):
         client_factory=cf_api_operation
     )
 
-    with commands_loader.command_group('apim api policy', sdk, custom_command_type=custom_type, is_preview=True) as g:
+    with commands_loader.command_group('apim api operation', sdk, custom_command_type=custom_type, is_preview=True) as g:
         g.custom_command('list', 'list_api_operation')
         g.custom_show_command('show', 'get_api_operation')
         g.custom_command('create', 'create_api_operation')
