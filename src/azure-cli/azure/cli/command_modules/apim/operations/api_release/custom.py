@@ -22,10 +22,10 @@ def create_api_release(client, resource_group_name, service_name, api_id, api_re
     if release_id is None:
         release_id = uuid.uuid4().hex
 
-    fully_qualified_api_id = "/apis/" + api_id + ";rev=" + api_revision
+    api_revision_to_release_and_make_current = "/apis/" + api_id + ";rev=" + api_revision
     if_match = "*" if if_match is None else if_match
 
-    return client.create_or_update(resource_group_name, service_name, api_id, release_id, if_match, fully_qualified_api_id, notes)
+    return client.create_or_update(resource_group_name, service_name, api_id, release_id, if_match, api_revision_to_release_and_make_current, notes)
 
 
 def update_api_release(instance, notes=None):

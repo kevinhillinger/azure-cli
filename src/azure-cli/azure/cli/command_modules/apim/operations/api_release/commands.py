@@ -6,7 +6,7 @@
 
 from azure.cli.core.commands import CliCommandType
 from azure.cli.command_modules.apim._client_factory import cf_api_release
-
+from azure.cli.command_modules.apim._exception_handler import default_exception_handler
 
 def load_command_table(commands_loader, _):
     sdk = CliCommandType(
@@ -19,7 +19,7 @@ def load_command_table(commands_loader, _):
         client_factory=cf_api_release
     )
 
-    with commands_loader.command_group('apim api release', sdk, custom_command_type=custom_type, is_preview=True) as g:
+    with commands_loader.command_group('apim api release', sdk, custom_command_type=custom_type, exception_handler=default_exception_handler, is_preview=True) as g:
         g.custom_command('list', 'list_api_release')
         g.custom_show_command('show', 'show_api_release')
         g.custom_command('create', 'create_api_release')

@@ -8,9 +8,9 @@ class ApiVersionSetOperations:
         self.parent = parent
 
     def load_arguments(self, _):
-        from azure.cli.command_modules.apim.operations.api_versionset.params import load_arguments
+        from azure.cli.command_modules.apim.operations.api_version_set.params import load_arguments
         load_arguments(self.parent.commands_loader, _)
 
     def load_command_table(self, _):
-        from azure.cli.command_modules.apim.operations.api_versionset.commands import load_command_table
+        from azure.cli.command_modules.apim.operations.api_version_set.commands import load_command_table
         load_command_table(self.parent.commands_loader, _)

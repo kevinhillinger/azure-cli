@@ -4,20 +4,18 @@
 # --------------------------------------------------------------------------------------------
 # pylint: disable=line-too-long
 
-import os
-import unittest
-import xmltodict
-from azure_devtools.scenario_tests import AllowLargeResponse
 from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagementPreparer)
 
 
 class ApimApiOperationScenarioTest(ScenarioTest):
+    def setUp(self):
+        self._initialize_variables()
+        super(ApimApiOperationScenarioTest, self).setUp()
+
     @ResourceGroupPreparer(name_prefix='cli_test_apim-', parameter_name_for_location='resource_group_location')
     @ApiManagementPreparer(parameter_name='apim_name', sku_name='Consumption')
     def test_apim_api_operation(self, resource_group, apim_name):
-        # setup
-        self._initialize_variables()
-        self._create_an_api()
+        self._setup_an_api()
 
         # list operations in an API
         initial_operation_count = len(self.cmd('apim api operation list -g "{rg}" -n "{apim}" --api-id "{api_id}"').get_output_in_json())
@@ -52,21 +50,13 @@ class ApimApiOperationScenarioTest(ScenarioTest):
         self.assertEqual(final_operation_count + 1, current_operation_count)
 
     def _initialize_variables(self):
-        self.api_id = 'api-id'
-        self.path = 'api-path'
-        self.display_name = 'api display name'
-        self.description = 'api description'
-        self.service_url = 'http://echoapi.cloudapp.net/api'
-
+        # api variables
         self.kwargs.update({
-            'api_id': self.api_id,
-            'path': self.path,
-            'display_name': self.display_name,
-            'description': self.description,
-            'service_url': self.service_url,
-            'protocols': 'http',
-            'subscription_key_header_name': 'header1234',
-            'subscription_key_query_string_name': 'query1234'
+            'api_id': 'api-id',
+            'path': 'api-path',
+            'display_name': 'api display name',
+            'service_url': 'http://echoapi.cloudapp.net/api',
+            'protocols': 'http'
         })
 
         # operation variables
@@ -83,8 +73,8 @@ class ApimApiOperationScenarioTest(ScenarioTest):
             'new_method': 'PUT'
         })
 
-    def _create_an_api(self):
-        output = self.cmd('apim api create -n {apim} -g {rg} -a {api_id} --path {path} --display-name "{display_name}" --description "{description}"  --service-url {service_url}  --protocols {protocols} --header-name {subscription_key_header_name} --querystring-name {subscription_key_query_string_name}').get_output_in_json()
+    def _setup_an_api(self):
+        output = self.cmd('apim api create -n {apim} -g {rg} -a {api_id} --path {path} --display-name "{display_name}" --service-url {service_url}  --protocols {protocols}').get_output_in_json()
         self.kwargs.update({
             'source_api_id': output['id'].rpartition('/')[2]
         })

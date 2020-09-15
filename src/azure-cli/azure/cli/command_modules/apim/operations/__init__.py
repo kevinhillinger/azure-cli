@@ -8,7 +8,7 @@ from azure.cli.command_modules.apim.operations.api_policy import ApiPolicyOperat
 from azure.cli.command_modules.apim.operations.api_operation import ApiOperationOperations
 from azure.cli.command_modules.apim.operations.api_release import ApiReleaseOperations
 from azure.cli.command_modules.apim.operations.api_revision import ApiRevisionOperations
-from azure.cli.command_modules.apim.operations.api_versionset import ApiVersionSetOperations
+from azure.cli.command_modules.apim.operations.api_version_set import ApiVersionSetOperations
 from azure.cli.command_modules.apim.operations.named_value import NamedValueOperations
 from azure.cli.command_modules.apim.operations.policy import PolicyOperations
 from azure.cli.command_modules.apim.operations.product import ProductOperations

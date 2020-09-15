@@ -5,9 +5,7 @@
 # pylint: disable=line-too-long
 
 import os
-import unittest
 import xmltodict
-from azure_devtools.scenario_tests import AllowLargeResponse
 from azure_devtools.scenario_tests import AllowLargeResponse
 from azure.cli.testsdk import (ScenarioTest, ResourceGroupPreparer, ApiManagementPreparer)
 
